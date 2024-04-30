@@ -30,8 +30,7 @@ const NextRegistration = () => {
                         id="username"
                         autoComplete="username"
                         className="block flex-1 border-0 bg-transparent py-1.5 pl-1 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
-                        placeholder="janesmith"
-                      />
+                        placeholder="janesmith"/>
                     </div>
                   </div>
                 </div>
@@ -60,8 +59,7 @@ const NextRegistration = () => {
                     <UserCircleIcon className="h-12 w-12 text-gray-300" aria-hidden="true" />
                     <button
                       type="button"
-                      className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50"
-                    >
+                      className="rounded-md bg-white px-2.5 py-1.5 text-sm font-semibold text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 hover:bg-gray-50">
                       Change
                     </button>
                   </div>
@@ -77,8 +75,7 @@ const NextRegistration = () => {
                       <div className="mt-4 flex text-sm leading-6 text-gray-600">
                         <label
                           htmlFor="file-upload"
-                          className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500"
-                        >
+                          className="relative cursor-pointer rounded-md bg-white font-semibold text-indigo-600 focus-within:outline-none focus-within:ring-2 focus-within:ring-indigo-600 focus-within:ring-offset-2 hover:text-indigo-500">
                           <span>Upload a file</span>
                           <input id="file-upload" name="file-upload" type="file" className="sr-only" />
                         </label>
@@ -107,8 +104,7 @@ const NextRegistration = () => {
                           id="comments"
                           name="comments"
                           type="checkbox"
-                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        />
+                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"/>
                       </div>
                       <div className="text-sm leading-6">
                         <label htmlFor="comments" className="font-medium text-gray-900">
@@ -123,8 +119,7 @@ const NextRegistration = () => {
                           id="candidates"
                           name="candidates"
                           type="checkbox"
-                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        />
+                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"/>
                       </div>
                       <div className="text-sm leading-6">
                         <label htmlFor="candidates" className="font-medium text-gray-900">
@@ -139,8 +134,7 @@ const NextRegistration = () => {
                           id="offers"
                           name="offers"
                           type="checkbox"
-                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                        />
+                          className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-600"/>
                       </div>
                       <div className="text-sm leading-6">
                         <label htmlFor="offers" className="font-medium text-gray-900">
@@ -160,8 +154,7 @@ const NextRegistration = () => {
                         id="push-everything"
                         name="push-notifications"
                         type="radio"
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
+                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"/>
                       <label htmlFor="push-everything" className="block text-sm font-medium leading-6 text-gray-900">
                         Everything
                       </label>
@@ -171,8 +164,7 @@ const NextRegistration = () => {
                         id="push-email"
                         name="push-notifications"
                         type="radio"
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
+                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"/>
                       <label htmlFor="push-email" className="block text-sm font-medium leading-6 text-gray-900">
                         Same as email
                       </label>
@@ -182,8 +174,7 @@ const NextRegistration = () => {
                         id="push-nothing"
                         name="push-notifications"
                         type="radio"
-                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"
-                      />
+                        className="h-4 w-4 border-gray-300 text-indigo-600 focus:ring-indigo-600"/>
                       <label htmlFor="push-nothing" className="block text-sm font-medium leading-6 text-gray-900">
                         No push notifications
                       </label>

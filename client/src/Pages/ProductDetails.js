@@ -170,7 +170,6 @@ export default ProductDetails
 // import ErrorMessage from "../Components/ErrorMessage"
 // import Loader from "../Components/Loader"
 
-
 // const ProductDetails = () => {
 //   const { id } = useParams();
 //   const singleProduct = products.find(obj => obj._id === id)
