@@ -4,6 +4,7 @@ import Footer from "../Components/Footer"
 import Rating from "../Components/Rating"
 import { Link } from "react-router-dom"
 import axios from "axios"
+import hero from '../images/hero.png'
 
 
 const Home = () => {
@@ -19,11 +20,50 @@ const Home = () => {
   return (
     <>
       <Header />
+
+      <div>
+        <>
+
+          <section className="mb-0">
+            <div
+              className="relative overflow-hidden bg-cover bg-no-repeat"
+              style={{
+                backgroundPosition: "50%",
+                // backgroundImage:
+                //   'url("https://mdbcdn.b-cdn.net/img/new/slides/146.webp")',
+                // height: 600,
+              }}>
+              <img className="xs:h-full sm:h-full md:h-full lg:h-full  xl:h-screen w-full" src={hero} alt="" />
+              <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.50)] bg-fixed">
+                <div className="flex h-full items-center justify-left">
+                  <div className="px-6 text-left text-amber-400 md:px-12">
+                    <h1 className="mt-4 xl:mt-10 mb-2 xl:mb-6 text-xl font-bold tracking-tight md:text-4xl xl:text-5xl">
+                      ELEGANCY LADY
+                    </h1>
+                    <h3 className="mt-0 mb-4 xl:mb-16 text-xl font-medium tracking-tight md:text-4xl xl:text-5xl">
+                      Luxe Bags & Accessories</h3>
+                    <button
+                      type="button"
+                      className="rounded border-2 border-neutral-50 px-[16px] xl:px-[46px] pt-[6px] pb-[5px] xl:pt-[14px] xl:pb-[12px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-amber-400 hover:bg-amber-400 hover:bg-opacity-10 hover:text-amber-400 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
+                      data-te-ripple-init=""
+                      data-te-ripple-color="light">
+                      Show Products
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </>
+
+      </div>
+
+
       <main>
         <div className="bg-white">
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-            <h2 className="text-2xl font-bold tracking-tight text-gray-900">
-              Customers also purchased</h2>
+            <h2 className="text-2xl font-bold tracking-tight text-amber-500">
+              ALL PRODUCTS OF ELEGANCY LADY </h2>
             <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
               {products.map((singleProduct) => (
                 <div to={singleProduct._id} className="group relative">

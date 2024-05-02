@@ -2,9 +2,12 @@ import { Fragment, useState } from 'react'
 import { Dialog, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
+import Logo from '../images/Logo.png'
+import Morocco from '../images/Morocco.png'
+
 
 const pages = [
-  { name: 'E-commerce', to: '/', current: true },
+  { name: 'Elegancy Lady', to: '/', current: true },
   { name: 'Shopping Cart', to: '/ShoppingCart', current: false },
   { name: 'Favorites', to: '/Favorites', current: false },
   { name: 'Categories', to: '/Categories', current: false },
@@ -25,9 +28,9 @@ const Header = () => {
 
           <div className="fixed inset-0 z-40 flex">
             <Transition.Child as={Fragment} enter="transition ease-in-out duration-300 transform" enterFrom="-translate-x-full" enterTo="translate-x-0" leave="transition ease-in-out duration-300 transform" leaveFrom="translate-x-0" leaveTo="-translate-x-full">
-              <Dialog.Panel className="relative flex w-full max-w-xs flex-col overflow-y-auto bg-white pb-12 shadow-xl">
+              <Dialog.Panel className="relative flex w-1/2 max-w-xs flex-col overflow-y-auto bg-black pb-12 shadow-xl">
                 <div className="flex px-4 pb-2 pt-5">
-                  <button type="button" className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-gray-300"
+                  <button type="button" className="relative -m-2 inline-flex items-center justify-center rounded-md p-2 text-amber-400"
                     onClick={() => setOpen(false)}>
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Close menu</span>
@@ -37,37 +40,40 @@ const Header = () => {
 
                 {/* Links was here */}
 
-                <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+                <div className="space-y-6 border-t border-amber-400 px-4 py-6">
                   {pages.map((page) => (
                     <div key={page.name} className="flow-root">
-                      <Link to={page.to} className="-m-2 block p-2 font-medium text-gray-900">
+                      <Link to={page.to} className="-m-2 block p-2 font-medium text-amber-400">
                         {page.name}
                       </Link>
                     </div>
                   ))}
                 </div>
 
-                <div className="space-y-6 border-t border-gray-200 px-4 py-6">
+                <div className="space-y-6 border-t border-amber-400 px-4 py-6">
                   <div className="flow-root">
-                    <Link to="/SignIn" className="-m-2 block p-2 font-medium text-gray-900">
+                    <Link to="/SignIn" className="-m-2 block p-2 font-medium text-amber-400">
                       Sign in
                     </Link>
                   </div>
                   <div className="flow-root">
-                    <Link to="/Registration" className="-m-2 block p-2 font-medium text-gray-900">
+                    <Link to="/Registration" className="-m-2 block p-2 font-medium text-amber-400">
                       Create account
                     </Link>
                   </div>
                 </div>
 
-                <div className="border-t border-gray-200 px-4 py-6">
+                <div className="border-t border-amber-400 px-4 py-6">
                   <Link to="#" className="-m-2 flex items-center p-2">
-                    <img src="https://tailwindui.com/img/flags/flag-canada.svg"
+                    <img src={Morocco}
                       alt="" className="block h-auto w-5 flex-shrink-0" />
-                    <span className="ml-3 block text-base font-medium text-gray-900">CAD</span>
+                    <span className="ml-3 block text-base font-medium text-amber-400">MAD</span>
                     <span className="sr-only">, change currency</span>
                   </Link>
                 </div>
+                <img className="w-auto mt-6"
+                    src={Logo}
+                    alt="" />
                 
               </Dialog.Panel>
             </Transition.Child>
@@ -75,14 +81,14 @@ const Header = () => {
         </Dialog>
       </Transition.Root>
       {/* ------------------------------ For Destop ------------------------- */}
-      <header className="relative bg-gray-900">
+      <header className="relative bg-black">
 
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="border-b border-gray-200">
+          <div className="border-b border-amber-300">
             <div className="flex h-16 items-center">
               <button
                 type="button"
-                className="relative rounded-md bg-gray-900 p-2 text-gray-200 lg:hidden"
+                className="relative rounded-md bg-black p-2 text-amber-300 lg:hidden"
                 onClick={() => setOpen(true)}>
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
@@ -94,7 +100,7 @@ const Header = () => {
                 <Link to="#">
                   <span className="sr-only">Your Company</span>
                   <img className="h-8 w-auto"
-                    src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                    src={Logo}
                     alt="" />
                 </Link>
               </div>
@@ -106,7 +112,7 @@ const Header = () => {
                   {pages.map((page) => (
                     <Link key={page.name}
                       to={page.to}
-                      className="flex items-center text-sm font-medium text-gray-300 hover:text-gray-400">
+                      className="flex items-center text-sm font-medium text-gray-300 hover:text-amber-300">
                       {page.name}
                     </Link>
                   ))}
@@ -115,30 +121,30 @@ const Header = () => {
 
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
-                  <Link to="/SignIn" className="text-sm font-medium text-gray-300 hover:text-gray-400">
+                  <Link to="/SignIn" className="text-sm font-medium text-gray-300 hover:text-amber-300">
                     Sign in
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
-                  <Link to="/Registration" className="text-sm font-medium text-gray-300 hover:text-gray-400">
+                  <Link to="/Registration" className="text-sm font-medium text-gray-300 hover:text-amber-300">
                     Create account
                   </Link>
                 </div>
 
                 {/* Flag */}
                 <div className="hidden lg:ml-8 lg:flex">
-                  <Link to="#" className="flex items-center text-gray-300 hover:text-gray-400">
+                  <Link to="#" className="flex items-center text-gray-300 hover:text-amber-300">
                     <img
-                      src="https://tailwindui.com/img/flags/flag-canada.svg"
+                      src={Morocco}
                       alt=""
                       className="block h-auto w-5 flex-shrink-0" />
-                    <span className="ml-3 block text-sm font-medium">CAD</span>
+                    <span className="ml-3 block text-sm font-medium">MAD</span>
                     <span className="sr-only">, change currency</span>
                   </Link>
                 </div>
 
                 {/* Search */}
                 <div className="flex lg:ml-6">
-                  <Link to="#" className="p-2 text-gray-300 hover:text-gray-500">
+                  <Link to="#" className="p-2 text-gray-300 hover:text-amber-300">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
                   </Link>
@@ -148,9 +154,9 @@ const Header = () => {
                 <div className="ml-4 flow-root lg:ml-6">
                   <Link to="/ShoppingCart" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-300 group-hover:text-gray-500"
+                      className="h-6 w-6 flex-shrink-0 text-gray-300 group-hover:text-amber-300"
                       aria-hidden="true"/>
-                    <span className="ml-2 text-sm font-medium text-gray-300 group-hover:text-gray-400">0</span>
+                    <span className="ml-2 text-sm font-medium text-gray-300 group-hover:text-amber-300">0</span>
                     <span className="sr-only">items in cart, view bag</span>
                   </Link>
                 </div>
