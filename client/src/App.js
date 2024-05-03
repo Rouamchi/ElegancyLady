@@ -1,6 +1,7 @@
 
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
+import Products from './Pages/Products';
 import SignIn from './Pages/SignIn';
 import Registration from './Pages/Registration';
 import NextRegistration from './Pages/NextRegistration'
@@ -17,6 +18,7 @@ export default function App() {
         <Routes>
           <Route path='/' exact element={<Home />}/>
           <Route path='/home' exact element={<Home />} />
+          <Route path='/Products' exact element={<Products />} />
           <Route path='/SignIn' exact element={<SignIn />} />
           <Route path='/Registration' exact element={<Registration />} />
           <Route path='/NextRegistration' exact element={<NextRegistration />} />

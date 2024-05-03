@@ -24,7 +24,7 @@ const Footer = () => {
               <p className="font-semibold text-white dark:text-gray-800">Pages</p>
 
               <div className="flex flex-col items-start mt-5 space-y-2">
-                <p className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">Elegancy Lady</p>
+                <Link to="/" className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">Elegancy Lady</Link>
                 <p className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">Who We Are ?</p>
                 <p className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">Categories</p>
               </div>

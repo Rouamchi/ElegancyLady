@@ -1,13 +1,16 @@
 import React, { useState, useEffect } from "react"
+import axios from "axios"
+import Rating from "../Components/Rating"
 import Header from "../Components/Header"
 import Footer from "../Components/Footer"
-import Rating from "../Components/Rating"
-import { Link } from "react-router-dom"
-import axios from "axios"
 import hero from '../images/hero.png'
+import { Link } from "react-router-dom"
+// import { Link } from "react-scroll"
+// import Products from "./Products"
 
 
 const Home = () => {
+
   const [products, setProducts] = useState([])
   useEffect(() => {
     const fetchProducts = async () => {
@@ -16,22 +19,16 @@ const Home = () => {
     }
     fetchProducts()
   }, [])
-
   return (
     <>
       <Header />
-
       <div>
         <>
-
-          <section className="mb-0">
+          <section className="-mb-12" >
             <div
               className="relative overflow-hidden bg-cover bg-no-repeat"
               style={{
                 backgroundPosition: "50%",
-                // backgroundImage:
-                //   'url("https://mdbcdn.b-cdn.net/img/new/slides/146.webp")',
-                // height: 600,
               }}>
               <img className="xs:h-full sm:h-full md:h-full lg:h-full  xl:h-screen w-full" src={hero} alt="" />
               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.50)] bg-fixed">
@@ -42,28 +39,28 @@ const Home = () => {
                     </h1>
                     <h3 className="mt-0 mb-4 xl:mb-16 text-xl font-medium tracking-tight md:text-4xl xl:text-5xl">
                       Luxe Bags & Accessories</h3>
-                    <button
-                      type="button"
+                    <Link
+                      to="Products" spy={true} smooth={true} offset={-100} duration={500}
                       className="rounded border-2 border-neutral-50 px-[16px] xl:px-[46px] pt-[6px] pb-[5px] xl:pt-[14px] xl:pb-[12px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-amber-400 hover:bg-amber-400 hover:bg-opacity-10 hover:text-amber-400 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
                       data-te-ripple-init=""
                       data-te-ripple-color="light">
                       Show Products
-                    </button>
+                    </Link>
                   </div>
                 </div>
               </div>
             </div>
           </section>
         </>
-
       </div>
-
 
       <main>
         <div className="bg-white">
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-            <h2 className="text-2xl font-bold tracking-tight text-amber-500">
-              ALL PRODUCTS OF ELEGANCY LADY </h2>
+            <p className="space-y-6 border-t border-amber-400 px-4 mb-6"></p>
+            <h2 className="text-xl lg:text-3xl font-bold text-center tracking-tight mb-6 text-amber-500">
+              PRODUCTS OF ELEGANCY LADY </h2>
+            <p className="space-y-6 border-t border-amber-400 px-4 mb-20"></p>
             <div className="mt-6 grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
               {products.map((singleProduct) => (
                 <div to={singleProduct._id} className="group relative">
@@ -83,7 +80,7 @@ const Home = () => {
                     </div>
                     <div>
                       <p className="text-2xl mb-3 font-medium text-gray-900">
-                        {singleProduct.price}$</p>
+                        {singleProduct.price} DH</p>
                       <Link to="/ProductDetails" className="py-1 px-4 mt-2 mr-4 pb-2 bg-gray-500/80 text-white font-semibold rounded hover:bg-white hover:text-gray-600 hover:border-gray-500 transition ease-in duration-200 transform active:translate-y-0">
                         Buy</Link>
                     </div>
@@ -154,7 +151,7 @@ export default Home
 //                           </div>
 //                           <div>
 //                             <p className="text-2xl mb-3 font-medium text-gray-900">
-//                               {singleProduct.price}$</p>
+//                               {singleProduct.price} DH</p>
 //                             <Link to="/ProductDetails" className="py-1 px-4 mt-2 mr-4 pb-2 bg-gray-500/80 text-white font-semibold rounded hover:bg-white hover:text-gray-600 hover:border-gray-500 transition ease-in duration-200 transform active:translate-y-0">
 //                               Buy</Link>
 //                           </div>
