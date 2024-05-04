@@ -34,7 +34,7 @@ const ProductDetails = () => {
     return (
       <>
         <Header />
-        <div className="w-full min-h-screen bg-gray-200 flex flex-col justify-center">
+        <div className="w-full min-h-screen bg-gray-100 flex flex-col justify-center">
           <div className="block lg:flex" >
             <div className="relative m-3 h-4/5 flex flex-wrap mx-auto justify-center">
               <div className="relative block lg:flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -133,7 +133,7 @@ const ProductDetails = () => {
                 <div>
                   <div className="flex items-center pb-2 lg:pb-6 justify-between lg:pt-5 pt-5">
                     <p className="text-2xl leading-normal text-gray-800 dark:text-white"> Total :</p>
-                    <p className="text-2xl font-bold leading-normal text-right text-gray-800 dark:text-white"> 240$ </p>
+                    <p className="text-2xl font-bold leading-normal text-right text-gray-800 dark:text-white"> {singleProduct.price * quantity}DH </p>
                   </div>
                   <Link to={`/ShoppingCart/${id}?quantity=${quantity}`}>
                     <button disabled={singleProduct.countInStock === 0}

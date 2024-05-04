@@ -82,7 +82,7 @@ const Home = () => {
                       <p className="text-2xl mb-3 font-medium text-gray-900">
                         {singleProduct.price} DH</p>
                       <Link to="/ProductDetails" className="py-1 px-4 mt-2 mr-4 pb-2 bg-gray-500/80 text-white font-semibold rounded hover:bg-white hover:text-gray-600 hover:border-gray-500 transition ease-in duration-200 transform active:translate-y-0">
-                        Buy</Link>
+                        Buy Now</Link>
                     </div>
                   </div>
                 </div>
