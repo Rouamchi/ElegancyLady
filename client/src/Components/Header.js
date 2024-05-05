@@ -7,10 +7,10 @@ import Morocco from '../images/Morocco.png'
 
 
 const pages = [
-  { name: 'Elegancy Lady', to: '/', current: true },
-  { name: 'Shopping Cart', to: '/ShoppingCart', current: false },
-  { name: 'Favorites', to: '/Favorites', current: false },
-  { name: 'Categories', to: '/Categories', current: false },
+  { name: '⚜️ ELEGANCY LADY ⚜️', to: '/', current: true },
+  { name: 'SHOPPING CART', to: '/ShoppingCart', current: false },
+  { name: 'FAVORITES', to: '/Favorites', current: false },
+  { name: 'CATEGORIES', to: '/Categories', current: false },
   { name: '', to: '/SignIn', current: false },
 ]
 
@@ -53,12 +53,12 @@ const Header = () => {
                 <div className="space-y-6 border-t border-amber-400 px-4 py-6">
                   <div className="flow-root">
                     <Link to="/SignIn" className="-m-2 block p-2 font-medium text-amber-400">
-                      Sign in
+                      SIGN IN
                     </Link>
                   </div>
                   <div className="flow-root">
                     <Link to="/Registration" className="-m-2 block p-2 font-medium text-amber-400">
-                      Create account
+                      CREATE ACCOUNT
                     </Link>
                   </div>
                 </div>
@@ -72,9 +72,9 @@ const Header = () => {
                   </Link>
                 </div>
                 <img className="w-auto mt-6"
-                    src={Logo}
-                    alt="" />
-                
+                  src={Logo}
+                  alt="" />
+
               </Dialog.Panel>
             </Transition.Child>
           </div>
@@ -122,11 +122,11 @@ const Header = () => {
               <div className="ml-auto flex items-center">
                 <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
                   <Link to="/SignIn" className="text-sm font-medium text-gray-300 hover:text-amber-300">
-                    Sign in
+                    SIGN IN
                   </Link>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <Link to="/Registration" className="text-sm font-medium text-gray-300 hover:text-amber-300">
-                    Create account
+                    CREATE ACCOUNT
                   </Link>
                 </div>
 
@@ -155,7 +155,7 @@ const Header = () => {
                   <Link to="/ShoppingCart" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-300 group-hover:text-amber-300"
-                      aria-hidden="true"/>
+                      aria-hidden="true" />
                     <Link to="#" className="ml-2 text-sm font-medium text-gray-300 group-hover:text-amber-300">0</Link>
                     <span className="sr-only">items in cart, view bag</span>
                   </Link>
