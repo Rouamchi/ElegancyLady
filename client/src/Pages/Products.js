@@ -46,7 +46,7 @@ const Products = () => {
               </div>
             </div>
             <img
-            className=" mx-auto h-28 w-auto mt-4 -mb-20"
+            className=" mx-auto h-28 w-auto mt-4 -mb-12 lg:-mb-20"
             src={Logo1}
             alt="Your Company"
           />

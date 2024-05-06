@@ -4,9 +4,9 @@ import axios from "axios"
 import Header from "../Components/Header"
 import Footer from "../Components/Footer"
 import hero from '../images/hero.png'
-// import Background from '../images/Background.jpg'
+import Background from '../images/Background.jpg'
 import { Link } from "react-router-dom"
-
+import './Home.css'
 
 const Home = () => {
 
@@ -29,7 +29,8 @@ const Home = () => {
               style={{
                 backgroundPosition: "50%",
               }}>
-              <img className=" h-56 lg:h-96 xl:h-96 w-full" src={hero} alt="" />
+              <img className="hide-when-mobile h-56 lg:h-96 xl:h-96 w-full" src={hero} alt="" />
+              <img className="show-when-mobile h-56 lg:h-96 xl:h-96 w-full" src={Background} alt="" />
               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.50)] bg-fixed">
                 <div className="flex h-full items-center justify-left">
                   <div className="px-6 text-left text-amber-400 md:px-12">
@@ -38,7 +39,7 @@ const Home = () => {
                     </h1>
                     <h3 className="mt-0 -mb-1 xl:mb-10 text-base font-medium tracking-tight md:text-3xl xl:text-4xl">
                       Luxe Bags & Accessories</h3>
-                    <p className="text-sm lg:text-2xl text-white font-medium lg:font-semibold mt-4 lg:-mt-4 mb-4 lg:mb-10">
+                    <p className=" text-sm lg:text-2xl text-white font-medium lg:font-semibold mt-4 lg:-mt-4 mb-4 lg:mb-10">
                       ELEGANCY LADY offer you a collection of clothing and accessories <br /> By the latest trends and 100% authentic!
                     </p>
                     <Link
@@ -57,7 +58,7 @@ const Home = () => {
           <br />
           <section className="mt-6">
             <div
-              className=" h-48 lg:h-64 overflow-hidden bg-cover bg-center"
+              className="h-48 lg:h-64 overflow-hidden bg-cover bg-center"
               style={{
                 backgroundImage:
                   'url("https://wallpaperaccess.com/full/318963.jpg")'
@@ -94,24 +95,24 @@ const Home = () => {
                     <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md bg-gray-200 lg:aspect-none lg:h-80">
                       <img src={singleProduct.imageSrc} alt={singleProduct.imageAlt} className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
                     </div>
-                    <button className="p-2 rounded-full bg-white text-white mx-56 -my-24 -mb-4 hover:bg-white focus:outline-none focus:bg-white">
+                    <button className="p-2 rounded-full bg-white text-white mx-64 lg:mx-56 -my-24 -mb-4 hover:bg-white focus:outline-none focus:bg-white">
                       <svg className="h-6 w-6" fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path>
                       </svg>
                     </button>
                     <div className="mt-4 justify-between">
-                      <div>
+                      <div className="ml-4 lg:ml-0">
                         <h3 className="-mt-4 text-lg font-medium text-gray-700 dark:text-gray-200">
                           <Link to={`/ProductDetails/${singleProduct._id}`}>
                             <span aria-hidden="true" className="absolute inset-0" />
                             {singleProduct.name}
                           </Link>
                         </h3>
-                        <p className="text-gray-700 uppercase">
+                        <p className="text-gray-600 uppercase">
                           {singleProduct.color}</p>
                         {/* <Rating value={singleProduct.rating} /> */}
                       </div>
                       <div className="">
-                        <p className="text-gray-500 mb-2">
+                        <p className=" text-lg text-gray-800 -mt-6 lg:mt-0 ml-60 lg:ml-0 mb-2">
                           {singleProduct.price} DH</p>
                         <div className="flex items-center justify-center w-full capitalize font-medium tracking-wide rounded-md bg-gray-800 text-white px-2 py-2 group-hover:bg-gray-700">
                           <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mx-1" viewBox="0 0 20 20" fill="currentColor">

@@ -1,0 +1,24 @@
+.hide-when-mobile {
+  display: flex;
+  justify-content: space-around;
+}
+
+.show-when-mobile {
+  display: none;
+}
+
+
+
+@media only screen and (max-width: 768px) {
+
+*{
+  margin-right: 0;
+}
+
+.show-when-mobile {
+  display: block;
+}
+.hide-when-mobile {
+  display: none;
+}
+}

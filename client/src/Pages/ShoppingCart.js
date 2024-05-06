@@ -32,9 +32,9 @@ const ShoppingCart = () => {
         <div className="w-full min-h-screen bg-gray-100 flex flex-col">
           <div className="block lg:flex" >
             <div id="scroll"
-              className="m-14 lg:m-20 lg:w-1/2 md:w-8/12 lg:px-20 lg:py-5 md:px-6 px-4 md:py-7 py-4 bg-gray-300 dark:bg-gray-800 overflow-y-hidden overflow-x-hidden lg:h-96 h-auto">
+              className="border-2 border-blue-800 m-14 lg:m-20 lg:w-1/2 md:w-8/12 lg:px-20 lg:py-5 md:px-6 px-4 md:py-7 py-4 bg-gray-300 dark:bg-gray-800 overflow-y-hidden overflow-x-hidden lg:h-80 h-auto">
               <div onclick="checkoutHandler(false)"
-                className="flex items-center text-gray-500 hover:text-gray-600 dark:text-white cursor-pointer">
+                className=" flex items-center text-gray-500 hover:text-gray-600 dark:text-white cursor-pointer">
                 <svg xmlns="http://www.w3.org/2000/svg"
                   className="icon icon-tabler icon-tabler-chevron-left"
                   width={16} height={16}
@@ -44,13 +44,13 @@ const ShoppingCart = () => {
                   <path stroke="none" d="M0 0h24v24H0z" fill="none" />
                   <polyline points="15 6 9 12 15 18" />
                 </svg>
-                <Link to={`/ProductDetails/${singleProduct._id}`} className="text-sm pl-2 leading-none dark:hover:text-gray-200">
+                <Link to={`/ProductDetails/${singleProduct._id}`} className=" text-sm pl-2 leading-none dark:hover:text-gray-200">
                   Back
                 </Link>
               </div>
-              <p className="lg:text-2xl text-xl font-black leading-10 text-gray-800 dark:text-white pt-3 ml-4 lg:mb-5">
+              {/* <p className="lg:text-2xl text-xl font-black leading-10 text-gray-800 dark:text-white pt-1 ml-4 lg:mb-5">
                 Items
-              </p>
+              </p> */}
               <div className="flex">
                 <div className="md:flex items-strech py-0 border-t border-gray-300 ml-4 mb-4">
                   <div className="md:w-4/12 2xl:w-1/4 w-full mb-4">
