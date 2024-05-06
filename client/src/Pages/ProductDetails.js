@@ -3,7 +3,7 @@ import Header from "../Components/Header"
 import Footer from "../Components/Footer"
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
-import Rating from '../Components/Rating'
+// import Rating from '../Components/Rating'
 // import { useCart } from "react-use-cart"
 
 
@@ -45,55 +45,54 @@ const ProductDetails = () => {
                     className="h-full w-full object-cover" />
                 </div>
                 <div className="p-6">
-                  <h6 className="mb-4 mt-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-pink-500 antialiased">
+                  <h6 className="mb-4 mt-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-amber-400 antialiased">
                     About This Item
                   </h6>
                   {/* Name */}
                   <Link to='#' className="mb-2 block font-sans text-2xl font-semibold leading-snug tracking-normal text-blue-gray-900 antialiased">
-                    {singleProduct.color}
                     {singleProduct.name}
                   </Link>
-                  <p className="mb-4 mt-4 block font-sans text-base font-normal leading-relaxed text-gray-700 antialiased">
+                  <p className="mb-4 mt-4 block font-sans text-base font-semibold leading-relaxed text-gray-700 antialiased">
                     {singleProduct.description}
                   </p>
 
                   <div className="relative block lg:flex w-full">
                     {/* Price */}
-                    <div className="mt-2 w-32 h-8 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-800 antialiased">
-                      Price: {singleProduct.price}$
+                    <div className="mt-4 w-32 h-8 block font-sans font-semibold leading-snug tracking-normal antialiased text-gray-800 mb-2">
+                      Price: {singleProduct.price}DH
                     </div>
                     <div className="flex">
                       {/* In Stock */}
                       <button className='flex lg:ml-6 select-none items-center gap-2 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none' type="button">
                         {singleProduct.countInStock > 0
                           ? <>
-                            <div className=" mt-1 rounded-sm py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-green-600">
+                            <div className=" mt-0 rounded-sm py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-green-600">
                               InStock</div>
                           </>
-                          : <div className="mt-1 mb-0 rounded-sm py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-red-600">
+                          : <div className="ml-0 mt-0 lg:mt-1 mb-0 rounded-sm py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-red-600">
                             Out Of Stock</div>
                         }
                       </button>
                       {/* Color */}
-                      <Link to='#' className="mt-1 rounded-sm py-3 px-6 text-center align-middle font-sans text-sm font-bold leading-snug text-gray-600">
+                      <Link to='#' className="-mt-10 lg:mt-4 ml-20 lg:ml-6 w-32 h-8 block font-sans font-semibold leading-snug tracking-normal antialiased text-gray-600 mb-2">
                         Color: {singleProduct.color}
                       </Link>
                     </div>
                   </div>
 
                   {/* Rating */}
-                  <div className="w-36 justify-center transition-colors duration-150 text-lg md:text-xl">
+                  {/* <div className="w-36 mt-4 justify-center transition-colors duration-150 text-lg md:text-xl">
                     <Rating value={singleProduct.rating} />
-                  </div>
+                  </div> */}
 
                   {/* Add to cart */}
                   <Link className="inline-block" to="/Favorites">
                     <div className="mt-4 lg:ml-8 block lg:flex justify-center gap-x-3">
                       <button
-                        className="py-2 px-4 ml-4 bg-gray-600 text-white font-semibold border border-transparent rounded hover:bg-white hover:text-gray-600 hover:border-gray-600 transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0"
+                        className="py-2 px-4 ml-4 bg-amber-400 text-white font-semibold border border-transparent rounded hover:bg-white hover:text-amber-400 hover:border-amber-400 transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0"
                         type='button'>
                         {singleProduct.inFavorites === true ? "Saved" : "Add To Favorites"}</button>
-                      <Link to="/" className="ml-3 lg py-2 px-4 bg-transparent text-gray-600 font-semibold border border-gray-600 rounded hover:bg-gray-600 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">
+                      <Link to="/" className="ml-3 lg py-2 px-4 bg-transparent text-amber-500 font-semibold border border-amber-500 rounded hover:bg-amber-400 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">
                         Go Back</Link>
                     </div>
                   </Link>
@@ -109,7 +108,7 @@ const ProductDetails = () => {
                   </p>
                   <div className="flex items-center justify-between pt-8">
                     <p className="text-base leading-none text-gray-800 dark:text-white"> Price :</p>
-                    <p className="text-base leading-none text-gray-800 dark:text-white"> {singleProduct.price}$ </p>
+                    <p className="text-base leading-none text-gray-800 dark:text-white"> {singleProduct.price}DH </p>
                   </div>
                   <div className="flex items-center justify-between pt-5">
                     <p className="text-base leading-none text-gray-800 dark:text-white"> Status :</p>
@@ -211,7 +210,7 @@ export default ProductDetails
 //                   <div className="relative block lg:flex w-full">
 //                     {/* Price */}
 //                     <div className="mt-2 w-32 h-8 block font-sans text-xl font-semibold leading-snug tracking-normal text-gray-800 antialiased">
-//                       Price: {singleProduct.price}$
+//                       Price: {singleProduct.price}DH
 //                     </div>
 
 //                     {/* In Stock */}
@@ -254,7 +253,7 @@ export default ProductDetails
 //                   </p>
 //                   <div className="flex items-center justify-between pt-8">
 //                     <p className="text-base leading-none text-gray-800 dark:text-white"> Price :</p>
-//                     <p className="text-base leading-none text-gray-800 dark:text-white"> {singleProduct.price}$ </p>
+//                     <p className="text-base leading-none text-gray-800 dark:text-white"> {singleProduct.price}DH </p>
 //                   </div>
 //                   <div className="flex items-center justify-between pt-5">
 //                     <p className="text-base leading-none text-gray-800 dark:text-white"> Status :</p>
@@ -278,7 +277,7 @@ export default ProductDetails
 //                 <div>
 //                   <div className="flex items-center pb-6 justify-between lg:pt-5 pt-20">
 //                     <p className="text-2xl leading-normal text-gray-800 dark:text-white"> Total :</p>
-//                     <p className="text-2xl font-bold leading-normal text-right text-gray-800 dark:text-white"> 240$ </p>
+//                     <p className="text-2xl font-bold leading-normal text-right text-gray-800 dark:text-white"> 240DH </p>
 //                   </div>
 //                   <Link to="/ShoppingCart">
 //                     <button onclick="checkoutHandler1(true)"
