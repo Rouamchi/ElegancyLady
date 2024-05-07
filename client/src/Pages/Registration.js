@@ -150,9 +150,9 @@ const Registration = () => {
         </div>
 
         <div className="mt-6 flex items-center justify-end gap-x-6">
-          <button type="button" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/" type="button" className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-400">
             Cancel
-          </button>
+          </Link>
           <button
             type="submit"
             className="rounded-md bg-amber-400 px-3 py-2 text-sm font-semibold text-white shadow-sm
