@@ -123,7 +123,7 @@ const ShoppingCart = () => {
                           </select>) : "0"}
                       </p>
                     </div>
-                    <hr className="my-4" />
+                    <hr className="my-4"/>
                     <div className="flex justify-between text-gray-700">
                       <p className="text-lg font-bold">Total</p>
                       <div className="">

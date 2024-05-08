@@ -3,8 +3,8 @@ import axios from "axios"
 // import Rating from "../Components/Rating"
 import Header from "../Components/Header"
 import Footer from "../Components/Footer"
-import hero from '../images/hero.png'
-import Background from '../images/Background.jpg'
+// import hero from '../images/hero.png'
+// import Background from '../images/Background.jpg'
 import { Link } from "react-router-dom"
 import './Home.css'
 
@@ -23,14 +23,14 @@ const Home = () => {
       <Header />
       <div>
         <>
-          <section className="-mb-14" >
-            <div
-              className="relative overflow-hidden bg-cover bg-no-repeat"
-              style={{
-                backgroundPosition: "50%",
-              }}>
-              <img className="hide-when-mobile h-56 lg:h-96 xl:h-96 w-full" src={hero} alt="" />
-              <img className="show-when-mobile h-56 lg:h-96 xl:h-96 w-full" src={Background} alt="" />
+          <section className="" >
+            <div className="relative overflow-hidden bg-cover bg-no-repeat">
+                <div className="bgImage hide-when-mobile">
+                </div>
+                <div className="bgImageMobile show-when-mobile">
+                </div>
+              {/* <img className="hide-when-mobile h-56 lg:h-96 xl:h-96 w-full" src={hero} alt="" /> */}
+              {/* <img className="show-when-mobile h-56 lg:h-96 xl:h-96 w-full" src={Background} alt="" /> */}
               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.50)] bg-fixed">
                 <div className="flex h-full items-center justify-left">
                   <div className="px-6 text-left text-amber-400 md:px-12">
@@ -39,12 +39,12 @@ const Home = () => {
                     </h1>
                     <h3 className="mt-0 -mb-1 xl:mb-10 text-base font-medium tracking-tight md:text-3xl xl:text-4xl">
                       Luxe Bags & Accessories</h3>
-                    <p className=" text-sm lg:text-2xl text-white font-medium lg:font-semibold mt-4 lg:-mt-4 mb-4 lg:mb-10">
-                      ELEGANCY LADY offer you a collection of clothing and accessories <br /> By the latest trends and 100% authentic!
+                    <p className=" text-md lg:text-2xl text-white font-normal lg:font-semibold mt-4 lg:-mt-4 mb-4 lg:mb-10">
+                      ELEGANCY LADY offer you a collection of clothing and accessories <br /> By the latest trends and 100% authenti.
                     </p>
                     <Link
                       to="Products" spy={true} smooth={true} offset={-100} duration={500}
-                      className="rounded border-2 border-neutral-50 px-[16px] xl:px-[46px] pt-[6px] pb-[5px] xl:pt-[14px] xl:pb-[12px] text-sm font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-amber-400 hover:bg-amber-400 hover:bg-opacity-10 hover:text-amber-400 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
+                      className="rounded border-2 border-neutral-50 px-[16px] xl:px-[46px] pt-[4px] pb-[6px] xl:pt-[10px] xl:pb-[10px] text-xs lg:text-sm font-normal lg:font-medium uppercase leading-normal text-neutral-50 transition duration-150 ease-in-out hover:border-amber-400 hover:bg-amber-400 hover:bg-opacity-10 hover:text-amber-400 focus:border-neutral-100 focus:text-neutral-100 focus:outline-none focus:ring-0 active:border-neutral-200 active:text-neutral-200"
                       data-te-ripple-init=""
                       data-te-ripple-color="light">
                       Show Products
@@ -54,9 +54,8 @@ const Home = () => {
               </div>
             </div>
           </section>
-          <br />
-          <br />
-          <section className="mt-6">
+          <hr className="border-2 border-amber-400" />
+          <section className="mt-0">
             <div
               className="h-48 lg:h-64 overflow-hidden bg-cover bg-center"
               style={{
@@ -66,7 +65,7 @@ const Home = () => {
               <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
                 <div className=" px-6 lg:px-10 max-w-xl lg:max-w-2xl">
                   <h2 className="text-xl lg:text-3xl text-white font-semibold  mt-4 lg:mt-0">PRODUCTS OF ELEGANCY LADY</h2>
-                  <p className="mt-2 lg:text-lg text-gray-300">
+                  <p className="mt-2 lg:text-lg text-amber-00">
                     A collection which is constantly renewed to satisfy you, and which is intended to be accessible to all!
                     Authentic, original & Luxe!
                   </p>
@@ -86,7 +85,7 @@ const Home = () => {
       <main>
         <div className="bg-white">
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-            <div className="-mt-8">
+            <div className="-mt-14">
               <h3 className="text-gray-600 text-2xl font-medium">Fashions</h3>
               <div className="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
 

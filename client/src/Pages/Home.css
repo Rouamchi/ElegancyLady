@@ -25,4 +25,66 @@
 .trash{
   display: none;
 }
+
+.bgImageMobile{
+  position: relative; 
+  width:100%;
+  height: 250px;
+  background-image:url('../images/heroMobile.png');
+  background-repeat: no-repeat;
+  background-size: cover ;
+  background-position: center;
+  overflow: hidden;
+  animation: bgChangeMobile 30s linear infinite;
+}
+
+@keyframes bgChangeMobile{
+  0%{
+      background-image:url('../images/heroMobile.png');  } 
+  20%{
+      background-image:url('../images/heroMobile.png');  }
+  25%{
+    background-image:url('../images/hero1.png');   } 
+  45%{
+    background-image:url('../images/hero1.png');   }
+  50%{
+    background-image:url('../images/hero2.png');  }
+  70%{
+      background-image:url('../images/hero2.png'); }
+  75%{
+    background-image:url('../images/hero3.png');  }
+  95%{
+    background-image:url('../images/hero3.png');  }
+}
+}
+
+div .bgImage{
+  position: relative; 
+  width:100%;
+  height: 500px;
+  background-image:url('../images/hero.png');
+  background-repeat: no-repeat;
+  background-size: cover ;
+  background-position: center;
+  overflow: hidden;
+  animation: bgChange 30s linear infinite;
+}
+
+@keyframes bgChange{
+  0%{
+      background-image:url('../images/hero.png');  } 
+  20%{
+      background-image:url('../images/hero.png');  }
+  25%{
+    background-image:url('../images/hero1.png');   } 
+  45%{
+    background-image:url('../images/hero1.png');   }
+  50%{
+    background-image:url('../images/hero2.png');  }
+  70%{
+      background-image:url('../images/hero2.png'); }
+  75%{
+    background-image:url('../images/hero3.png');  }
+  95%{
+    background-image:url('../images/hero3.png');  }
 }
