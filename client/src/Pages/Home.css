@@ -40,21 +40,21 @@
 
 @keyframes bgChangeMobile{
   0%{
-      background-image:url('../images/heroMobile.png');  } 
+    background-image:url('../images/heroMobile.png');  } 
   20%{
-      background-image:url('../images/heroMobile.png');  }
+    background-image:url('../images/heroMobile.png');  }
   25%{
-    background-image:url('../images/hero1.png');   } 
+    background-image:url('../images/hero1Mobile.png');   } 
   45%{
-    background-image:url('../images/hero1.png');   }
+    background-image:url('../images/hero1Mobile.png');   }
   50%{
-    background-image:url('../images/hero2.png');  }
+    background-image:url('../images/hero2Mobile.png');  }
   70%{
-      background-image:url('../images/hero2.png'); }
+    background-image:url('../images/hero2Mobile.png'); }
   75%{
-    background-image:url('../images/hero3.png');  }
+    background-image:url('../images/hero3Mobile.png');  }
   95%{
-    background-image:url('../images/hero3.png');  }
+    background-image:url('../images/hero3Mobile.png');  }
 }
 }
 

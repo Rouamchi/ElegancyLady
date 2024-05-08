@@ -65,7 +65,7 @@ const Home = () => {
               <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
                 <div className=" px-6 lg:px-10 max-w-xl lg:max-w-2xl">
                   <h2 className="text-xl lg:text-3xl text-white font-semibold  mt-4 lg:mt-0">PRODUCTS OF ELEGANCY LADY</h2>
-                  <p className="mt-2 lg:text-lg text-amber-00">
+                  <p className="mt-2 lg:text-lg text-amber-300">
                     A collection which is constantly renewed to satisfy you, and which is intended to be accessible to all!
                     Authentic, original & Luxe!
                   </p>
