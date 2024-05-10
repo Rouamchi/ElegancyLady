@@ -3,14 +3,13 @@ import axios from "axios"
 // import Rating from "../Components/Rating"
 import Header from "../Components/Header"
 import Footer from "../Components/Footer"
-// import hero from '../images/hero.png'
-// import Background from '../images/Background.jpg'
 import { Link } from "react-router-dom"
+import ToTop from "../Components/ToTop"
 import './Home.css'
 
 const Home = () => {
-
   const [products, setProducts] = useState([])
+
   useEffect(() => {
     const fetchProducts = async () => {
       const { data } = await axios.get('http://localhost:4000/products')
@@ -18,6 +17,7 @@ const Home = () => {
     }
     fetchProducts()
   }, [])
+
   return (
     <>
       <Header />
@@ -25,10 +25,10 @@ const Home = () => {
         <>
           <section className="" >
             <div className="relative overflow-hidden bg-cover bg-no-repeat">
-                <div className="bgImage hide-when-mobile">
-                </div>
-                <div className="bgImageMobile show-when-mobile">
-                </div>
+              <div className="bgImage hide-when-mobile">
+              </div>
+              <div className="bgImageMobile show-when-mobile">
+              </div>
               {/* <img className="hide-when-mobile h-56 lg:h-96 xl:h-96 w-full" src={hero} alt="" /> */}
               {/* <img className="show-when-mobile h-56 lg:h-96 xl:h-96 w-full" src={Background} alt="" /> */}
               <div className="absolute top-0 right-0 bottom-0 left-0 h-full w-full overflow-hidden bg-[hsla(0,0%,0%,0.50)] bg-fixed">
@@ -127,10 +127,10 @@ const Home = () => {
               </div>
             </div>
           </div>
-
         </div>
       </main>
       <Footer />
+      <ToTop />
     </>
   )
 }

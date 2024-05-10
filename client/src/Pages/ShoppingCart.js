@@ -130,7 +130,7 @@ const ShoppingCart = () => {
                         <p className="mb-1 text-lg font-bold">{singleProduct.price * quantity} DH</p>
                       </div>
                     </div>
-                    <Link to={`/ShoppingCart/${id}?quantity=${quantity}`}>
+                    <Link to="/">
                       <button disabled={singleProduct.countInStock === 0}
                         className="mt-3 w-full rounded-md bg-amber-400 py-1.5 font-medium text-blue-50 hover:bg-black">
                         Check Out </button>

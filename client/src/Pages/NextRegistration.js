@@ -9,7 +9,6 @@ const NextRegistration = () => {
   return (
     <>
       <Header />
-
       <img
         className="mx-auto h-48 w-96 mt-10"
         src={Logo}
@@ -105,7 +104,6 @@ const NextRegistration = () => {
           </Link>
         </div>
       </form>
-
       <Footer />
     </>
   )

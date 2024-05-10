@@ -8,7 +8,6 @@ const Registration = () => {
   return (
     <>
       <Header />
-
       <form className='grid justify-items-stretch justify-center mx-6 my-12 lg:mx-8 '>
         <div className="space-y-12">
           {/* -------------------------------- */}
@@ -162,7 +161,6 @@ const Registration = () => {
           </button>
         </div>
       </form>
-
       <Footer />
     </>
   )
