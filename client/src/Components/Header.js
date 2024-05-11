@@ -5,10 +5,9 @@ import { Link } from 'react-router-dom'
 import Logo from '../images/Logo.png'
 import Morocco from '../images/Morocco.png'
 
-
 const pages = [
   { name: '⚜️ ELEGANCY LADY ⚜️', to: '/', current: true },
-  { name: 'SHOPPING CART', to: '/ShoppingCart', current: false },
+  { name: 'CART', to: '/ShoppingCart', current: false },
   { name: 'FAVORITES', to: '/Favorites', current: false },
   { name: 'CATEGORIES', to: '/Categories', current: false },
   { name: '', to: '/SignIn', current: false },
@@ -129,7 +128,6 @@ const Header = () => {
                     CREATE ACCOUNT
                   </Link>
                 </div>
-
                 {/* Flag */}
                 <div className="hidden lg:ml-8 lg:flex">
                   <Link to="#" className="flex items-center text-gray-300 hover:text-amber-300">
@@ -141,7 +139,6 @@ const Header = () => {
                     <span className="sr-only">, change currency</span>
                   </Link>
                 </div>
-
                 {/* Search */}
                 <div className="flex lg:ml-6">
                   <Link to="#" className="p-2 text-gray-300 hover:text-amber-300">

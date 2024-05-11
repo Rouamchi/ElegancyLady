@@ -2,7 +2,8 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import ArrowUpwardIcon from '@mui/icons-material/ArrowUpward';
 
-function ToTop() {
+
+function ToTopButton() {
   const [toTopButton, setToTopButton] = useState(false);
 
   useEffect(() => {
@@ -37,11 +38,11 @@ function ToTop() {
             borderRadius: '50px',
             padding: '9px'
           }}
-          onClick={ scrollUp }
+          onClick={scrollUp}
         />
-      )}
+       )}  
     </div>
   )
 }
 
-export default ToTop 
+export default ToTopButton

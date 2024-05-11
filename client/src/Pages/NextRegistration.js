@@ -4,6 +4,7 @@ import Footer from "../Components/Footer"
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import Logo from '../images/Logo.png'
 import { Link } from 'react-router-dom'
+import ToTop from "../Components/ToTop"
 
 const NextRegistration = () => {
   return (
@@ -105,6 +106,7 @@ const NextRegistration = () => {
         </div>
       </form>
       <Footer />
+      <ToTop />
     </>
   )
 }

@@ -9,6 +9,7 @@ import ProductDetails from './Pages/ProductDetails';
 import ShoppingCart from './Pages/ShoppingCart';
 import Favorites from './Pages/Favorites';
 import Categories from './Pages/Categories';
+import CreateProduct from './Pages/CreateProduct'
 
 
 export default function App() {
@@ -19,6 +20,7 @@ export default function App() {
           <Route path='/' exact element={<Home />}/>
           <Route path='/home' exact element={<Home />} />
           <Route path='/Products' exact element={<Products />} />
+          <Route path='/CreateProduct' exact element={<CreateProduct />} />
           <Route path='/SignIn' exact element={<SignIn />} />
           <Route path='/Registration' exact element={<Registration />} />
           <Route path='/NextRegistration' exact element={<NextRegistration />} />

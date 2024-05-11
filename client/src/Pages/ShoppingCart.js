@@ -3,6 +3,7 @@ import Header from "../Components/Header"
 import Footer from "../Components/Footer"
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import ToTop from "../Components/ToTop"
 
 
 const ShoppingCart = () => {
@@ -111,7 +112,7 @@ const ShoppingCart = () => {
                     </div>
                     <div className="mt-2 flex justify-between">
                       <p className="text-gray-700">Quantity :</p>
-                      <p className="text-gray-700">
+                      <p className="text-gray-700">{quantity}
                         {singleProduct.countInStock > 0 ? (
                           <select className="bg-white" as="select" value={quantity}
                             onChange={(e) => setQuantity(e.target.value)}>
@@ -142,6 +143,7 @@ const ShoppingCart = () => {
           </div>
         </div>
         <Footer />
+        <ToTop />
       </>
     )
 }

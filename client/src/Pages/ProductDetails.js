@@ -3,6 +3,7 @@ import Header from "../Components/Header"
 import Footer from "../Components/Footer"
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
+import ToTop from "../Components/ToTop"
 // import Rating from '../Components/Rating'
 // import { useCart } from "react-use-cart"
 
@@ -153,6 +154,7 @@ const ProductDetails = () => {
           </div>
         </div>
         <Footer />
+        <ToTop />
       </>
     )
 }
