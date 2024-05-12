@@ -39,7 +39,7 @@ const Home = () => {
                     </h1>
                     <h3 className="mt-0 -mb-1 xl:mb-10 text-base font-medium tracking-tight md:text-3xl xl:text-4xl">
                       Luxe Bags & Accessories</h3>
-                    <p className=" text-md lg:text-2xl text-white font-normal lg:font-semibold mt-4 lg:-mt-4 mb-4 lg:mb-10">
+                    <p className="text-md lg:text-2xl text-white font-normal lg:font-semibold mt-4 lg:-mt-4 mb-4 lg:mb-10">
                       ELEGANCY LADY offer you a collection of clothing and accessories <br /> By the latest trends and 100% authenti.
                     </p>
                     <Link
