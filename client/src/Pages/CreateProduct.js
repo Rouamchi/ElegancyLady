@@ -32,7 +32,6 @@ const CreateProduct = () => {
     console.log(e)
     const reader = new FileReader();
     reader.readAsDataURL(e.target.files[0]);
-    // reader.readAsDataURL(e.target.value);
     reader.onload = () => {
       console.log(reader.result);
     };
@@ -86,7 +85,9 @@ const CreateProduct = () => {
                   id="imageSrc" 
                   type="file"
                   accept="image/*"
-                    value={data.imageSrc} onChange={(e) => { handleImage(e) }} 
+                    // value={data.imageSrc} 
+                    files={data.imageSrc} 
+                    onChange={(e) => { handleImage(e) }} 
                     className=" ml-8 absolute w-full opacity-50 cursor-pointer" 
                     />
                   <div className="flex items-center">
