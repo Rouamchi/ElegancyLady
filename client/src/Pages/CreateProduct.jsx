@@ -16,6 +16,8 @@ const CreateProduct = () => {
     // brand: "",
     // category: "",
     countInStock: "",
+    inCart:false,
+    inFavorites:false,
     price: "",
     color: "",
   });
@@ -28,17 +30,18 @@ const CreateProduct = () => {
     console.log(e)
   }
 
-  function handleImage(e) {
-    console.log(e)
-    const reader = new FileReader();
-    reader.readAsDataURL(e.target.files[0]);
-    reader.onload = () => {
-      console.log(reader.result);
-    };
-    reader.onerror = error => {
-      console.log("Error: ", error)
-    }    
-  }
+  // function handleImage(e) {
+  //   console.log(e)
+  //   const reader = new FileReader();
+  //   reader[e.target.id] = e.target.files
+  //   reader.readAsDataURL(e.target.files[0]);
+  //   reader.onload = () => {
+  //     console.log(reader.result);
+  //   };
+  //   reader.onerror = error => {
+  //     console.log("Error: ", error)
+  //   }
+  // }
 
   function click(e) {
     e.preventDefault();
@@ -48,6 +51,8 @@ const CreateProduct = () => {
       description: data.description,
       // brand: data.brand,
       // category: data.category.name,
+      inCart:data.inCart,
+      inFavorites:data.inFavorites,
       countInStock: data.countInStock,
       price: data.price,
       color: data.color,
@@ -67,7 +72,7 @@ const CreateProduct = () => {
       <>
         {/* component */}
         <div className="bg-gray-100 h-auto flex items-center justify-center">
-          <div className="mt-20 mb-20 max-w-md w-full bg-white p-8 rounded-lg shadow-md">
+          <div className="mt-0 mb-0 lg:mt-20 lg:mb-20 max-w-md w-full bg-white p-8 rounded-lg shadow-md">
             <img
               className="mx-auto h-44 w-96 mb-5 -mt-2"
               src={Logo}
@@ -75,45 +80,36 @@ const CreateProduct = () => {
             />
             <form className=''>
               {/* Product Photo */}
-              <div className="mb-4">
-                <label htmlFor="fileAttachment"
-                  className="block text-gray-700 text-sm font-bold mb-2">
-                  Product Photo:
-                </label>
+              {/* <div className="mb-4">
                 <div className="relative border-2 rounded-md px-4 py-3 bg-white flex items-center justify-between hover:border-amber-400 transition duration-150 ease-in-out">
-                  <input 
-                  id="imageSrc" 
-                  type="file"
-                  accept="image/*"
-                    // value={data.imageSrc} 
-                    files={data.imageSrc} 
-                    onChange={(e) => { handleImage(e) }} 
-                    className=" ml-8 absolute w-full opacity-50 cursor-pointer" 
-                    />
+                  <input
+                    id="imageSrc"
+                    type="file"
+                    accept="image/*"
+                    files={data.imageSrc}
+                    onChange={(e) => { handleImage(e) }}
+                    className=" ml-8 absolute w-full opacity-50 cursor-pointer"
+                  />
                   <div className="flex items-center">
                     <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
                     </svg>
-                    {/* <span className="ml-2 text-sm text-gray-500">Choose a Photo</span> */}
                   </div>
                 </div>
+              </div> */}
+              <div className="mb-4">
+                <textarea id="imageSrc" type="text"
+                  value={data.imageSrc} onChange={(e) => { handle(e) }} rows={1}
+                  className="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-amber-400" placeholder="Type URL Photo" defaultValue={""} />
               </div>
               {/* Product Name */}
               <div className="mb-4">
-                <label htmlFor="text"
-                  className="block text-gray-700 text-sm font-bold mb-2">
-                  Product Name
-                </label>
                 <textarea id="name"
                   value={data.name} onChange={(e) => { handle(e) }} rows={1}
                   className="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-amber-400" placeholder="Enter product name" defaultValue={""} />
               </div>
               {/* Product Description */}
               <div className="mb-6">
-                <label htmlFor="text"
-                  className="block text-gray-700 text-sm font-bold mb-2">
-                  Description
-                </label>
                 <textarea id="description"
                   value={data.description} onChange={(e) => { handle(e) }} rows={4}
                   className="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-amber-400" placeholder="What's on your mind?" defaultValue={""}
@@ -121,10 +117,6 @@ const CreateProduct = () => {
               </div>
               {/* Product Price */}
               <div className="mb-4">
-                <label htmlFor="number"
-                  className="block text-gray-700 text-sm font-bold mb-2">
-                  Product Price
-                </label>
                 <textarea id="price"
                   value={data.price} onChange={(e) => { handle(e) }} rows={1}
                   className="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-amber-400" placeholder="Enter product price" defaultValue={""}
@@ -132,10 +124,6 @@ const CreateProduct = () => {
               </div>
               {/* Product Quantity */}
               <div className="mb-4">
-                <label htmlFor="number"
-                  className="block text-gray-700 text-sm font-bold mb-2">
-                  Product Quantity
-                </label>
                 <textarea id="countInStock"
                   value={data.countInStock} onChange={(e) => { handle(e) }} rows={1}
                   className="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-amber-400" placeholder="Enter product quantity" defaultValue={""}
@@ -143,10 +131,6 @@ const CreateProduct = () => {
               </div>
               {/* Product Color */}
               <div className="mb-4">
-                <label htmlFor="text"
-                  className="block text-gray-700 text-sm font-bold mb-2">
-                  Product Color
-                </label>
                 <textarea id="color"
                   value={data.color} onChange={(e) => { handle(e) }} rows={1}
                   className="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-amber-400" placeholder="Enter product color" defaultValue={""}

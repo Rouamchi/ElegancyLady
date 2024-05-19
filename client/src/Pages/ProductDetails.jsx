@@ -5,17 +5,20 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import ToTop from "../Components/ToTop"
 // import Rating from '../Components/Rating'
-// import { useCart } from "react-use-cart"
+// import{ useCart } from "react-use-cart"
 
 
 const ProductDetails = () => {
   const { id } = useParams();
   const [products, setProducts] = useState([])
-  const [quantity, setQuantity] = useState(1)
-  // const [inCart, setInCard] = useState()
-  // const { addItem } = useCart()
+  const [quantity] = useState(1)
+  // const { addToCart } = useCart()
 
   const singleProduct = products.find(obj => obj._id === id)
+  const addToCart = (_id) => {
+    singleProduct.inCart = true
+    singleProduct.countInStock = 1
+  }
 
   useEffect(() => {
     fetch('http://localhost:4000/products')
@@ -92,7 +95,7 @@ const ProductDetails = () => {
                       <button
                         className="flex py-1 px-4 ml-4 bg-amber-400 text-white font-semibold border border-transparent rounded hover:bg-white hover:text-amber-400 hover:border-amber-400 transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0"
                         type='button'>
-                        {singleProduct.inFavorites === true ? "Saved": "Add To Favorites"}
+                        {singleProduct.inFavorites === true ? "Saved" : "Add To Favorites"}
                         {/* <svg className="ml-2 h-5 w-5" fill="white" height="24" viewBox="10 -10 28 58" width="24"><path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path>
                         </svg> */}
                       </button>
@@ -125,14 +128,7 @@ const ProductDetails = () => {
                 <p className="text-gray-700">Quantity :</p>
                 <p className="text-gray-700">
                   {singleProduct.countInStock > 0 ? (
-                    <select className="bg-white" as="select" value={quantity}
-                      onChange={(e) => setQuantity(e.target.value)}>
-                      {[...Array(singleProduct.countInStock).keys()].map((x) => (
-                        <option key={x + 1} value={x + 1}>
-                          {x + 1}
-                        </option>
-                      ))}
-                    </select>) : "0"}
+                    <p>{singleProduct.countInStock}</p>) : "0"}
                 </p>
               </div>
               <hr className="my-4" />
@@ -142,14 +138,15 @@ const ProductDetails = () => {
                   <p className="mb-1 text-lg font-bold">{singleProduct.price * quantity} DH</p>
                 </div>
               </div>
-              <Link to={`/ShoppingCart/${id}?quantity=${quantity}`}>
-                <button disabled={singleProduct.countInStock === 0}
-                  className="flex justify-center mt-3 w-full rounded-md bg-amber-400 py-1.5 font-medium text-blue-50 hover:bg-black">
-                  Add To Cart
-                  <svg className="ml-2 h-5 w-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </button>
-              </Link>
+              {/* <Link to={`/ShoppingCart/${id}?quantity=${quantity}`}> */}
+              <button onClick={() => addToCart(singleProduct)} disabled={singleProduct.countInStock === 0}
+                className="flex justify-center mt-3 w-full rounded-md bg-amber-400 py-1.5 font-medium text-blue-50 hover:bg-black">
+                
+                {singleProduct.inCart === true ? (<span>In Cart</span>) : (<span>Add To Cart</span>)}
+                <svg className="ml-2 h-5 w-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </button>
+              {/* </Link> */} 
             </div>
           </div>
         </div>

@@ -11,6 +11,7 @@ import Registration from './Pages/Registration';
 import NextRegistration from './Pages/NextRegistration'
 import ProductDetails from './Pages/ProductDetails';
 import ShoppingCart from './Pages/ShoppingCart';
+import Cart from './Pages/Cart';
 import Favorites from './Pages/Favorites';
 import Categories from './Pages/Categories';
 import CreateProduct from './Pages/CreateProduct'
@@ -52,6 +53,10 @@ const router = createBrowserRouter([
   {
     path: "/ShoppingCart/:id?",
     element: <ShoppingCart/>,
+  },
+  {
+    path: "/Cart",
+    element: <Cart/>,
   },
   {
     path: "/Favorites",

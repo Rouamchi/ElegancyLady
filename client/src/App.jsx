@@ -7,6 +7,7 @@ import Registration from './Pages/Registration';
 import NextRegistration from './Pages/NextRegistration'
 import ProductDetails from './Pages/ProductDetails';
 import ShoppingCart from './Pages/ShoppingCart';
+import Cart from './Pages/Cart';
 import Favorites from './Pages/Favorites';
 import Categories from './Pages/Categories';
 import CreateProduct from './Pages/CreateProduct'
@@ -26,6 +27,7 @@ export default function App() {
           <Route path='/NextRegistration' exact element={<NextRegistration />} />
           <Route path='/ProductDetails/:id' exact element={<ProductDetails />} />
           <Route path='/ShoppingCart/:id?' exact element={<ShoppingCart />} />
+          <Route path='/Cart' exact element={<Cart/>} />
           <Route path='/Favorites' exact element={<Favorites/>} />
           <Route path='/Categories' exact element={<Categories />} />
 

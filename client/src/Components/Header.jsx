@@ -6,8 +6,8 @@ import Logo from '../images/Logo.png'
 import Morocco from '../images/Morocco.png'
 
 const pages = [
-  { name: '⚜️ ELEGANCY LADY ⚜️', to: '/', current: true },
-  { name: 'CART', to: '/ShoppingCart', current: false },
+  { name: 'ELEGANCY LADY', to: '/', current: true },
+  { name: 'CART', to: '/Cart', current: false },
   { name: 'FAVORITES', to: '/Favorites', current: false },
   { name: 'CATEGORIES', to: '/Categories', current: false },
   { name: '', to: '/SignIn', current: false },
@@ -149,7 +149,7 @@ const Header = () => {
 
                 {/* Cart */}
                 <div className="ml-4 flow-root lg:ml-6">
-                  <Link to="/ShoppingCart" className="group -m-2 flex items-center p-2">
+                  <Link to="/Cart" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-300 group-hover:text-amber-300"
                       aria-hidden="true" />
