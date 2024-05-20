@@ -10,8 +10,7 @@ import SignIn from './Pages/SignIn';
 import Registration from './Pages/Registration';
 import NextRegistration from './Pages/NextRegistration'
 import ProductDetails from './Pages/ProductDetails';
-import ShoppingCart from './Pages/ShoppingCart';
-// import Cart from './Pages/Cart';
+import Cart from './Pages/Cart';
 import CheckOut from './Pages/CheckOut';
 import Favorites from './Pages/Favorites';
 import Categories from './Pages/Categories';
@@ -52,17 +51,13 @@ const router = createBrowserRouter([
     element: <ProductDetails />,
   },
   {
-    path: "/ShoppingCart/:id?",
-    element: <ShoppingCart />,
-  },
-  {
     path: "/CheckOut",
     element: <CheckOut />,
   },
-  // {
-  //   path: "/Cart",
-  //   element: <Cart/>,
-  // },
+  {
+    path: "/Cart",
+    element: <Cart/>,
+  },
   {
     path: "/Favorites/:id?",
     element: <Favorites />,

@@ -5,18 +5,20 @@ import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import ToTop from "../Components/ToTop"
 //import axios from "axios"
-// import Rating from '../Components/Rating'
+//import Rating from '../Components/Rating'
 
 
 const ProductDetails = () => {
   const { id } = useParams();
   const [products, setProducts] = useState([])
+  const singleProduct = products.find(obj => obj._id === id)
   const [quantity] = useState(1)
 
-  const [buttonText, setButtonText] = useState("Add To Favorites"); //same as creating your state variable where "Next" is the default value for buttonText and setButtonText is the setter function for your state variable instead of setState
+  const [buttonText, setButtonText] = useState("Add To Favorites");
   const changeText = (text) => setButtonText(text);
-  const singleProduct = products.find(obj => obj._id === id)
 
+  const [buttonCart, setButtonCart] = useState("Add To Cart");
+  const changeCart = (text) => setButtonCart(text);
 
   useEffect(() => {
     fetch('http://localhost:4000/products')
@@ -135,10 +137,13 @@ const ProductDetails = () => {
                   <p className="mb-1 text-lg font-bold">{singleProduct.price * quantity} DH</p>
                 </div>
               </div>
-              <Link to={`/ShoppingCart/${id}?quantity=${quantity}`}>
+              <Link 
+              // to={`/ShoppingCart/${id}?quantity=${quantity}`}
+              >
                 <button disabled={singleProduct.countInStock === 0}
+                onClick={() => changeCart("Added To Cart")}
                   className="flex justify-center mt-3 w-full rounded-md bg-amber-400 py-1.5 font-medium text-blue-50 hover:bg-black">
-                  Add To Cart
+                  {buttonCart}
                   {/* onClick={() => addToCart(singleProduct)}  */}
                   {/* {singleProduct.inCart === true ? (<span>In Cart</span>) : (<span>Add To Cart</span>)} */}
                   <svg className="ml-2 h-5 w-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
