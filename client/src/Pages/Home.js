@@ -86,12 +86,6 @@ const Home = () => {
         <div className="bg-white">
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             <div className="-mt-12 lg:-mt-16">
-              <button className="mb-2 lg:mb-4 relative border-2 rounded-md px-4 py-3 bg-white flex items-center w-full justify-center hover:border-amber-300 transition duration-150 ease-in-out">
-                <svg className="w-6 h-6 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                </svg>
-                <Link to="/CreateProduct" className="text-gray-400"> Add New Product</Link>
-              </button>
               <h3 className="text-gray-600 text-2xl font-medium">Fashions</h3>
               <div className="grid gap-x-4 gap-y-8 lg:gap-x-6 lg:gap-y-10 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
 

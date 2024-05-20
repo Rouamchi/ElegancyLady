@@ -8,7 +8,7 @@ import Morocco from '../images/Morocco.png'
 const pages = [
   { name: 'ELEGANCY LADY', to: '/', current: true },
   { name: 'CART', to: '/Cart', current: false },
-  { name: 'FAVORITES', to: '/Favorites', current: false },
+  { name: 'FAVORITES', to: '/Favorites', current: true },
   { name: 'CATEGORIES', to: '/Categories', current: false },
   { name: '', to: '/SignIn', current: false },
 ]

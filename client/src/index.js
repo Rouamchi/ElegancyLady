@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import {createBrowserRouter,RouterProvider,} from "react-router-dom";
+import { createBrowserRouter, RouterProvider, } from "react-router-dom";
 import { Provider } from 'react-redux'
 import store from './store'
 import Home from './Pages/Home';
@@ -11,7 +11,8 @@ import Registration from './Pages/Registration';
 import NextRegistration from './Pages/NextRegistration'
 import ProductDetails from './Pages/ProductDetails';
 import ShoppingCart from './Pages/ShoppingCart';
-import Cart from './Pages/Cart';
+// import Cart from './Pages/Cart';
+import CheckOut from './Pages/CheckOut';
 import Favorites from './Pages/Favorites';
 import Categories from './Pages/Categories';
 import CreateProduct from './Pages/CreateProduct'
@@ -19,52 +20,56 @@ import CreateProduct from './Pages/CreateProduct'
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Home/>,
+    element: <Home />,
     errorElement: <h1>Sorry, Page not found</h1>
   },
   {
     path: "/home",
-    element: <Home/>,
-  }, 
+    element: <Home />,
+  },
   {
     path: "/Products",
-    element: <Products/>,
+    element: <Products />,
   },
   {
     path: "/CreateProduct",
-    element: <CreateProduct/>,
+    element: <CreateProduct />,
   },
   {
     path: "/signIn",
-    element: <SignIn/>,
+    element: <SignIn />,
   },
   {
     path: "/Registration",
-    element: <Registration/>,
+    element: <Registration />,
   },
   {
     path: "/NextRegistration",
-    element: <NextRegistration/>,
+    element: <NextRegistration />,
   },
   {
     path: "/ProductDetails/:id",
-    element: <ProductDetails/>,
+    element: <ProductDetails />,
   },
   {
     path: "/ShoppingCart/:id?",
-    element: <ShoppingCart/>,
+    element: <ShoppingCart />,
   },
   {
-    path: "/Cart",
-    element: <Cart/>,
+    path: "/CheckOut",
+    element: <CheckOut />,
   },
+  // {
+  //   path: "/Cart",
+  //   element: <Cart/>,
+  // },
   {
-    path: "/Favorites",
-    element: <Favorites/>,
+    path: "/Favorites/:id?",
+    element: <Favorites />,
   },
   {
     path: "/Categories",
-    element: <Categories/>,
+    element: <Categories />,
   },
 ])
 
