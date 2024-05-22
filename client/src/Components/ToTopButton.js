@@ -28,7 +28,7 @@ function ToTopButton() {
         <ArrowUpwardIcon
           style={{
             color:'white',
-            backgroundColor: '#ffd22b',
+            backgroundColor: 'orange',
             position: 'fixed',
             bottom: '80px',
             right: '50px',

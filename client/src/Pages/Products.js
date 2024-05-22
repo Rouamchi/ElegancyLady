@@ -52,12 +52,12 @@ const Products = () => {
               alt="Your Company"
             />
           </section>
-          <button className="-mb-12 lg:-mb-16 mt-12 lg:mt-24 relative border-2 rounded-md px-4 py-3 bg-gray-100 flex items-center w-full justify-center hover:border-amber-300 transition duration-150 ease-in-out">
+          {/* <button className="-mb-12 lg:-mb-16 mt-12 lg:mt-24 relative border-2 rounded-md px-4 py-3 bg-gray-100 flex items-center w-full justify-center hover:border-amber-300 transition duration-150 ease-in-out">
             <svg className="w-6 h-6 text-gray-400 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
             </svg>
             <Link to="/CreateProduct" className="text-gray-400"> Add New Product</Link>
-          </button>
+          </button> */}
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             <div className="mt-0 grid grid-cols-2 gap-x-4 gap-y-8 lg:gap-x-6 lg:gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
               {products.map((singleProduct) => (
@@ -66,9 +66,9 @@ const Products = () => {
                     <img src={singleProduct.imageSrc} alt={singleProduct.imageAlt} className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
                   </div>
                   <button className="p-2 rounded-full bg-gray-100 text-white mx-28 lg:mx-56 -my-24 -mb-4 hover:bg-white focus:outline-none focus:bg-white">
-                      <svg className="h-5 w-5 lg:h-6 lg:w-6" fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path>
-                      </svg>
-                    </button>
+                    <svg className="h-5 w-5 lg:h-6 lg:w-6" fill="#262626" height="24" viewBox="0 0 48 48" width="24"><path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path>
+                    </svg>
+                  </button>
                   <div className="mt-4 justify-between">
                     <div className="ml-1 lg:ml-0">
                       <h3 className="-mt-4 text-base font-medium text-gray-700 dark:text-gray-200">

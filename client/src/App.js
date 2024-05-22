@@ -8,7 +8,7 @@ import ProductDetails from './Pages/ProductDetails';
 import Cart from './Pages/Cart';
 import CheckOut from './Pages/CheckOut';
 import Favorites from './Pages/Favorites';
-import Categories from './Pages/Categories';
+import Create from './Pages/CreateProduct';
 import CreateProduct from './Pages/CreateProduct'
 
 
@@ -28,7 +28,7 @@ export default function App() {
           <Route path='/Cart' exact element={<Cart />} />
           <Route path='/CheckOut' exact element={<CheckOut />} />
           <Route path='/Favorites/:id?' exact element={<Favorites/>} />
-          <Route path='/Categories' exact element={<Categories />} />
+          <Route path='/CreateProduct' exact element={<Create />} />
 
         </Routes>
       </div>

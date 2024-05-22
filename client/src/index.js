@@ -12,7 +12,7 @@ import ProductDetails from './Pages/ProductDetails';
 import Cart from './Pages/Cart';
 import CheckOut from './Pages/CheckOut';
 import Favorites from './Pages/Favorites';
-import Categories from './Pages/Categories';
+import Create from './Pages/CreateProduct';
 import CreateProduct from './Pages/CreateProduct'
 
 const router = createBrowserRouter([
@@ -58,8 +58,8 @@ const router = createBrowserRouter([
     element: <Favorites />,
   },
   {
-    path: "/Categories",
-    element: <Categories />,
+    path: "/CreateProduct",
+    element: <Create />,
   },
 ])
 

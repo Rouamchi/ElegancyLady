@@ -48,7 +48,7 @@ const Footer = () => {
                   ⚜️ Facebook Page </Link>
                 <Link to="#" target='_blank' rel='noreferrer'
                   className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">
-                  <ReactWhatsapp className='whatsapp' number="+212617293986">⚜️ WhatsApp Account </ReactWhatsapp></Link>
+                  <ReactWhatsapp className='whatsapp' number="+212714540273">⚜️ WhatsApp Account </ReactWhatsapp></Link>
               </div>
             </div>
           </div>
@@ -99,7 +99,7 @@ const Footer = () => {
 
               <Link to='' target='_blank'>
                 <button className="bg-amber-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
-                  <ReactWhatsapp className="w-5 h-5" number="+212617293986"><FaWhatsapp className=" w-5 h-5"></FaWhatsapp></ReactWhatsapp>
+                  <ReactWhatsapp className="w-5 h-5" number="+212714540273"><FaWhatsapp className=" w-5 h-5"></FaWhatsapp></ReactWhatsapp>
                 </button>
               </Link>
 
