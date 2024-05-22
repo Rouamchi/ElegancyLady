@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from 'react'
 import Header from "../Components/Header"
 import Footer from '../Components/Footer'
-import ToTop from "../Components/ToTop"
 import { Link } from "react-router-dom"
 import Logo1 from "../images/Logo1.png"
 import { useParams } from 'react-router-dom'
+import ToTopButton from '../Components/ToTopButton'
 
 
 const Cart = () => {
   const { id } = useParams();
   const [products, setProducts] = useState([])
   const [quantity, setQuantity] = useState(1)
+
+  const [buttonText, setButtonText] = useState("Add To Favorites");
+  const changeText = (text) => setButtonText(text);
 
   function remove(_id) {
     const singleProduct = products.filter((obj) => obj._id !== id)
@@ -107,11 +110,11 @@ const Cart = () => {
                               </p>
                               <div className="flex items-center justify-between pt-3 pb-4 lg:pt-5 lg:pb-0">
                                 <div className="flex itemms-center lg:pl-4">
-                                  <Link to="/Favorites" className="flex text-md font-bold leading-3 text-amber-400 hover:text-amber-500 dark:text-white cursor-pointer lg:-mt-2">
-                                    Add to favorites
+                                  <button onClick={() => changeText("Saved")} className="flex text-md font-bold leading-3 text-amber-400 hover:text-amber-500 dark:text-white cursor-pointer lg:-mt-2">
+                                    {buttonText} {singleProduct.inFavorites === true}
                                     <svg className="ml-1 h-5 w-5" fill="orange" height="24" viewBox="10 2 28 58" width="24"><path d="M34.6 6.1c5.7 0 10.4 5.2 10.4 11.5 0 6.8-5.9 11-11.5 16S25 41.3 24 41.9c-1.1-.7-4.7-4-9.5-8.3-5.7-5-11.5-9.2-11.5-16C3 11.3 7.7 6.1 13.4 6.1c4.2 0 6.5 2 8.1 4.3 1.9 2.6 2.2 3.9 2.5 3.9.3 0 .6-1.3 2.5-3.9 1.6-2.3 3.9-4.3 8.1-4.3m0-3c-4.5 0-7.9 1.8-10.6 5.6-2.7-3.7-6.1-5.5-10.6-5.5C6 3.1 0 9.6 0 17.6c0 7.3 5.4 12 10.6 16.5.6.5 1.3 1.1 1.9 1.7l2.3 2c4.4 3.9 6.6 5.9 7.6 6.5.5.3 1.1.5 1.6.5.6 0 1.1-.2 1.6-.5 1-.6 2.8-2.2 7.8-6.8l2-1.8c.7-.6 1.3-1.2 2-1.7C42.7 29.6 48 25 48 17.6c0-8-6-14.5-13.4-14.5z"></path>
                                     </svg>
-                                  </Link>
+                                  </button>
                                   <button onClick={() => remove(singleProduct._id)}
                                     type="submit" className="text-sm leading-3 text-md font-bold text-red-600 hover:text-red-500 pl-5 cursor-pointer lg:-mt-2">
                                     Delete
@@ -148,22 +151,22 @@ const Cart = () => {
                           </div>
                         </div>
                         <div className='block lg:flex'>
-                        <div className="mt-2 lg:mr-16 flex justify-between">
-                          <p className="text-gray-700 font-medium">Status :</p>
-                          <p className="text-gray-700">{singleProduct.countInStock > 0 ? "In Stock" : "Out Of Stock"}</p>
-                        </div>
-                        <div className="mt-2 flex justify-between">
-                          <p className="text-gray-700 font-medium">Quantity :</p>
-                          {singleProduct.countInStock > 0 ? (
-                            <select className="bg-white text-gray-700" as="select" value={singleProduct.quantity}
-                              onChange={(e) => setQuantity(e.target.value)}>
-                              {[...Array(singleProduct.countInStock).keys()].map((x) => (
-                                <option key={x + 1} value={x + 1}>
-                                  {x + 1}
-                                </option>
-                              ))}
-                            </select>) : "0"}
-                        </div>
+                          <div className="mt-2 lg:mr-16 flex justify-between">
+                            <p className="text-gray-700 font-medium">Status :</p>
+                            <p className="text-gray-700">{singleProduct.countInStock > 0 ? "In Stock" : "Out Of Stock"}</p>
+                          </div>
+                          <div className="mt-2 flex justify-between">
+                            <p className="text-gray-700 font-medium">Quantity :</p>
+                            {singleProduct.countInStock > 0 ? (
+                              <select className="bg-white text-gray-700" as="select" value={singleProduct.quantity}
+                                onChange={(e) => setQuantity(e.target.value)}>
+                                {[...Array(singleProduct.countInStock).keys()].map((x) => (
+                                  <option key={x + 1} value={x + 1}>
+                                    {x + 1}
+                                  </option>
+                                ))}
+                              </select>) : "0"}
+                          </div>
                         </div>
                         <hr className="my-4" />
                         <div className="flex justify-between text-gray-700">
@@ -187,7 +190,7 @@ const Cart = () => {
         </div>
       </main>
       <Footer />
-      <ToTop />
+      <ToTopButton />
     </>
   )
 }

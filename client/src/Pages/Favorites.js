@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import Header from "../Components/Header"
 import Footer from '../Components/Footer'
-import ToTop from "../Components/ToTop"
+import ToTopButton from "../Components/ToTopButton"
 import { Link } from "react-router-dom"
 // import axios from "axios"
 import Logo1 from "../images/Logo1.png"
@@ -101,7 +101,7 @@ const Favorites = () => {
         </div>
       </main>
       <Footer />
-      <ToTop />
+      <ToTopButton />
     </>
   )
 }

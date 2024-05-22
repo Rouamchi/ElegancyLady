@@ -5,7 +5,7 @@ import Footer from "../Components/Footer"
 import { Link } from "react-router-dom"
 import axios from "axios"
 import Logo1 from "../images/Logo1.png"
-import ToTop from "../Components/ToTop"
+import ToTopButton from "../Components/ToTopButton"
 
 
 const Products = () => {
@@ -100,7 +100,7 @@ const Products = () => {
         </div>
       </main>
       <Footer />
-      <ToTop />
+      <ToTopButton />
     </>
   )
 }

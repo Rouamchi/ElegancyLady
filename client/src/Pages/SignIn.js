@@ -3,7 +3,7 @@ import Header from "../Components/Header"
 import Footer from "../Components/Footer"
 import { Link } from 'react-router-dom'
 import Logo from '../images/Logo.png'
-import ToTop from "../Components/ToTop"
+import ToTopButton from "../Components/ToTopButton"
 
 
 const SignIn = () => {
@@ -81,7 +81,7 @@ const SignIn = () => {
         </div>
       </div>
       <Footer />
-      <ToTop />
+      <ToTopButton />
     </>
   )
 }

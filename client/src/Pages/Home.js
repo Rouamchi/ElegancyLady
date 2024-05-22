@@ -4,7 +4,7 @@ import axios from "axios"
 import Header from "../Components/Header"
 import Footer from "../Components/Footer"
 import { Link } from "react-router-dom"
-import ToTop from "../Components/ToTop"
+import ToTopButton from "../Components/ToTopButton"
 import './Home.css'
 
 const Home = () => {
@@ -21,8 +21,6 @@ const Home = () => {
   return (
     <>
       <Header />
-      <div>
-        <>
           <section className="" >
             <div className="relative overflow-hidden bg-cover bg-no-repeat">
               <div className="bgImage hide-when-mobile">
@@ -79,8 +77,6 @@ const Home = () => {
               </div>
             </div>
           </section>
-        </>
-      </div>
 
       <main>
         <div className="bg-white">
@@ -128,7 +124,7 @@ const Home = () => {
         </div>
       </main>
       <Footer />
-      <ToTop />
+      <ToTopButton />
     </>
   )
 }

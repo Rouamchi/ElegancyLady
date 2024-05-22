@@ -5,7 +5,7 @@ import { Dialog, Popover, Tab, Transition } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link, NavLink } from 'react-router-dom'
 import navigation from '../navigation'
-import ToTop from "../Components/ToTop"
+import ToTopButton from "../Components/ToTopButton"
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(' ')
@@ -192,7 +192,7 @@ const Categories = () => {
         </header>
       </div>
       {/* <Footer/> */}
-      <ToTop />
+      <ToTopButton />
     </>
   )
 }

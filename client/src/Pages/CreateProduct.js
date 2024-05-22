@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import Header from "../Components/Header"
 import Footer from '../Components/Footer'
-import ToTop from "../Components/ToTop"
+import ToTopButton from "../Components/ToTopButton"
 import Logo from '../images/Logo.png'
 import Axios from "axios"
 
@@ -164,7 +164,7 @@ const CreateProduct = () => {
         </div>
       </>
       <Footer />
-      <ToTop />
+      <ToTopButton />
     </>
   )
 }

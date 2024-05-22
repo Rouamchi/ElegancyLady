@@ -8,7 +8,6 @@ import Home from './Pages/Home';
 import Products from './Pages/Products';
 import SignIn from './Pages/SignIn';
 import Registration from './Pages/Registration';
-import NextRegistration from './Pages/NextRegistration'
 import ProductDetails from './Pages/ProductDetails';
 import Cart from './Pages/Cart';
 import CheckOut from './Pages/CheckOut';
@@ -41,10 +40,6 @@ const router = createBrowserRouter([
   {
     path: "/Registration",
     element: <Registration />,
-  },
-  {
-    path: "/NextRegistration",
-    element: <NextRegistration />,
   },
   {
     path: "/ProductDetails/:id",

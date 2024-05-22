@@ -153,7 +153,9 @@ const Header = () => {
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-300 group-hover:text-amber-300"
                       aria-hidden="true" />
-                    <Link to="#" className="ml-2 text-sm font-medium text-gray-300 group-hover:text-amber-300">0</Link>
+                    {/* <Link to="#" className="ml-2 text-sm font-medium text-gray-300 group-hover:text-amber-300">
+                     0
+                    </Link> */}
                     <span className="sr-only">items in cart, view bag</span>
                   </Link>
                 </div>
