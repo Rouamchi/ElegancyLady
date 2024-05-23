@@ -1,5 +1,7 @@
 const express = require('express');
 const router = express.Router();
+const multer = require('multer');
+const upload = multer({ dest: 'uploads/' });
 const Products = require('../schemas/products.schema')
 
 /* GET users listing. */
@@ -8,8 +10,9 @@ router.get('/', async function (req, res, next) {
   res.send(products);
 });
 //////////////////
-router.post('/', async function (req, res, next) {
-  const { users, name, imageSrc, imageAlt, inCart, inFavorites, brand, description, category, countInStock, price, color, rating } = req.body
+router.post('/', upload.single('imageSrc'), async function (req, res, next) {
+  const { users, name, imageAlt, inCart, inFavorites, brand, description, category, countInStock, price, color, rating } = req.body
+  const imageSrc = req.file.path;
   const newProduct = await Products.create({
     users,
     name, 

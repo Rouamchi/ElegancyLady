@@ -9,54 +9,51 @@ const CreateProduct = () => {
 
   const url = "http://localhost:4000/Products"
   const [data, setData] = useState({
-    users: "",
+    // users: "",
     name: "",
-    imageSrc: "",
+    imageSrc: null,
     description: "",
     // brand: "",
     // category: "",
     countInStock: "",
-    inCart:false,
-    inFavorites:false,
+    inCart: false,
+    inFavorites: false,
     price: "",
     color: "",
   });
 
 
   function handle(e) {
-    const newdata = { ...data }
-    newdata[e.target.id] = e.target.value
-    setData(newdata)
-    console.log(e)
+    const newdata = { ...data };
+    if (e.target.id === "imageSrc") {
+      // If it's the image input, update with file object
+      newdata[e.target.id] = e.target.files[0];
+    } else {
+      // Otherwise, handle other inputs
+      newdata[e.target.id] = e.target.value;
+    }
+    setData(newdata);
   }
-
-  // function handleImage(e) {
-  //   console.log(e)
-  //   const reader = new FileReader();
-  //   reader[e.target.id] = e.target.files
-  //   reader.readAsDataURL(e.target.files[0]);
-  //   reader.onload = () => {
-  //     console.log(reader.result);
-  //   };
-  //   reader.onerror = error => {
-  //     console.log("Error: ", error)
-  //   }
-  // }
 
   function click(e) {
     e.preventDefault();
-    Axios.post(url, {
+    const formData = new FormData();
+    // Append all data including the image file to FormData
+    for (let key in data) {
+      formData.append(key, data[key]);
+    }
+    Axios.post(url, formData, {
       name: data.name,
       imageSrc: data.imageSrc,
       description: data.description,
       // brand: data.brand,
       // category: data.category.name,
-      inCart:data.inCart,
-      inFavorites:data.inFavorites,
+      inCart: data.inCart,
+      inFavorites: data.inFavorites,
       countInStock: data.countInStock,
       price: data.price,
       color: data.color,
-      users: data.users.fullname,
+      // users: data.users.fullname,
     })
       .then(res => {
         console.log(res.data)
@@ -80,27 +77,14 @@ const CreateProduct = () => {
             />
             <form className=''>
               {/* Product Photo */}
-              {/* <div className="mb-4">
-                <div className="relative border-2 rounded-md px-4 py-3 bg-white flex items-center justify-between hover:border-amber-400 transition duration-150 ease-in-out">
-                  <input
-                    id="imageSrc"
-                    type="file"
-                    accept="image/*"
-                    files={data.imageSrc}
-                    onChange={(e) => { handleImage(e) }}
-                    className=" ml-8 absolute w-full opacity-50 cursor-pointer"
-                  />
-                  <div className="flex items-center">
-                    <svg className="w-6 h-6 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 6v6m0 0v6m0-6h6m-6 0H6" />
-                    </svg>
-                  </div>
-                </div>
-              </div> */}
               <div className="mb-4">
-                <textarea id="imageSrc" type="text"
-                  value={data.imageSrc} onChange={(e) => { handle(e) }} rows={1}
-                  className="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-amber-400" placeholder="Type URL Photo" defaultValue={""} />
+                <input
+                  id="imageSrc"
+                  type="file"
+                  onChange={handle}
+                  className="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-amber-400"
+                  placeholder="Choose Image"
+                />
               </div>
               {/* Product Name */}
               <div className="mb-4">
@@ -149,7 +133,7 @@ const CreateProduct = () => {
               </div> */}
               {/* Submit Button and Character Limit Section */}
               <div className="flex items-center justify-between">
-                <button onClick={(e) => click(e)}
+                <button onClick={click}
                   type="submit"
                   className="flex justify-center items-center bg-amber-400 hover:bg-amber-500 focus:outline-none focus:shadow-outline-amber text-white py-2 px-4 rounded-md transition duration-300 gap-2"> {" "}
                   Post{" "}

@@ -36,6 +36,7 @@ const ProductDetails = () => {
 
   }, [])
 
+
   const addToCart = () => {
     if (!cart.some(item => item._id === singleProduct._id)) {
       setCart([...cart, singleProduct.inCart === true]);
@@ -66,6 +67,7 @@ const ProductDetails = () => {
               <div className="relative block lg:flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                 <div className="relative m-9 lg:m-0 w-4/5 lg:w-2/5 shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
                   <img key={singleProduct._id}
+                  singleProduct={singleProduct}
                     alt={singleProduct.imageAlt}
                     src={singleProduct.imageSrc}
                     className="h-full w-full object-cover" />

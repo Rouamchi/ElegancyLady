@@ -12,7 +12,7 @@ const OrderSchema = new mongoose.Schema({
     {
       name: { type: String, required: true },
       quantity: { type: Number, required: true },
-      imageSrc: { type: String, required: true },
+      imageSrc: { type: String, default: null },
       price: { type: Number, required: true },
       products: {
         type: mongoose.Schema.Types.ObjectId,
