@@ -12,30 +12,34 @@ router.get('/', async function (req, res, next) {
 });
 
 router.post('/', async function (req, res, next) {
-  const { name, password, fullName, email, isAdmin, gender, birthdate} = req.body
+  const { username, password,  email, address, city, postalCode, country, isAdmin, gender, birthdate } = req.body
   const newUser = await Users.create({
-    name, 
+    username,
     password,
-    fullName, 
+    // fullName,
     email,
-    isAdmin, 
-    gender,
-    birthdate,
+    address,
+    city,
+    postalCode,
+    country,
+    isAdmin,
     createdAt: new Date(),
   })
   res.send(newUser)
 })
 router.put('/', async function (req, res, next) {
-  const {name, password, fullName, email, isAdmin, gender, birthdate, _id } = req.body
+  const { username, password, email, address, city, postalCode, country, isAdmin, gender, birthdate, _id } = req.body
   const newUser = await Users.findByIdAndUpdate(_id,
     {
-      name, 
+      username,
       password,
-      fullName, 
+      // fullName,
       email,
-      isAdmin, 
-      gender,
-      birthdate,
+      address,
+      city,
+      postalCode,
+      country,
+      isAdmin,
     }, { new: true })
   res.send(newUser);
 })

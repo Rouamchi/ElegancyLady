@@ -2,13 +2,15 @@ const mongoose = require('mongoose');
 const deepPopulate = require('mongoose-deep-populate')(mongoose);
 const UsersSchema = new mongoose.Schema(
   {
-  name: {type: String, required: true},
-  password: {type: String, required: true},
-  fullname: String,
-  email: {type: String, required: true},
+  username: {type: String},
+  password: {type: String},
+  // fullname: {type: String},
+  email: {type: String},
+  address: {type: String},
+  city: {type: String},
+  postalCode: {type: String},
+  country: {type: String,},
   isAdmin: {type: Boolean, default: false},
-  gender: String,
-  birthdate: Date,
   createdAt: Date,
   isVisible: {type: Boolean, default: true}
 }

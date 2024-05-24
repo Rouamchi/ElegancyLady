@@ -34,6 +34,7 @@
     "react-scroll-top": "^1.0.4",
     "react-share": "^5.1.0",
     "react-use-cart": "^1.13.0",
+    "react-use-storage": "^0.5.1",
     "react-whatsapp": "^0.3.0",
     "redux": "^4.2.1",
     "redux-devtools-extension": "^2.13.9",
