@@ -38,7 +38,7 @@ app.use('/uploads', express.static('uploads'), function (req, res, next) {
   next();
 });
 
-// app.use('/ProductDetails/uploads', express.static('ProductDetails/uploads'));
+ //app.use('/ProductDetails/uploads', express.static('ProductDetails/uploads'));
 
 
 app.use('/', indexRouter);

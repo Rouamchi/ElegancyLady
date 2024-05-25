@@ -31,6 +31,7 @@ router.post('/', upload.single('imageSrc'), async function (req, res, next) {
   })
   res.send(newProduct)
 })
+
 router.put('/', async function (req, res, next) {
   const { name, imageSrc, imageAlt, brand, description, inCart, inFavorites, category, countInStock, price, color, rating, _id } = req.body
   const newProduct = await Products.findByIdAndUpdate(_id,

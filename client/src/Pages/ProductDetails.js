@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom'
 import ToTopButton from "../Components/ToTopButton";
 
 
-
 const ProductDetails = () => {
   const { id } = useParams();
   const [products, setProducts] = useState([])
