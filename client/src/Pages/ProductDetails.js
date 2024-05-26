@@ -16,7 +16,6 @@ const ProductDetails = () => {
 
   const [buttonText, setButtonText] = useState("Add To Favorites");
   const changeText = (text) => setButtonText(text);
-
   const [buttonCart, setButtonCart] = useState("Add To Cart");
   const changeCart = (text) => setButtonCart(text);
 
