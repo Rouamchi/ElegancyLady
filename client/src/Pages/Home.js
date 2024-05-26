@@ -9,8 +9,6 @@ import './Home.css'
 
 const Home = () => {
   const [products, setProducts] = useState([])
-  // const [cart, setCart] = useState([]);
-  // const [favorites, setFavorites] = useState([]);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -20,23 +18,6 @@ const Home = () => {
     fetchProducts()
   }, [])
 
-  // const addToCart = (singleProduct) => {
-  //   if (!cart.some(item => item._id === singleProduct._id)) {
-  //     setCart([...cart, singleProduct]);
-  //     alert('Product added to cart!');
-  //   } else {
-  //     alert('Product is already in cart!');
-  //   }
-  // };
-
-  // const addToFavorites = (singleProduct) => {
-  //   if (!favorites.some(item => item._id === singleProduct._id)) {
-  //     setFavorites([...favorites, singleProduct.inFavorites === true]);
-  //     alert('Product added to Favorites!');
-  //   } else {
-  //     alert('Product is already in Favorites!');
-  //   }
-  // };
 
   return (
     <>

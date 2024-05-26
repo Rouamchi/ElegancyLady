@@ -25,14 +25,13 @@ const ProductDetails = () => {
       .then((data) => {
         setProducts(data)
       })
-
       .catch((err) => {
         console.log(err)
       })
 
   }, [])
 
-
+const urlImage = "http://localhost:4000/uploads"
   const addToCart = () => {
     if (!cart.some(item => item._id === singleProduct._id)) {
       setCart([...cart, singleProduct.inCart === true]);
@@ -64,7 +63,8 @@ const ProductDetails = () => {
                 <div className="relative m-9 lg:m-0 w-4/5 lg:w-2/5 shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
                   <img key={singleProduct._id}
                     alt={singleProduct.imageAlt}
-                    src={`http://localhost:4000/uploads/181e5fe5a7974c9732bba98220e326a2`}
+                    src={singleProduct.imageSrc}
+                    // src={urlImage}
                     className="h-full w-full object-cover" />
                 </div>
                 <div className="p-6">
