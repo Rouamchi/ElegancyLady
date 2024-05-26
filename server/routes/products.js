@@ -5,7 +5,7 @@ const upload = multer({ dest: 'uploads/' });
 const Products = require('../schemas/products.schema')
 
 /* GET users listing. */
-router.get('/', upload.single('imageSrc'), async function (req, res, next) {
+router.get('/', async function (req, res, next) {
   const products = await Products.find()
   res.send(products);
 });

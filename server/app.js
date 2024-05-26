@@ -24,7 +24,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 
 //to accept data from locahost
-app.use('/uploads', express.static('uploads'), function (req, res, next) {
+app.use('/', function (req, res, next) {
   // Website you wish to allow to connect
   res.setHeader('Access-Control-Allow-Origin', '*');
   // Request methods you wish to allow
@@ -38,7 +38,7 @@ app.use('/uploads', express.static('uploads'), function (req, res, next) {
   next();
 });
 
- //app.use('/ProductDetails/uploads', express.static('ProductDetails/uploads'));
+ app.use('/uploads', express.static('uploads'));
 
 
 app.use('/', indexRouter);
