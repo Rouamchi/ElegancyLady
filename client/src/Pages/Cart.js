@@ -165,7 +165,7 @@ const Cart = () => {
                             <div className="flex justify-between text-gray-700">
                               <p className="text-lg font-bold">Total</p>
                               <div className="">
-                                <p className="mb-1 text-lg font-bold">{singleProduct.price * quantity} DH</p>
+                                <p  className="mb-1 text-lg font-bold">{singleProduct.price * quantity} DH</p>
                               </div>
                             </div>
                             <Link to="/CheckOut">
