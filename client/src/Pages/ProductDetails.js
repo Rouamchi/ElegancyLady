@@ -31,7 +31,7 @@ const ProductDetails = () => {
 
   }, [])
 
-const urlImage = "http://localhost:4000/uploads"
+// const urlImage = "http://localhost:4000/uploads"
   const addToCart = () => {
     if (!cart.some(item => item._id === singleProduct._id)) {
       setCart([...cart, singleProduct.inCart === true]);
@@ -63,8 +63,8 @@ const urlImage = "http://localhost:4000/uploads"
                 <div className="relative m-9 lg:m-0 w-4/5 lg:w-2/5 shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
                   <img key={singleProduct._id}
                     alt={singleProduct.imageAlt}
-                    // src={singleProduct.imageSrc}
-                    src={urlImage}
+                    src={singleProduct.imageSrc}
+                    // src={urlImage}
                     className="h-full w-full object-cover" />
                 </div>
                 <div className="p-6">

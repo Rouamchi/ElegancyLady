@@ -39,6 +39,9 @@ app.use('/', function (req, res, next) {
 });
 
  app.use('/uploads', express.static('uploads'));
+//  app.get("/image.png", (req, res) => {
+//   res.sendFile(path.join(__dirname, "./uploads/image.png"));
+// });
 
 
 app.use('/', indexRouter);
