@@ -4,6 +4,8 @@ import Footer from "../Components/Footer"
 import { useParams } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import ToTopButton from "../Components/ToTopButton";
+import CartAlert from "../Components/CartAlert";
+import FavoriteAlert from "../Components/FavoriteAlert";
 
 
 const ProductDetails = () => {
@@ -11,13 +13,14 @@ const ProductDetails = () => {
   const [products, setProducts] = useState([])
   const singleProduct = products.find(obj => obj._id === id)
   const [quantity] = useState(1)
-  const [cart, setCart] = useState([]);
-  const [favorites, setFavorites] = useState([]);
-
   const [buttonText, setButtonText] = useState("Add To Favorites");
   const changeText = (text) => setButtonText(text);
   const [buttonCart, setButtonCart] = useState("Add To Cart");
   const changeCart = (text) => setButtonCart(text);
+  const [cart, setCart] = useState([])
+  const [showAlert1, setShowAlert1] = useState(false);
+  const [showAlert2, setShowAlert2] = useState(false);
+
 
   useEffect(() => {
     fetch('http://localhost:4000/products')
@@ -31,32 +34,37 @@ const ProductDetails = () => {
 
   }, [])
 
-// const urlImage = "http://localhost:4000/uploads"
   const addToCart = () => {
-    if (!cart.some(item => item._id === singleProduct._id)) {
-      setCart([...cart, singleProduct.inCart === true]);
-      alert('Product added to cart!');
+    if (!singleProduct.inCart) {
+      const updatedProduct = { ...singleProduct, inCart: true };
+      console.log("Updated product:", updatedProduct);
+      setCart([...cart, updatedProduct]);
+      console.log("Cart after adding product:", [...cart, updatedProduct]);
+      changeCart("Added To Cart");
     } else {
-      alert('Product is already in cart!');
+
     }
   };
-
-  const addToFavorites = () => {
-    if (!favorites.some(item => item._id === singleProduct._id)) {
-      setFavorites([...favorites, singleProduct.inFavorites === true]);
-      alert('Added to Favorites!');
-    } else {
-      alert('Already in Favorites!');
-    }
-  }
+  const clickCart = () => {
+    setShowAlert1(true);
+    setTimeout(() => {
+      setShowAlert1(false);
+    }, 4000);
+  };
+  const clickFavorite = () => {
+    setShowAlert2(true);
+    setTimeout(() => {
+      setShowAlert2(false);
+    }, 4000);
+  };
 
   if (singleProduct != null)
     return (
       <>
         <Header />
-        {/* <CartAlert/>
-        <FavoriteAlert/> */}
         <div className="w-full min-h-screen bg-gray-100 flex flex-col justify-center">
+        {showAlert1 && <CartAlert className="" />}
+            {showAlert2 && <FavoriteAlert className="" />}
           <div className="block lg:flex" >
             <div className="relative m-3 h-4/5 flex flex-wrap mx-auto justify-center">
               <div className="relative block lg:flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
@@ -106,7 +114,7 @@ const ProductDetails = () => {
                   <div className="inline-block">
                     <div className="mt-5 lg:ml-8 flex justify-center gap-x-3">
                       <button
-                        onClick={() => { addToFavorites(); changeText("Saved !"); }}
+                        onClick={() => { changeText("Saved !"); clickFavorite(); }}
                         className="flex py-1 px-4 ml-4 bg-amber-400 text-white font-semibold border border-transparent rounded hover:bg-white hover:text-amber-400 hover:border-amber-400 transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0"
                         type='button'>{buttonText} {singleProduct.inFavorites === true}
                       </button>
@@ -149,17 +157,14 @@ const ProductDetails = () => {
                   <p className="mb-1 text-lg font-bold">{singleProduct.price * quantity} DH</p>
                 </div>
               </div>
-              <Link
-              // to={`/ShoppingCart/${id}?quantity=${quantity}`}
-              >
-                <button onClick={() => { addToCart(); changeCart("Added To Cart"); }}
-                  disabled={singleProduct.countInStock === 0}
-                  className="flex justify-center mt-3 w-full rounded-md bg-amber-400 py-1.5 font-medium text-blue-50 hover:bg-black">
-                  {buttonCart}
-                  <svg className="ml-2 h-5 w-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
-                  </svg>
-                </button>
-              </Link>
+              {/* {`/ShoppingCart/${id}?quantity=${quantity}`} */}
+              <button onClick={() => { addToCart(); clickCart(); }}
+                disabled={singleProduct.countInStock === 0}
+                className="flex justify-center mt-3 w-full rounded-md bg-amber-400 py-1.5 font-medium text-blue-50 hover:bg-black">
+                {buttonCart}
+                <svg className="ml-2 h-5 w-5" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" stroke="currentColor"><path d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z" />
+                </svg>
+              </button>
             </div>
           </div>
         </div>

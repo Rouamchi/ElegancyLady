@@ -1,4 +1,4 @@
-import { Fragment, useState } from 'react'
+import { Fragment, useState} from 'react'
 import { Dialog, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
@@ -15,7 +15,6 @@ const pages = [
 
 const Header = () => {
   const [open, setOpen] = useState(false)
-
   return (
     <div className="bg-white">
       {/* Mobile menu */}
@@ -153,9 +152,9 @@ const Header = () => {
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-300 group-hover:text-amber-300"
                       aria-hidden="true" />
-                    {/* <Link to="#" className="ml-2 text-sm font-medium text-gray-300 group-hover:text-amber-300">
-                     0
-                    </Link> */}
+                    <Link to="#" className="ml-2 text-sm font-medium text-gray-300 group-hover:text-amber-300">
+                    {/* 0 */}
+                    </Link>
                     <span className="sr-only">items in cart, view bag</span>
                   </Link>
                 </div>

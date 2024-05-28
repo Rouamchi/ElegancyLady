@@ -8,7 +8,6 @@ import Logo1 from "../images/Logo1.png"
 
 const Favorites = () => {
   const [products, setProducts] = useState([])
-
   const removeFromCart = (productId) => {
     const updatedProducts = products.filter(product => product._id !== productId);
     setProducts(updatedProducts);
@@ -19,7 +18,6 @@ const Favorites = () => {
       .then((response) => response.json())
       .then((data) => {
         setProducts(data)
-
       })
 
       .catch((err) => {

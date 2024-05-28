@@ -10,9 +10,12 @@ import CheckOut from './Pages/CheckOut';
 import Favorites from './Pages/Favorites';
 import Create from './Pages/CreateProduct';
 import CreateProduct from './Pages/CreateProduct'
+import React from 'react';
+
 
 
 export default function App() {
+
 
   return (
     <>
