@@ -49,13 +49,13 @@ const ProductDetails = () => {
     setShowAlert1(true);
     setTimeout(() => {
       setShowAlert1(false);
-    }, 3000);
+    }, 4000);
   };
   const clickFavorite = () => {
     setShowAlert2(true);
     setTimeout(() => {
       setShowAlert2(false);
-    }, 3000);
+    }, 4000);
   };
 
   if (singleProduct != null)

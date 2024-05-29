@@ -30,10 +30,9 @@ const CheckOut = () => {
             alt="Your Company"
           />
         </div >
-        {showAlert && <CheckOutAlert />}
         <ReactWhatsapp number="+212714540273" className="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2">
           <ReactWhatsapp className="w-8 h-8 mr-4" number="+212714540273"><FaWhatsapp className=" w-7 h-7 text-green-600"></FaWhatsapp></ReactWhatsapp>
-          Cantact Seller To Finish Your Payment Easily !
+          Send Screenshot You Taked to Seller To Finish Your Payment Easily !
         </ReactWhatsapp>
         <div className='text-gray-700 text-md font-bold px-5 py-2.5 text-center inline-flex items-center mt-10 mr-2 mb-2'>
           Or Pay With Card:</div>
@@ -48,6 +47,7 @@ const CheckOut = () => {
           </svg>
           Pay with Visa
         </button>
+        {showAlert && <CheckOutAlert />}
         <button onClick={click} type="button"
           className="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg text-md px-5 py-2.5 text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2">
           <svg className="mr-2 -ml-1 w-7 h-4" viewBox="0 0 601 360" fill="none" xmlns="http://www.w3.org/2000/svg">

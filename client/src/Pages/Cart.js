@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, createRef } from 'react';
 import Header from "../Components/Header";
 import Footer from '../Components/Footer';
 import { Link } from "react-router-dom";
 import Logo1 from "../images/Logo1.png";
 import ToTopButton from '../Components/ToTopButton';
+import {createFileName, useScreenshot} from 'use-react-screenshot'
 
 const Cart = () => {
   const [products, setProducts] = useState([]);
@@ -11,8 +12,22 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
 
-  const changeText = (text) => setButtonText(text);
+  const [ takeScreenshot] = useScreenshot({
+    type:'image/png',
+    quality:1.0
+  })
+  const download = (image, {name = 'ScreenshotElegancyLady', extention ='png'}={}) =>{
+    const a = document.createElement('a')
+    a.href = image
+    a.download = createFileName(extention, name)
+    a.click()
+  }
+  const ref = createRef(null)
+  const DownloadScreenShot = () => {
+    takeScreenshot(ref.current).then(download)
+  }
 
+  const changeText = (text) => setButtonText(text);
   const removeFromCart = (productId) => {
     const updatedProducts = products.filter(product => product._id !== productId);
     setProducts(updatedProducts);
@@ -58,8 +73,9 @@ const Cart = () => {
 
   return (
     <>
+    <div>
       <Header />
-      <main>
+      <main ref={ref}>
         <div className="bg-gray-100">
           <section className="mt-0">
             <div
@@ -191,7 +207,7 @@ const Cart = () => {
                             </div>
                           </div>
                           <Link to="/CheckOut">
-                            <button disabled={singleProduct.countInStock === 0}
+                            <button onClick={DownloadScreenShot} disabled={singleProduct.countInStock === 0}
                               className="mt-3 w-full rounded-md bg-amber-400 py-1.5 font-medium text-blue-50 hover:bg-black">
                               Check Out
                             </button>
@@ -214,9 +230,9 @@ const Cart = () => {
       </main>
       <Footer />
       <ToTopButton className="fixed"/>
+      </div>
     </>
   );
 }
 
 export default Cart;
-
