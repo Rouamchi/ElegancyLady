@@ -53,7 +53,7 @@ const Products = () => {
             />
           </section>
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-            <div className="mt-0 grid grid-cols-2 gap-x-4 gap-y-8 lg:gap-x-6 lg:gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+            <div className="overflow-hidden mt-0 grid grid-cols-2 gap-x-4 gap-y-8 lg:gap-x-6 lg:gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
               {products.map((singleProduct) => (
                 <div to={singleProduct._id} className="group relative">
                   <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:rounded-2xl bg-gray-200 lg:aspect-none h-48 lg:h-80">

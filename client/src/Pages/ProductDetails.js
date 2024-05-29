@@ -63,9 +63,11 @@ const ProductDetails = () => {
       <>
         <Header />
         <div className="w-full min-h-screen bg-gray-100 flex flex-col justify-center">
-        {showAlert1 && <CartAlert className="" />}
-            {showAlert2 && <FavoriteAlert className="" />}
           <div className="block lg:flex" >
+            <div>
+              {showAlert1 && <CartAlert />}
+              {showAlert2 && <FavoriteAlert />}
+            </div>
             <div className="relative m-3 h-4/5 flex flex-wrap mx-auto justify-center">
               <div className="relative block lg:flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
                 <div className="relative m-9 lg:m-0 w-4/5 lg:w-2/5 shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">

@@ -60,7 +60,7 @@ const Footer = () => {
               <img src="https://www.svgrepo.com/show/303128/download-on-the-app-store-apple-logo.svg" width="130" height="110" alt="" />
             </div>
 
-            <div className="flex gap-4 hover:cursor-pointer">
+            <div className="flex gap-3 hover:cursor-pointer">
               <Link to='https://www.facebook.com/profile.php?id=61559465095245&mibextid=ZbWKwL' target='_blank'>
                 <button className="bg-amber-500 p-2 font-semibold text-white inline-flex items-center space-x-2 rounded-full">
                   <svg className="w-5 h-5 fill-current" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">

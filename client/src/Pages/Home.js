@@ -82,7 +82,7 @@ const Home = () => {
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             <div className="-mt-12 lg:-mt-16">
               <h3 className="text-gray-600 text-2xl font-medium">Fashions</h3>
-              <div className="grid gap-x-4 gap-y-8 lg:gap-x-6 lg:gap-y-10 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
+              <div className="overflow-hidden grid gap-x-4 gap-y-8 lg:gap-x-6 lg:gap-y-10 grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 mt-6">
                 {products.map((singleProduct) => (
                   <div key={singleProduct._id} singleProduct={singleProduct} className="group relative">
                     <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:rounded-2xl bg-gray-200 lg:aspect-none h-48 lg:h-80">
