@@ -75,7 +75,7 @@ const Cart = () => {
                     A collection which is constantly renewed to satisfy you, and which is intended to be accessible to all!
                     Authentic, original & Luxe!
                   </p>
-                  <Link to="/" className="flex items-center mt-1 lg:mt-4 px-3 py-2 bg:transparent text-white text-sm uppercase font-medium rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
+                  <Link to="/" className="flex items-center mt-1 lg:mt-4 px-3 py-2 bg:transparent text-white text-sm uppercase font-medium rounded hover:bg-gray-600 focus:outline-none ">
                     <span>Back To Home</span>
                     <svg className="h-5 w-5 mx-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" stroke="currentColor">
                       <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
@@ -96,7 +96,7 @@ const Cart = () => {
               Go Back
             </Link>
           </div>
-          <div className="w-full min-h-screen bg-gray-100 flex flex-col">
+          <div className="overflow-hidden w-full min-h-screen bg-gray-100 flex flex-col">
             <div className="block">
               <div>
                 <ul>
