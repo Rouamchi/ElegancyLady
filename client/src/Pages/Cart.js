@@ -205,7 +205,7 @@ const Cart = () => {
             </div>
             {/* Display Total for all products in the cart */}
             <div className="flex justify-center md:justify-end md:mr-20">
-              <button className="lg:mt-6 mb-4 rounded-md bg-white border border-gray-700 py-2 px-24 font-medium text-gray-700">
+              <button className="lg:mt-6 mb-4 rounded-md bg-white py-2 px-24 font-medium text-gray-700 shadow-md">
                 Global Total:   {total} DH
               </button>
             </div>
