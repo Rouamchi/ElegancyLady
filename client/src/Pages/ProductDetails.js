@@ -21,6 +21,7 @@ const ProductDetails = () => {
   const [showAlert1, setShowAlert1] = useState(false);
   const [showAlert2, setShowAlert2] = useState(false);
 
+  // const urlImage = "http://localhost:4000/uploads"
 
   useEffect(() => {
     fetch('http://localhost:4000/products')
@@ -63,18 +64,18 @@ const ProductDetails = () => {
       <>
         <Header />
         <div className="w-full min-h-screen bg-gray-100 flex flex-col justify-center">
-          <div className="block lg:flex" >
+          <div className="relative block lg:flex" >
             <div>
               {showAlert1 && <CartAlert />}
               {showAlert2 && <FavoriteAlert />}
             </div>
             <div className="m-3 h-4/5 flex flex-wrap mx-auto justify-center">
               <div className="block lg:flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div className="m-9 lg:m-0 w-4/5 lg:w-2/5 shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
+                <div className="m-9 md:h-96 lg:m-0 w-4/5 lg:w-2/5 shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
                   <img key={singleProduct._id}
                     alt={singleProduct.imageAlt}
                     src={singleProduct.imageSrc}
-                    // src={urlImage}
+                    // src={`http://localhost:4000/uploads/${singleProduct.imageFilename}`}
                     className="h-full w-full object-cover" />
                 </div>
                 <div className="p-6">

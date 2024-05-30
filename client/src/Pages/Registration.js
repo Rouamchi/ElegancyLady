@@ -58,7 +58,7 @@ const Registration = () => {
         <div className="space-y-12">
           {/* -------------------------------- */}
           <img
-            className="mx-auto  h-56 w-96"
+            className="mx-auto  h-40 w-auto"
             src={Logo}
             alt="Your Company"
           />

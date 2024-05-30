@@ -102,17 +102,11 @@ const Cart = () => {
               </div>
             </div>
             <img
-              className=" mx-auto h-28 w-auto mt-4 mb-1 lg:mb-1"
+              className=" mx-auto h-24 w-auto mt-4 mb-1 lg:mb-1"
               src={Logo1}
               alt="Your Company"
             />
           </section>
-          <div onclick="checkoutHandler(false)"
-            className="ml-8 lg:ml-24 lg:mb-2 mt-3 w-3/12 lg:w-1/12 rounded bg-black py-1 font-medium text-blue-50 hover:bg-amber-400">
-            <Link to="/" className="flex ml-4 lg:ml-6 items-center mb-1 text-gray-100 hover:text-gray-100 dark:text-white cursor-pointer">
-              Go Back
-            </Link>
-          </div>
           <div ref={ref} className="overflow-hidden w-full min-h-screen bg-gray-100 flex flex-col">
             <div className="block">
               <div>
