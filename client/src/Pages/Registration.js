@@ -14,7 +14,6 @@ const Registration = () => {
   const [data, setData] = useState({
     username: "",
     password: "",
-    // fullname: "",
     email: "",
     address: "",
     city: "",
@@ -43,10 +42,7 @@ const Registration = () => {
     })
       .then(res => {
         console.log(res.data)
-        // setMessage(res.data.msg)
-        //if(data.ok){
         window.location = '/SignIn'
-        //}
       })
       .catch((err) => {
         console.log(err)

@@ -12,10 +12,11 @@ const Cart = () => {
   const [cart, setCart] = useState([]);
   const [total, setTotal] = useState(0);
 
-  const [ takeScreenshot] = useScreenshot({
+  const [image, takeScreenshot] = useScreenshot({
     type:'image/png',
     quality:1.0
   })
+  console.log(image);
   const download = (image, {name = 'ScreenshotElegancyLady', extention ='png'}={}) =>{
     const a = document.createElement('a')
     a.href = image
@@ -75,7 +76,7 @@ const Cart = () => {
     <>
     <div>
       <Header />
-      <main ref={ref}>
+      <main>
         <div className="bg-gray-100">
           <section className="mt-0">
             <div
@@ -112,7 +113,7 @@ const Cart = () => {
               Go Back
             </Link>
           </div>
-          <div className="overflow-hidden w-full min-h-screen bg-gray-100 flex flex-col">
+          <div ref={ref} className="overflow-hidden w-full min-h-screen bg-gray-100 flex flex-col">
             <div className="block">
               <div>
                 <ul>

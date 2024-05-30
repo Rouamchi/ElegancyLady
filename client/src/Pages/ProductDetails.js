@@ -68,9 +68,9 @@ const ProductDetails = () => {
               {showAlert1 && <CartAlert />}
               {showAlert2 && <FavoriteAlert />}
             </div>
-            <div className="relative m-3 h-4/5 flex flex-wrap mx-auto justify-center">
-              <div className="relative block lg:flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div className="relative m-9 lg:m-0 w-4/5 lg:w-2/5 shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
+            <div className="m-3 h-4/5 flex flex-wrap mx-auto justify-center">
+              <div className="block lg:flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <div className="m-9 lg:m-0 w-4/5 lg:w-2/5 shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
                   <img key={singleProduct._id}
                     alt={singleProduct.imageAlt}
                     src={singleProduct.imageSrc}
@@ -89,7 +89,7 @@ const ProductDetails = () => {
                     {singleProduct.description}
                   </p>
 
-                  <div className="relative block lg:flex w-full">
+                  <div className="block lg:flex w-full">
                     {/* Price */}
                     <div className="mt-4 w-32 h-8 block font-sans font-semibold leading-snug tracking-normal antialiased text-gray-800 mb-2">
                       Price: {singleProduct.price}DH
@@ -112,15 +112,15 @@ const ProductDetails = () => {
                       </Link>
                     </div>
                   </div>
-                  {/* Add to cart */}
+                  {/* Add to favorites */}
                   <div className="inline-block">
                     <div className="mt-5 lg:ml-8 flex justify-center gap-x-3">
                       <button
                         onClick={() => { changeText("Saved !"); clickFavorite(); }}
-                        className="flex py-1 px-4 ml-4 bg-amber-400 text-white font-semibold border border-transparent rounded hover:bg-white hover:text-amber-400 hover:border-amber-400 transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0"
-                        type='button'>{buttonText} {singleProduct.inFavorites === true}
+                        className="flex py-1 px-4 ml-4 bg-amber-400 text-white font-semibold border border-transparent rounded hover:bg-white hover:text-amber-400 hover:border-amber-400 transition ease-in duration-200 hover:-translate-y-1 active:translate-y-0"
+                        type='button'>{buttonText}
                       </button>
-                      <Link to="/" className="ml-3 lg py-1 px-4 bg-transparent text-amber-500 font-semibold border border-amber-500 rounded hover:bg-amber-400 hover:text-white hover:border-transparent transition ease-in duration-200 transform hover:-translate-y-1 active:translate-y-0">
+                      <Link to="/" className="ml-3 lg py-1 px-4 bg-transparent text-amber-500 font-semibold border border-amber-500 rounded hover:bg-amber-400 hover:text-white hover:border-transparent transition ease-in duration-200 hover:-translate-y-1 active:translate-y-0">
                         Go Back</Link>
                     </div>
                   </div>
