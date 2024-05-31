@@ -167,7 +167,7 @@ const Cart = () => {
                         {/* Sub total */}
                         <div className="mb-10 mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:-mt-1 md:w-1/3">
                           <div className='block lg:flex'>
-                            <div className="mb-2 lg:mr-20 flex justify-between">
+                            <div className="mb-2 lg:mr-16 flex justify-between">
                               <p className="text-gray-700 font-medium">Price :</p>
                               <p className="text-gray-700">{singleProduct.price}DH</p>
                             </div>
@@ -177,14 +177,14 @@ const Cart = () => {
                             </div>
                           </div>
                           <div className='block lg:flex'>
-                            <div className="mt-2 lg:mr-16 flex justify-between">
+                            <div className="mt-2 lg:mr-14 flex justify-between">
                               <p className="text-gray-700 font-medium">Status :</p>
                               <p className="text-gray-700">{singleProduct.countInStock > 0 ? "In Stock" : "Out Of Stock"}</p>
                             </div>
                             <div className="mt-2 flex justify-between">
                               <p className="text-gray-700 font-medium">Quantity :</p>
                               {singleProduct.countInStock > 0 ? (
-                                <select className="bg-white text-gray-700" as="select" value={singleProduct.quantity}
+                                <select className=" bg-white text-gray-700" as="select" value={singleProduct.quantity}
                                   onChange={(e) => updateQuantity(singleProduct._id, parseInt(e.target.value))}>
                                   {[...Array(singleProduct.countInStock).keys()].map((x) => (
                                     <option key={x + 1} value={x + 1}>
