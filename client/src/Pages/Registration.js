@@ -62,18 +62,18 @@ const Registration = () => {
             src={Logo}
             alt="Your Company"
           />
-          <div className="border-b border-gray-900/10 pb-12">
+          <div className="border-b border-gray-300 pb-12">
             <h2 className="text-lg md:text-xl font-semibold leading-7 text-gray-700">Personal Information</h2>
             <div className="sm:col-span-4">
               <div className="mt-2">
-                <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                <div className="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset sm:max-w-md">
                   <input
                     type="text"
                     name="username"
                     id="username"
                     value={data.username} onChange={(e) => { handle(e) }}
                     autoComplete="username"
-                    className="pl-4 block flex-1 border-0 bg-transparent py-1.5 text-gray-900 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                    className="pl-4 block flex-1 border-0 bg-transparent py-1.5 text-gray-700 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
                     placeholder="Enter Your Username" />
                 </div>
               </div>
@@ -92,7 +92,7 @@ const Registration = () => {
                     id="password"
                     placeholder="Password"
                     autoComplete="new-password" 
-                    className="pl-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="pl-4 block w-full rounded-md border-0 py-1.5 text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
                   />
                   <button type="button"
                     onClick={togglePasswordVisibility}
@@ -120,7 +120,7 @@ const Registration = () => {
                     type="email"
                     placeholder='Email address'
                     autoComplete="email"
-                    className="pl-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="pl-4 block w-full rounded-md border-0 py-1.5 text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -133,7 +133,7 @@ const Registration = () => {
                     id="address"
                     placeholder='Address'
                     autoComplete="address"
-                    className="pl-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="pl-4 block w-full rounded-md border-0 py-1.5 text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -146,7 +146,7 @@ const Registration = () => {
                     name="country"
                     placeholder='Country'
                     autoComplete="country-name"
-                    className="text-gray-700 pl-4 block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:max-w-xs sm:text-sm sm:leading-6"
+                    className="text-gray-700 pl-4 block w-full rounded-md border-0 py-1.5 shadow-sm ring-1 ring-inset ring-gray-300 focus:ring-2 focus:ring-inset  sm:max-w-xs sm:text-sm sm:leading-6"
                   />
 
                 </div>
@@ -160,7 +160,7 @@ const Registration = () => {
                     id="city"
                     placeholder='City'
                     autoComplete="address-level2"
-                    className="block pl-4 w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="block pl-4 w-full rounded-md border-0 py-1.5 text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -173,7 +173,7 @@ const Registration = () => {
                     id="postalCode"
                     placeholder='Postal code'
                     autoComplete="postal-code"
-                    className="pl-4 block w-full rounded-md border-0 py-1.5 text-gray-900 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                    className="pl-4 block w-full rounded-md border-0 py-1.5 text-gray-700 shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset  sm:text-sm sm:leading-6"
                   />
                 </div>
               </div>
@@ -183,7 +183,7 @@ const Registration = () => {
         </div>
 
         <div className="mt-6 flex items-center justify-end gap-x-6">
-          <Link to="/" type="button" className="text-sm font-semibold leading-6 text-gray-900 hover:text-amber-400">
+          <Link to="/" type="button" className="text-sm font-semibold leading-6 text-gray-700 hover:text-amber-400">
             Cancel
           </Link>
           <button

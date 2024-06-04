@@ -38,7 +38,6 @@ const CreateProduct = () => {
   function click(e) {
     e.preventDefault();
     const formData = new FormData();
-    // Append all data including the image file to FormData
     for (let key in data) {
       formData.append(key, data[key]);
     }
