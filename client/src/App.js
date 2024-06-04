@@ -11,6 +11,7 @@ import Favorites from './Pages/Favorites';
 import Create from './Pages/CreateProduct';
 import CreateProduct from './Pages/CreateProduct'
 import React from 'react';
+import Paypal from './Pages/Paypal'
 
 
 
@@ -32,6 +33,7 @@ export default function App() {
           <Route path='/CheckOut' exact element={<CheckOut />} />
           <Route path='/Favorites/:id?' exact element={<Favorites/>} />
           <Route path='/CreateProduct' exact element={<Create />} />
+          <Route path='/Paypal' exact element={<Paypal />} />
 
         </Routes>
       </div>

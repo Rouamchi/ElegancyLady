@@ -52,7 +52,6 @@ const SignIn = () => {
       <Header />
       <form className='grid justify-items-stretch justify-center mx-6 my-8 md:mx-8 '>
         <div className="space-y-8">
-          {/* -------------------------------- */}
           <img
             className="mx-auto h-40 w-auto"
             src={Logo}

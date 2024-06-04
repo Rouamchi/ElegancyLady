@@ -52,6 +52,9 @@ const ProductDetails = () => {
     }, 4000);
   };
   const clickFavorite = () => {
+    // products.filter((singleProduct) => {
+    //   return (singleProduct.inFavorites === true)
+    // })
     setShowAlert2(true);
     setTimeout(() => {
       setShowAlert2(false);
@@ -127,7 +130,7 @@ const ProductDetails = () => {
               </div>
             </div>
             {/* SAMMARY */}
-            <div className="md:mr-20 md:mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/5">
+            <div className="md:mr-20 md:mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:w-1/5">
               <p className="md:text-2xl text-xl font-black leading-9 text-gray-700 dark:text-white mb-4">
                 Payments
               </p>

@@ -14,6 +14,8 @@ import CheckOut from './Pages/CheckOut';
 import Favorites from './Pages/Favorites';
 import Create from './Pages/CreateProduct';
 import CreateProduct from './Pages/CreateProduct'
+import Paypal from './Pages/Paypal'
+
 
 const router = createBrowserRouter([
   {
@@ -60,6 +62,10 @@ const router = createBrowserRouter([
   {
     path: "/CreateProduct",
     element: <Create />,
+  },
+  {
+    path: "/Paypal",
+    element: <Paypal />,
   },
 ])
 
