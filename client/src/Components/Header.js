@@ -93,11 +93,10 @@ const Header = () => {
                 <Bars3Icon className="h-6 w-6" aria-hidden="true" />
               </button>
 
-              {/* Logo */}
-              <div className="ml-4 flex md:ml-0">
+              <div className=" ml-16 flex md:ml-0">
                 <Link to="#">
                   <span className="sr-only">Your Company</span>
-                  <img className="h-8 w-auto"
+                  <img className="h-12 lg:w-32"
                     src={Logo}
                     alt="" />
                 </Link>

@@ -15,7 +15,7 @@ const SignIn = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
 
-  const url = "http://localhost:4000/login"; 
+  const url = "http://localhost:4000/users/login"; 
 
   function handle(e) {
     const newdata = { ...data };
