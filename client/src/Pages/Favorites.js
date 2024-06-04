@@ -2,8 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Header from "../Components/Header"
 import Footer from '../Components/Footer'
 import ToTopButton from "../Components/ToTopButton"
-import { Link } from "react-router-dom"
-import Logo1 from "../images/Logo1.png"
+import SectionProducts from "../Components/SectionProducts"
+
 
 
 const Favorites = () => {
@@ -30,35 +30,8 @@ const Favorites = () => {
       <Header />
       <main>
         <div className="bg-gray-100">
-          <section className="mt-0">
-            <div
-              className=" h-48 lg:h-64 overflow-hidden bg-cover bg-center"
-              style={{
-                backgroundImage:
-                  'url("https://wallpaperaccess.com/full/318963.jpg")'
-              }}>
-              <div className="bg-gray-900 bg-opacity-50 flex items-center h-full">
-                <div className=" px-6 lg:px-10 max-w-xl lg:max-w-2xl">
-                  <h2 className="text-xl lg:text-3xl text-white font-semibold  mt-4 lg:mt-0">PRODUCTS OF ELEGANCY LADY</h2>
-                  <p className="mt-2 lg:text-lg text-gray-300">
-                    A collection which is constantly renewed to satisfy you, and which is intended to be accessible to all!
-                    Authentic, original & Luxe!
-                  </p>
-                  <Link to="/" className="flex items-center mt-1 lg:mt-4 px-3 py-2 bg:transparent text-white text-sm uppercase font-medium rounded hover:bg-gray-600 focus:outline-none focus:bg-gray-600">
-                    <span>Back To Home</span>
-                    <svg className="h-5 w-5 mx-2" fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} viewBox="0 0 24 24" stroke="currentColor">
-                      <path d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
-                  </Link>
-                </div>
-              </div>
-            </div>
-            <img
-              className=" mx-auto h-24 w-auto mt-4 -mb-12 lg:-mb-20"
-              src={Logo1}
-              alt="Your Company"
-            />
-          </section>
+          <div className="-mb-8">
+            <SectionProducts /></div>
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
             <div className="overflow-hidden mt-0 grid grid-cols-2 gap-x-4 gap-y-8 lg:gap-x-6 lg:gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
               {products.filter((singleProduct) => {
