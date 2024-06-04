@@ -50,7 +50,7 @@ const SignIn = () => {
   return (
     <>
       <Header />
-      <form className='grid justify-items-stretch justify-center mx-6 my-8 lg:mx-8 '>
+      <form className='grid justify-items-stretch justify-center mx-6 my-8 md:mx-8 '>
         <div className="space-y-8">
           {/* -------------------------------- */}
           <img
@@ -157,7 +157,7 @@ export default SignIn;
 //   return (
 //     <>
 //       <Header />
-//       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+//       <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 md:px-8">
 //         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
 //           <img
 //             className="mx-auto h-full w-full"

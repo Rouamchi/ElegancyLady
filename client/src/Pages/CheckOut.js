@@ -22,7 +22,7 @@ const CheckOut = () => {
   return (
     <>
       <Header />
-      <div className="max-w-2xl mx-auto flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
+      <div className="max-w-2xl mx-auto flex min-h-full flex-1 flex-col justify-center px-6 py-12 md:px-8">
         <div className="sm:mx-auto sm:w-full sm:max-w-sm">
           <img
             className="mx-auto h-full w-full mb-8"
@@ -31,7 +31,7 @@ const CheckOut = () => {
           />
         </div >
         {showAlert && <CheckOutAlert />}
-        <ReactWhatsapp number="+212714540273" className="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg  text-sm lg:text-base px-5 py-2.5 text-left lg:text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2">
+        <ReactWhatsapp number="+212714540273" className="text-gray-900 bg-white hover:bg-gray-100 border border-gray-200 focus:ring-4 focus:ring-gray-100 font-medium rounded-lg  text-sm md:text-base px-5 py-2.5 text-left md:text-center inline-flex items-center dark:focus:ring-gray-600 dark:bg-gray-800 dark:border-gray-700 dark:text-white dark:hover:bg-gray-700 mr-2 mb-2">
           <ReactWhatsapp className="w-8 h-8 mr-3" number="+212714540273"><FaWhatsapp className=" w-7 h-7 text-green-600"></FaWhatsapp></ReactWhatsapp>
           Send the screenshot you taked to seller & finish your payment easily!
         </ReactWhatsapp>

@@ -9,7 +9,7 @@ const Footer = () => {
 
       <footer className="bg-black font-sans dark:bg-black left-0 right-0 bottom-0">
         <div className="container px-6 py-12 mx-auto">
-          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 lg:grid-cols-4">
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 md:grid-cols-4">
             <div className="sm:col-span-2">
               <h1 className="max-w-lg text-xl font-semibold tracking-tight text-white xl:text-2xl dark:text-gray-800">
               ⚜️ Contact With Us !</h1>

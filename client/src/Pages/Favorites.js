@@ -32,30 +32,30 @@ const Favorites = () => {
         <div className="bg-gray-100">
           <div className="-mb-8">
             <SectionProducts /></div>
-          <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 lg:max-w-7xl lg:px-8">
-            <div className="overflow-hidden mt-0 grid grid-cols-2 gap-x-4 gap-y-8 lg:gap-x-6 lg:gap-y-10 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
+          <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 md:max-w-7xl md:px-8">
+            <div className="overflow-hidden mt-0 grid grid-cols-2 gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-10 sm:grid-cols-2 md:grid-cols-4 xl:gap-x-8">
               {products.filter((singleProduct) => {
                 return (singleProduct.inFavorites === true)
               }).map((singleProduct) => (
                 <div to={singleProduct._id} className="group relative">
-                  <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md lg:rounded-2xl bg-gray-200 lg:aspect-none h-48 lg:h-80">
-                    <img src={singleProduct.imageSrc} alt={singleProduct.imageAlt} className="h-full w-full object-cover object-center lg:h-full lg:w-full" />
+                  <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md md:rounded-2xl bg-gray-200 md:aspect-none h-48 md:h-80">
+                    <img src={singleProduct.imageSrc} alt={singleProduct.imageAlt} className="h-full w-full object-cover object-center md:h-full md:w-full" />
                   </div>
                   <button key={singleProduct._id} onClick={() => removeFromCart(singleProduct._id)}
-                    className="p-1.5 rounded-full bg-gray-100 text-gray-700 mx-28 lg:mx-56 -my-24 -mb-4 hover:bg-white focus:outline-none focus:bg-white">
+                    className="p-1.5 rounded-full bg-gray-100 text-gray-700 mx-28 md:mx-56 -my-24 -mb-4 hover:bg-white focus:outline-none focus:bg-white">
                     <svg class="h-8 w-8 rounded-full p-1 hover:bg-gray-100 hover:text-red-600" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 7l-.867 12.142A2 2 0 0116.138 21H7.862a2 2 0 01-1.995-1.858L5 7m5 4v6m4-6v6m1-10V4a1 1 0 00-1-1h-4a1 1 0 00-1 1v3M4 7h16"></path>
                     </svg>
                   </button>
                   <div className="mt-4 justify-between">
-                    <div className="ml-1 lg:ml-0">
+                    <div className="ml-1 md:ml-0">
                       <h3 className="-mt-4 text-base font-medium text-gray-700 dark:text-gray-200">
                         <span aria-hidden="true" />
                         {singleProduct.name}
                       </h3>
                     </div>
                     <div className="">
-                      <p className="text-gray-500 -mt-1 lg:mt-0 ml-1 lg:ml-0 mb-2">
+                      <p className="text-gray-500 -mt-1 md:mt-0 ml-1 md:ml-0 mb-2">
                         {singleProduct.price} DH</p>
                       <div className="flex items-center justify-center w-full capitalize font-medium tracking-wide rounded-md bg-gray-800 text-white px-2 py-2 group-hover:bg-gray-700">
                         <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5 mx-1" viewBox="0 0 20 20" fill="currentColor">

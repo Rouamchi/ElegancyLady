@@ -21,7 +21,7 @@ const Categories = () => {
         
         {/* Mobile menu */}
         <Transition.Root show={open} as={Fragment}>
-          <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
+          <Dialog as="div" className="relative z-40 md:hidden" onClose={setOpen}>
             <Transition.Child as={Fragment} enter="transition-opacity ease-linear duration-300" enterFrom="opacity-0" enterTo="opacity-100" leave="transition-opacity ease-linear duration-300" leaveFrom="opacity-100" leaveTo="opacity-0">
               <div className="fixed inset-0 bg-black bg-opacity-25" />
             </Transition.Child>
@@ -104,12 +104,12 @@ const Categories = () => {
         {/* ------------------------------ For Destop ------------------------- */}
         <header className="relative bg-gray-600">
 
-          <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
             <div className="border-b border-gray-200">
               <div className="flex h-16 items-center">
                 <button
                   type="button"
-                  className="relative rounded-md bg-gray-900 p-2 text-gray-200 lg:hidden"
+                  className="relative rounded-md bg-gray-900 p-2 text-gray-200 md:hidden"
                   onClick={() => setOpen(true)}>
                   <span className="absolute -inset-0.5" />
                   <span className="sr-only">Open menu</span>
@@ -117,7 +117,7 @@ const Categories = () => {
                 </button>
 
                 {/* Flyout menus */}
-                <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
+                <Popover.Group className="hidden md:ml-8 md:block md:self-stretch">
                   <div className="flex h-full space-x-8">
                     {navigation.categories.map((category) => (
                       <Popover key={category.name} className="flex">

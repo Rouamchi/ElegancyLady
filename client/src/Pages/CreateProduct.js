@@ -69,7 +69,7 @@ const CreateProduct = () => {
       <>
         {/* component */}
         <div className="bg-gray-100 h-auto flex items-center justify-center">
-          <div className="mt-0 mb-0 lg:mt-20 lg:mb-20 max-w-md w-full bg-white p-8 rounded-lg shadow-md">
+          <div className="mt-0 mb-0 md:mt-20 md:mb-20 max-w-md w-full bg-white p-8 rounded-lg shadow-md">
             <img
               className="mx-auto h-40 w-auto mb-5 -mt-2"
               src={Logo}

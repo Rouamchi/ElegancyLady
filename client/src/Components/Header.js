@@ -19,7 +19,7 @@ const Header = () => {
     <div className="bg-white">
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
-        <Dialog as="div" className="relative z-40 lg:hidden" onClose={setOpen}>
+        <Dialog as="div" className="relative z-40 md:hidden" onClose={setOpen}>
           <Transition.Child as={Fragment} enter="transition-opacity ease-linear duration-300" enterFrom="opacity-0" enterTo="opacity-100" leave="transition-opacity ease-linear duration-300" leaveFrom="opacity-100" leaveTo="opacity-0">
             <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
@@ -81,12 +81,12 @@ const Header = () => {
       {/* ------------------------------ For Destop ------------------------- */}
       <header className="relative bg-black">
 
-        <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
           <div className="border-b border-amber-300">
             <div className="flex h-16 items-center">
               <button
                 type="button"
-                className="relative rounded-md bg-black p-2 text-amber-300 lg:hidden"
+                className="relative rounded-md bg-black p-2 text-amber-300 md:hidden"
                 onClick={() => setOpen(true)}>
                 <span className="absolute -inset-0.5" />
                 <span className="sr-only">Open menu</span>
@@ -94,7 +94,7 @@ const Header = () => {
               </button>
 
               {/* Logo */}
-              <div className="ml-4 flex lg:ml-0">
+              <div className="ml-4 flex md:ml-0">
                 <Link to="#">
                   <span className="sr-only">Your Company</span>
                   <img className="h-8 w-auto"
@@ -105,7 +105,7 @@ const Header = () => {
 
               {/* Flyout menus was here */}
 
-              <Popover.Group className="hidden lg:ml-8 lg:block lg:self-stretch">
+              <Popover.Group className="hidden md:ml-8 md:block md:self-stretch">
                 <div className="flex h-full space-x-8">
                   {pages.map((page) => (
                     <Link key={page.name}
@@ -118,7 +118,7 @@ const Header = () => {
               </Popover.Group>
 
               <div className="ml-auto flex items-center">
-                <div className="hidden lg:flex lg:flex-1 lg:items-center lg:justify-end lg:space-x-6">
+                <div className="hidden md:flex md:flex-1 md:items-center md:justify-end md:space-x-6">
                   <Link to="/SignIn" className="text-sm font-medium text-gray-300 hover:text-amber-300">
                     SIGN IN
                   </Link>
@@ -128,7 +128,7 @@ const Header = () => {
                   </Link>
                 </div>
                 {/* Flag */}
-                <div className="hidden lg:ml-8 lg:flex">
+                <div className="hidden md:ml-8 md:flex">
                   <Link to="#" className="flex items-center text-gray-300 hover:text-amber-300">
                     <img
                       src={Morocco}
@@ -139,7 +139,7 @@ const Header = () => {
                   </Link>
                 </div>
                 {/* Search */}
-                <div className="flex lg:ml-6">
+                <div className="flex md:ml-6">
                   <Link to="#" className="p-2 text-gray-300 hover:text-amber-300">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
@@ -147,7 +147,7 @@ const Header = () => {
                 </div>
 
                 {/* Cart */}
-                <div className="ml-4 flow-root lg:ml-6">
+                <div className="ml-4 flow-root md:ml-6">
                   <Link to="/Cart" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
                       className="h-6 w-6 flex-shrink-0 text-gray-300 group-hover:text-amber-300"
@@ -357,7 +357,7 @@ export default Header
 //         <Disclosure as="nav" className="bg-gray-800">
 //           {({ open }) => (
 //             <>
-//               <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+//               <div className="mx-auto max-w-7xl px-2 sm:px-6 md:px-8">
 //                 <div className="relative flex h-16 items-center justify-between">
 //                   <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
 

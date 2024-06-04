@@ -63,21 +63,21 @@ const ProductDetails = () => {
       <>
         <Header />
         <div className="w-full min-h-screen bg-gray-100 flex flex-col justify-center">
-          <div className="relative block lg:flex" >
+          <div className="relative block md:flex" >
             <div>
               {showAlert1 && <CartAlert />}
               {showAlert2 && <FavoriteAlert />}
             </div>
             <div className="m-3 h-4/5 flex flex-wrap mx-auto justify-center">
-              <div className="block lg:flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
-                <div className="m-9 lg:m-0 w-4/5 lg:w-2/5 shrink-0 overflow-hidden rounded-xl lg:rounded-r-none bg-white bg-clip-border text-gray-700">
+              <div className="block md:flex w-full max-w-[48rem] flex-row rounded-xl bg-white bg-clip-border text-gray-700 shadow-md">
+                <div className="m-9 md:m-0 w-4/5 md:w-2/5 shrink-0 overflow-hidden rounded-xl md:rounded-r-none bg-white bg-clip-border text-gray-700">
                   <img key={singleProduct._id}
                     alt={singleProduct.imageAlt}
                     src={singleProduct.imageSrc}
                     className="h-full w-full object-cover" />
                 </div>
                 <div className="p-6">
-                  <h6 className="mb-4 -mt-6 lg:mt-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-amber-400 antialiased">
+                  <h6 className="mb-4 -mt-6 md:mt-4 block font-sans text-base font-semibold uppercase leading-relaxed tracking-normal text-amber-400 antialiased">
                     About This Item
                   </h6>
                   {/* Name */}
@@ -88,32 +88,32 @@ const ProductDetails = () => {
                     {singleProduct.description}
                   </p>
 
-                  <div className="block lg:flex w-full">
+                  <div className="block md:flex w-full">
                     {/* Price */}
                     <div className="mt-4 w-32 h-8 block font-sans font-semibold leading-snug tracking-normal antialiased text-gray-800 mb-2">
                       Price: {singleProduct.price}DH
                     </div>
                     <div className="flex">
                       {/* In Stock */}
-                      <button className='flex lg:ml-6 select-none items-center gap-2 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none' type="button">
+                      <button className='flex md:ml-6 select-none items-center gap-2 disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none' type="button">
                         {singleProduct.countInStock > 0
                           ? <>
                             <div className=" mt-0 rounded-sm py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-green-600">
                               InStock</div>
                           </>
-                          : <div className="ml-0 mt-0 lg:mt-1 mb-0 rounded-sm py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-red-600">
+                          : <div className="ml-0 mt-0 md:mt-1 mb-0 rounded-sm py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-red-600">
                             Out Of Stock</div>
                         }
                       </button>
                       {/* Color */}
-                      <Link to='#' className="-mt-10 lg:mt-4 ml-20 lg:ml-6 w-32 h-8 block text-xs font-sans font-normal leading-snug tracking-normal antialiased text-gray-600 mb-2">
+                      <Link to='#' className="-mt-10 md:mt-4 ml-20 md:ml-6 w-32 h-8 block text-xs font-sans font-normal leading-snug tracking-normal antialiased text-gray-600 mb-2">
                         Color: {singleProduct.color}
                       </Link>
                     </div>
                   </div>
                   {/* Add to favorites */}
                   <div className="inline-block">
-                    <div className="mt-5 lg:ml-8 flex justify-center gap-x-3">
+                    <div className="mt-5 md:ml-8 flex justify-center gap-x-3">
                       <button
                         onClick={() => { changeText("Saved !"); clickFavorite(); }}
                         className="flex py-1 px-4 ml-4 bg-amber-400 text-white font-semibold border border-transparent rounded hover:bg-white hover:text-amber-400 hover:border-amber-400 transition ease-in duration-200 hover:-translate-y-1 active:translate-y-0"
@@ -127,8 +127,8 @@ const ProductDetails = () => {
               </div>
             </div>
             {/* SAMMARY */}
-            <div className="lg:mr-20 lg:mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/5">
-              <p className="lg:text-2xl text-xl font-black leading-9 text-gray-700 dark:text-white mb-4">
+            <div className="md:mr-20 md:mt-6 h-full rounded-lg border bg-white p-6 shadow-md md:mt-0 md:w-1/5">
+              <p className="md:text-2xl text-xl font-black leading-9 text-gray-700 dark:text-white mb-4">
                 Payments
               </p>
               <hr className="my-4" />

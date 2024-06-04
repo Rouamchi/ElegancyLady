@@ -3,14 +3,14 @@ import React from 'react'
 const CheckOutAlert = () => {
   return (
     <>
-      <div className="flex items-center justify-center mt-0 lg:mt-10 h-0">
+      <div className="flex items-center justify-center mt-0 md:mt-10 h-0">
         <div role="dialog"
           className="w-full inline-block align-bottom bg-white rounded-lg text-left overflow-hidden shadow-xl transform transition-all sm:my-8 sm:align-middle sm:max-w-lg sm:w-full" aria-modal="true"
           aria-labelledby="modal-headline">
           <div className="bg-red-100 px-4 pt-5 pb-6 sm:p-6 sm:pb-6">
             <div className="sm:flex sm:items-start">
               {/* ICON */}
-              <div className="mx-auto flex-shrink-0 flex items-center justify-center h-6 w-6 lg:h-12 lg:w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
+              <div className="mx-auto flex-shrink-0 flex items-center justify-center h-6 w-6 md:h-12 md:w-12 rounded-full bg-red-100 sm:mx-0 sm:h-10 sm:w-10">
                 <svg width="64px"
                   height="64px"
                   className="h-6 w-6 text-red-600"
@@ -31,7 +31,7 @@ const CheckOutAlert = () => {
                   </g>
                 </svg>
               </div>
-              <div className="mt-3 ml-3 lg:mr-0 text-left  sm:mt-0 sm:ml-4 sm:text-left">
+              <div className="mt-3 ml-3 md:mr-0 text-left  sm:mt-0 sm:ml-4 sm:text-left">
                 <div className="mt-2">
                   <p className="text-sm text-gray-500">
                     {" "}

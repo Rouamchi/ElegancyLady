@@ -3,7 +3,7 @@ import React from 'react'
 const FavoriteAlert = () => {
   return (
     <>
-        <div className="lg:-mt-20 fixed flex w-full flex-col items-center md:items-center space-y-4 sm:items-end">
+        <div className="md:-mt-20 fixed flex w-full flex-col items-center md:items-center space-y-4 sm:items-end">
           <div className="p-4 pointer-events-auto w-full max-w-sm overflow-hidden rounded-lg bg-white shadow-lg ring-1 ring-black ring-opacity-5">
               <div className="flex items-start">
                 <div className="flex-shrink-0">
