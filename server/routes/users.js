@@ -54,38 +54,15 @@ router.delete('/', async function (req, res, next) {
 // Login route
 router.post('/login', async function (req, res, next) {
   const { username, password } = req.body;
-  const user = await Users.findOne({ username, isVisible: true });
-
-  if (!user) {
-    return res.status(401).send({ success: false, message: "Invalid username or password" });
-  }
-
-  const isMatch = await bcrypt.compare(password, user.password);
-  if (!isMatch) {
-    return res.status(401).send({ success: false, message: "Invalid username or password" });
-  }
-
-  res.send({ success: true, message: "Login successful", user });
-});
-
-module.exports = router;
-
-
-// Login route
-router.post('/login', async function (req, res, next) {
-  const { username, password } = req.body;
-  const user = await Users.findOne({ username, isVisible: true });
-
-  if (!user) {
-    return res.status(401).send({ success: false, message: "Invalid username or password" });
-  }
-
-  const isMatch = await bcrypt.compare(password, user.password);
-  if (!isMatch) {
-    return res.status(401).send({ success: false, message: "Invalid username or password" });
-  }
-
-  res.send({ success: true, message: "Login successful", user });
+  const user = await Users.findOne({ username: username })
+    if (!user) {
+      return res.status(401).send({ success: false, message: "Invalid username or password" });
+    }
+    const isMatch = await bcrypt.compare(password, user.password);
+    if (!isMatch) {
+      return res.status(401).send({ success: false, message: "Invalid username or password" });
+    }
+    res.send({ success: true, message: "Login successful", user });
 });
 
 module.exports = router;

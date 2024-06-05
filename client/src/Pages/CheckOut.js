@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import Header from "../Components/Header"
 import Footer from "../Components/Footer"
 import Logo from '../images/Logo.png'
-// import { Link } from 'react-router-dom'
 import { FaWhatsapp } from 'react-icons/fa'
 import ReactWhatsapp from 'react-whatsapp'
 import ToTopButton from "../Components/ToTopButton"

@@ -10,6 +10,7 @@ const pages = [
   { name: 'CART', to: '/Cart', current: false },
   { name: 'FAVORITES', to: '/Favorites', current: true },
   { name: 'CREATE', to: '/CreateProduct', current: true },
+  { name: 'ABOUT US', to: '/AboutUs', current: true },
   { name: '', to: '/SignIn', current: false },
 ]
 

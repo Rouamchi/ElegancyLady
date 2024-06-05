@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Products from './Pages/Products';
@@ -10,9 +10,7 @@ import CheckOut from './Pages/CheckOut';
 import Favorites from './Pages/Favorites';
 import Create from './Pages/CreateProduct';
 import CreateProduct from './Pages/CreateProduct'
-import React from 'react';
-
-
+import AboutUs from './Pages/AboutUs'
 
 export default function App() {
 
@@ -25,6 +23,7 @@ export default function App() {
           <Route path='/home' exact element={<Home />} />
           <Route path='/Products' exact element={<Products />} />
           <Route path='/CreateProduct' exact element={<CreateProduct />} />
+          <Route path='/AboutUs' exact element={<AboutUs />} />
           <Route path='/SignIn' exact element={<SignIn />} />
           <Route path='/Registration' exact element={<Registration />} />
           <Route path='/ProductDetails/:id' exact element={<ProductDetails />} />
