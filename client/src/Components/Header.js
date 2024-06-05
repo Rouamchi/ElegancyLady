@@ -10,7 +10,7 @@ const pages = [
   { name: 'CART', to: '/Cart', current: false },
   { name: 'FAVORITES', to: '/Favorites', current: true },
   { name: 'ABOUT US', to: '/AboutUs', current: true },
-  { name: 'CREATE', to: '/CreateProduct', current: true },
+  // { name: 'CREATE', to: '/CreateProduct', current: true },
   { name: '', to: '/SignIn', current: false },
 ]
 
@@ -81,7 +81,6 @@ const Header = () => {
       </Transition.Root>
       {/* ------------------------------ For Destop ------------------------- */}
       <header className="relative bg-black">
-
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
           <div className="border-b border-amber-300">
             <div className="flex h-16 items-center">
@@ -140,7 +139,7 @@ const Header = () => {
                 </div>
                 {/* Search */}
                 <div className="flex md:ml-6">
-                  <Link to="#" className="p-2 text-gray-300 hover:text-amber-300">
+                  <Link to="#" className="p-2 text-amber-300 lg:text-gray-300 hover:text-amber-300">
                     <span className="sr-only">Search</span>
                     <MagnifyingGlassIcon className="h-6 w-6" aria-hidden="true" />
                   </Link>
@@ -150,7 +149,7 @@ const Header = () => {
                 <div className="ml-4 flow-root md:ml-6">
                   <Link to="/Cart" className="group -m-2 flex items-center p-2">
                     <ShoppingBagIcon
-                      className="h-6 w-6 flex-shrink-0 text-gray-300 group-hover:text-amber-300"
+                      className="h-6 w-6 flex-shrink-0 text-amber-300 lg:text-gray-300 group-hover:text-amber-300"
                       aria-hidden="true" />
                     <Link to="#" className="ml-2 text-sm font-medium text-gray-300 group-hover:text-amber-300">
                     {/* 0 */}

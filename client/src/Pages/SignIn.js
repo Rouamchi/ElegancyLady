@@ -5,17 +5,20 @@ import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import ToTopButton from "../Components/ToTopButton";
 import Logo from '../images/Logo.png';
+ import { useLocalStorage } from "react-use-storage";
+
 
 const SignIn = () => {
+  const [islogin, setIslogin] = useLocalStorage("islogin", false);
+  // const [userId, setUserId] = useLocalStorage("userId", '');
+  const [error, setError] = useState("");
+  const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
+  const url = "http://localhost:4000/users/login";
   const [data, setData] = useState({
     username: "",
     password: ""
   });
-  const [error, setError] = useState("");
-  const navigate = useNavigate();
-
-  const url = "http://localhost:4000/login";
 
   const handle = (e) => {
     const newdata = { ...data };
@@ -36,6 +39,10 @@ const SignIn = () => {
       .then(res => {
         if (res.data.success) {
           console.log(res.data);
+          console.log(islogin);
+          // console.log(userId);
+          setIslogin(true)
+          // setUserId(res.data._id)
           navigate('/');
         } else {
           setError("Invalid username or password");

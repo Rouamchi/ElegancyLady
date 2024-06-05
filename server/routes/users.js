@@ -55,6 +55,12 @@ router.delete('/', async function (req, res, next) {
 router.post('/login', async function (req, res, next) {
   const { username, password } = req.body;
   const user = await Users.findOne({ username: username })
+  // if (user) {
+  //   res.send({ state: 'Successfully logged in', success: true, _id: user._id })
+
+  // } else {
+  //   res.send({ state: 'Can not find this member, Please Check again', success: false })
+  // }
     if (!user) {
       return res.status(401).send({ success: false, message: "Invalid username or password" });
     }

@@ -6,7 +6,6 @@ import ReactWhatsapp from 'react-whatsapp'
 const Footer = () => {
   return (
     <>
-
       <footer className="bg-black font-sans dark:bg-black left-0 right-0 bottom-0">
         <div className="container px-6 py-12 mx-auto">
           <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 sm:gap-y-10 md:grid-cols-4">
@@ -29,8 +28,8 @@ const Footer = () => {
               <div className="flex flex-col items-start mt-5 space-y-2">
                 <Link to="/" className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">
                 ⚜️ Elegancy Lady </Link>
-                <p className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">
-                ⚜️ Who We Are ? </p>
+                <Link to="/AboutUs" className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">
+                ⚜️ Who We Are ? </Link>
                 <p className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">
                 ⚜️ Our Categories </p>
               </div>
@@ -111,7 +110,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <p className="font-sans p-8 text-start text-white md:text-center md:text-lg md:p-4">© 2024 Elegancy Lady At DIA STORE. All rights reserved.</p>
+          <p className="font-sans p-8 text-start text-white md:text-center md:text-lg md:p-4">© 2024 Elegancy Lady At <Link to='/CreateProduct'> DIA STORE. </Link> All rights reserved.</p>
         </div>
       </footer>
 
