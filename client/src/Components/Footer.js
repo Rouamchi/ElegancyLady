@@ -110,7 +110,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <p className="font-sans p-8 text-start text-white md:text-center md:text-lg md:p-4">© 2024 Elegancy Lady At <Link to='/CreateProduct'> DIA STORE. </Link> All rights reserved.</p>
+          <p className="font-sans p-8 text-start text-white md:text-center md:text-lg md:p-4">© Elegancy Lady At <Link to='/CreateProduct'> DIA STORE. </Link> All rights reserved.</p>
         </div>
       </footer>
 

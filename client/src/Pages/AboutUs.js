@@ -232,14 +232,16 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
+        <hr className="border border-amber-400 lg:mt-10" />
         <div className=''>
-          <iframe title='map' className='w-full h-96 lg:mt-10 mb-0'
+          <iframe title='map' className='w-full h-96 mb-0'
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d26594.860689190984!2d-7.6566622005143214!3d33.57006373675486!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xda7d2e9854fbd49%3A0xcb8dc82bd8575005!2sMa%C3%A2rif%2C%20Casablanca!5e0!3m2!1sen!2sma!4v1717561196560!5m2!1sen!2sma"
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade">
           </iframe>
         </div>
+        <hr className="border border-amber-400" />
       </div>
       <Footer />
       <ToTopButton />
