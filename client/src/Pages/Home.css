@@ -41,20 +41,24 @@
 @keyframes bgChangeMobile{
   0%{
     background-image:url('../images/heroMobile.png');  } 
-  20%{
+  15%{
     background-image:url('../images/heroMobile.png');  }
-  25%{
+  20%{
     background-image:url('../images/hero1Mobile.png');   } 
-  45%{
+  35%{
     background-image:url('../images/hero1Mobile.png');   }
-  50%{
+  40%{
     background-image:url('../images/hero2Mobile.png');  }
-  70%{
+  55%{
     background-image:url('../images/hero2Mobile.png'); }
+  60%{
+    background-image:url('../images/hero3Mobile.png');  }
   75%{
     background-image:url('../images/hero3Mobile.png');  }
-  95%{
-    background-image:url('../images/hero3Mobile.png');  }
+  80%{
+    background-image:url('../images/hero4Mobile.png');  }
+  85%{
+    background-image:url('../images/hero4Mobile.png');  }
 }
 }
 
@@ -73,18 +77,22 @@ div .bgImage{
 @keyframes bgChange{
   0%{
       background-image:url('../images/hero.png');  } 
-  20%{
+  15%{
       background-image:url('../images/hero.png');  }
-  25%{
+  20%{
     background-image:url('../images/hero1.png');   } 
-  45%{
+  35%{
     background-image:url('../images/hero1.png');   }
-  50%{
+  40%{
     background-image:url('../images/hero2.png');  }
-  70%{
+  55%{
       background-image:url('../images/hero2.png'); }
+  60%{
+    background-image:url('../images/hero3.png');  }
   75%{
     background-image:url('../images/hero3.png');  }
-  95%{
-    background-image:url('../images/hero3.png');  }
+  80%{
+    background-image:url('../images/hero4.png');  }
+  85%{
+    background-image:url('../images/hero4.png');  }
 }

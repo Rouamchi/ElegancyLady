@@ -6,6 +6,7 @@ import Logo from '../images/Logo.png'
 import Morocco from '../images/Morocco.png'
 import SignOut from '../Pages/SignOut'
 import { AuthContext } from "../Pages/AuthContext";
+import '../Pages/Home.css'
 
 const pages = [
   { name: 'ELEGANCY LADY', to: '/', current: true },
@@ -33,14 +34,14 @@ const Header = () => {
 
           <div className="fixed inset-0 z-40 flex">
             <Transition.Child as={Fragment} enter="transition ease-in-out duration-300 transform" enterFrom="-translate-x-full" enterTo="translate-x-0" leave="transition ease-in-out duration-300 transform" leaveFrom="translate-x-0" leaveTo="-translate-x-full">
-              <Dialog.Panel className="relative flex w-1/2 max-w-xs flex-col overflow-y-auto bg-gray-100 pb-12 shadow-xl">
+              <Dialog.Panel className="relative flex w-1/2 max-w-xs flex-col overflow-y-auto bg-gray-900 pb-12 shadow-xl">
                 <div className="flex px-4 pb-2 pt-5">
                   <button type="button" className="relative -m-3 mb-0 inline-flex items-center justify-center rounded-md p-2 text-amber-500"
                     onClick={() => setOpen(false)}>
                     <span className="absolute -inset-0.5" />
                     <span className="sr-only">Close menu</span>
                     <XMarkIcon className="h-6 w-6" aria-hidden="true" />
-                   <p className='ml-4 text-lg'>Hide</p>
+                    <p className='ml-4 text-lg'>Hide</p>
                   </button>
                 </div>
 
@@ -64,26 +65,26 @@ const Header = () => {
                 </div>
 
                 <div className="space-y-6 border-t border-amber-500 px-4 py-6">
-                    {isLogin ? (
-                      <div className=" items-center">
-                        <span className="mr-4 font-medium text-gray-600 hover:text-amber-300">
-                          Hello {username}</span> <br/><br/>
-                        <button className=" font-medium text-amber-500 hover:text-amber-300">
-                          <SignOut />
-                        </button>
-                      </div>
-                    ) : (
-                      <Link to="/SignIn" className="font-medium text-amber-500 hover:text-amber-300">
-                        Sign In</Link>
-                    )}
-                    <div className="flow-root">
-                      <Link to="/Registration" className="-m-2 block p-2 font-medium text-amber-500">
-                        Create Account
-                      </Link>
+                  {isLogin ? (
+                    <div className=" items-center">
+                      <span className="mr-4 font-medium text-amber-500 hover:text-amber-300">
+                        {username} ⚜️</span> <br /><br />
+                      <button className=" font-medium text-amber-500 hover:text-amber-300">
+                        <SignOut />
+                      </button>
                     </div>
+                  ) : (
+                    <Link to="/SignIn" className="font-medium text-amber-500 hover:text-amber-300">
+                      Sign In</Link>
+                  )}
+                  <div className="flow-root">
+                    <Link to="/Registration" className="-m-2 block p-2 font-medium text-amber-500">
+                      Create Account
+                    </Link>
+                  </div>
                 </div>
 
-                <div className="border-t border-gray-100 px-4 py-6">
+                <div className="border-t border-amber-500 px-4 py-6">
                   <Link to="#" className="-m-2 -mt-6 flex items-center p-2">
                     <img src={Morocco}
                       alt="" className="block h-auto w-5 flex-shrink-0" />
@@ -134,20 +135,20 @@ const Header = () => {
                     </Link>
                   ))}
                 </div>
-                {isLogin ? (
-                <Link to="/CreateProduct" className="text-sm font-medium text-gray-300 hover:text-amber-300">
+              </Popover.Group>
+              {isLogin ? (
+                <Link to="/CreateProduct" className="hide-when-mobile text-sm font-medium text-gray-300 hover:text-amber-300">
                   CREATE
                 </Link>
               ) : (
                 <Link></Link>
               )}
-              </Popover.Group>
               <div className="ml-auto flex items-center">
                 <div className="hidden md:flex md:flex-1 md:items-center md:justify-end md:space-x-6">
                   {isLogin ? (
                     <div className="flex items-center">
-                      <span className="mr-4 text-sm font-medium text-gray-300 hover:text-amber-300">
-                        Welcome {username}</span>
+                      <span className="mr-4 text-sm font-medium text-amber-300 hover:text-amber-300">
+                        ⚜️ {username} ⚜️</span>
                       <button className="text-sm font-medium text-gray-300 hover:text-amber-300">
                         <SignOut />
                       </button>
