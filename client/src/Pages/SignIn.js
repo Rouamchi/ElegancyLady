@@ -1,16 +1,17 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import Axios from "axios";
 import { Link, useNavigate } from 'react-router-dom';
 import Header from "../Components/Header";
 import Footer from "../Components/Footer";
 import ToTopButton from "../Components/ToTopButton";
 import Logo from '../images/Logo.png';
- import { useLocalStorage } from "react-use-storage";
+import { useLocalStorage } from "react-use-storage";
+import { AuthContext } from "../Pages/AuthContext";
 
 
 const SignIn = () => {
   const [islogin, setIslogin] = useLocalStorage("islogin", false);
-  // const [userId, setUserId] = useLocalStorage("userId", '');
+  const { setUsername } = useContext(AuthContext);
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
@@ -40,9 +41,8 @@ const SignIn = () => {
         if (res.data.success) {
           console.log(res.data);
           console.log(islogin);
-          // console.log(userId);
           setIslogin(true)
-          // setUserId(res.data._id)
+          setUsername(data.username);
           navigate('/');
         } else {
           setError("Invalid username or password");

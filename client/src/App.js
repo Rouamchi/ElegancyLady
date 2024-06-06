@@ -12,6 +12,7 @@ import Favorites from './Pages/Favorites';
 import Create from './Pages/CreateProduct';
 import CreateProduct from './Pages/CreateProduct'
 import AboutUs from './Pages/AboutUs'
+import AuthContext from './Pages/AuthContext'
 
 export default function App() {
 
@@ -33,6 +34,7 @@ export default function App() {
           <Route path='/CheckOut' exact element={<CheckOut />} />
           <Route path='/Favorites/:id?' exact element={<Favorites/>} />
           <Route path='/CreateProduct' exact element={<Create />} />
+          <Route path='/AuthContext' exact element={<AuthContext />} />
 
         </Routes>
       </div>

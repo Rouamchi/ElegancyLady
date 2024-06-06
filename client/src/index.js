@@ -16,6 +16,7 @@ import Favorites from './Pages/Favorites';
 import Create from './Pages/CreateProduct';
 import CreateProduct from './Pages/CreateProduct'
 import AboutUs from './Pages/AboutUs'
+import { AuthContext, AuthProvider } from "./Pages/AuthContext";
 
 
 const router = createBrowserRouter([
@@ -58,7 +59,7 @@ const router = createBrowserRouter([
   },
   {
     path: "/Cart",
-    element: <Cart/>,
+    element: <Cart />,
   },
   {
     path: "/Favorites/:id?",
@@ -72,11 +73,17 @@ const router = createBrowserRouter([
     path: "/AboutUs",
     element: <AboutUs />,
   },
+  {
+    path: "/AuthContext",
+    element: <AuthContext />,
+  },
 ])
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <Provider store={store} >
-    <RouterProvider router={router} />
-  </Provider>
+  <AuthProvider>
+    <Provider store={store} >
+      <RouterProvider router={router} />
+    </Provider>
+  </AuthProvider>
 );

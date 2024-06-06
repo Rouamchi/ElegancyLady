@@ -2,7 +2,6 @@ const express = require('express');
 const router = express.Router();
 const Users = require('../schemas/users.schema');
 const bcrypt = require('bcrypt');
-// const jwt = require('jsonwebtoken'); 
 
 // GET users listing
 router.get('/', async function (req, res, next) {
@@ -12,9 +11,9 @@ router.get('/', async function (req, res, next) {
 
 // Register a new user
 router.post('/', async (req, res) => {
-  const { username, password } = req.body;
+  const { username, email, address, city, postalCode, country, isAdmin } = req.body;
   try {
-    const hashedPassword = await bcrypt.hash(password, 10);
+    const hashedPassword = await bcrypt.hash(req.body.password, 10);
     const newUser = new Users({
       username,
       password: hashedPassword,
@@ -63,18 +62,18 @@ router.delete('/', async function (req, res, next) {
 router.post('/login', async (req, res) => {
   const { username, password } = req.body;
   try {
-    const user = await Users.findOne({ username });
+    const user = await Users.findOne({ username: username });
     if (!user) {
-      return res.status(401).json({ success: false, message: 'Invalid username or password' });
+      return res.status(401).send({ success: false, message: 'Invalid username' });
     }
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(401).json({ success: false, message: 'Invalid username or password' });
+      return res.status(401).send({ success: false, message: 'Invalid password' });
     }
-    res.json({ success: true, userId: user._id });
+    res.send({ success: true, userId: user._id });
   } catch (err) {
     console.error(err);
-    res.status(500).json({ success: false, message: 'An error occurred. Please try again.' });
+    res.status(500).send({ success: false, message: 'An error occurred. Please try again.' });
   }
 });
 
