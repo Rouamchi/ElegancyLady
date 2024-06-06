@@ -1,9 +1,10 @@
-import { Fragment, useState} from 'react'
+import { Fragment, useState } from 'react'
 import { Dialog, Popover, Transition } from '@headlessui/react'
 import { Bars3Icon, MagnifyingGlassIcon, ShoppingBagIcon, XMarkIcon } from '@heroicons/react/24/outline'
 import { Link } from 'react-router-dom'
 import Logo from '../images/Logo.png'
 import Morocco from '../images/Morocco.png'
+import SignOut from '../Pages/SignOut'
 
 const pages = [
   { name: 'ELEGANCY LADY', to: '/', current: true },
@@ -121,6 +122,9 @@ const Header = () => {
                   <Link to="/SignIn" className="text-sm font-medium text-gray-300 hover:text-amber-300">
                     SIGN IN
                   </Link>
+                  <button className="text-sm font-medium text-gray-300 hover:text-amber-300">
+                    <SignOut />
+                  </button>
                   <span className="h-6 w-px bg-gray-200" aria-hidden="true" />
                   <Link to="/Registration" className="text-sm font-medium text-gray-300 hover:text-amber-300">
                     CREATE ACCOUNT
@@ -152,7 +156,7 @@ const Header = () => {
                       className="h-6 w-6 flex-shrink-0 text-amber-300 lg:text-gray-300 group-hover:text-amber-300"
                       aria-hidden="true" />
                     <Link to="#" className="ml-2 text-sm font-medium text-gray-300 group-hover:text-amber-300">
-                    {/* 0 */}
+                      {/* 0 */}
                     </Link>
                     <span className="sr-only">items in cart, view bag</span>
                   </Link>

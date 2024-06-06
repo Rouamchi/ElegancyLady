@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const Users = require('../schemas/users.schema');
 const bcrypt = require('bcrypt');
+// const jwt = require('jsonwebtoken'); 
 
 // GET users listing
 router.get('/', async function (req, res, next) {
@@ -10,20 +11,27 @@ router.get('/', async function (req, res, next) {
 });
 
 // Register a new user
-router.post('/', async function (req, res, next) {
-  const { username, password, email, address, city, postalCode, country, isAdmin } = req.body;
-  const newUser = await Users.create({
-    username,
-    password,
-    email,
-    address,
-    city,
-    postalCode,
-    country,
-    isAdmin,
-    createdAt: new Date(),
-  });
-  res.send(newUser);
+router.post('/', async (req, res) => {
+  const { username, password } = req.body;
+  try {
+    const hashedPassword = await bcrypt.hash(password, 10);
+    const newUser = new Users({
+      username,
+      password: hashedPassword,
+      email,
+      address,
+      city,
+      postalCode,
+      country,
+      isAdmin,
+      createdAt: new Date(),
+    });
+    await newUser.save();
+    res.json({ success: true, userId: newUser._id });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: 'An error occurred. Please try again.' });
+  }
 });
 
 // Update user information
@@ -52,23 +60,27 @@ router.delete('/', async function (req, res, next) {
 });
 
 // Login route
-router.post('/login', async function (req, res, next) {
+router.post('/login', async (req, res) => {
   const { username, password } = req.body;
-  const user = await Users.findOne({ username: username })
-  // if (user) {
-  //   res.send({ state: 'Successfully logged in', success: true, _id: user._id })
-
-  // } else {
-  //   res.send({ state: 'Can not find this member, Please Check again', success: false })
-  // }
+  try {
+    const user = await Users.findOne({ username });
     if (!user) {
-      return res.status(401).send({ success: false, message: "Invalid username or password" });
+      return res.status(401).json({ success: false, message: 'Invalid username or password' });
     }
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(401).send({ success: false, message: "Invalid username or password" });
+      return res.status(401).json({ success: false, message: 'Invalid username or password' });
     }
-    res.send({ success: true, message: "Login successful", user });
+    res.json({ success: true, userId: user._id });
+  } catch (err) {
+    console.error(err);
+    res.status(500).json({ success: false, message: 'An error occurred. Please try again.' });
+  }
+});
+
+//LogOut 
+router.post('/logout', (req, res) => {
+  res.json({ success: true, message: "Logged out successfully" });
 });
 
 module.exports = router;

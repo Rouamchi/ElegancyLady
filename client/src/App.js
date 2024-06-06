@@ -3,6 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Home from './Pages/Home';
 import Products from './Pages/Products';
 import SignIn from './Pages/SignIn';
+import SignOut from './Pages/SignOut';
 import Registration from './Pages/Registration';
 import ProductDetails from './Pages/ProductDetails';
 import Cart from './Pages/Cart';
@@ -25,6 +26,7 @@ export default function App() {
           <Route path='/CreateProduct' exact element={<CreateProduct />} />
           <Route path='/AboutUs' exact element={<AboutUs />} />
           <Route path='/SignIn' exact element={<SignIn />} />
+          <Route path='/SignOut' exact element={<SignOut />} />
           <Route path='/Registration' exact element={<Registration />} />
           <Route path='/ProductDetails/:id' exact element={<ProductDetails />} />
           <Route path='/Cart' exact element={<Cart />} />

@@ -7,6 +7,7 @@ import store from './store'
 import Home from './Pages/Home';
 import Products from './Pages/Products';
 import SignIn from './Pages/SignIn';
+import SignOut from './Pages/SignOut';
 import Registration from './Pages/Registration';
 import ProductDetails from './Pages/ProductDetails';
 import Cart from './Pages/Cart';
@@ -38,6 +39,10 @@ const router = createBrowserRouter([
   {
     path: "/signIn",
     element: <SignIn />,
+  },
+  {
+    path: "/SignOut",
+    element: <SignOut />,
   },
   {
     path: "/Registration",
