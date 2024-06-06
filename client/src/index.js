@@ -17,6 +17,7 @@ import Create from './Pages/CreateProduct';
 import CreateProduct from './Pages/CreateProduct'
 import AboutUs from './Pages/AboutUs'
 import { AuthContext, AuthProvider } from "./Pages/AuthContext";
+import { FavoritesProvider } from './Pages/FavoritesContext';
 
 
 const router = createBrowserRouter([
@@ -81,9 +82,11 @@ const router = createBrowserRouter([
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <AuthProvider>
-    <Provider store={store} >
-      <RouterProvider router={router} />
-    </Provider>
-  </AuthProvider>
+  <FavoritesProvider>
+    <AuthProvider>
+      <Provider store={store} >
+        <RouterProvider router={router} />
+      </Provider>
+    </AuthProvider>
+  </FavoritesProvider>
 );

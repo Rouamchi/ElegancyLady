@@ -6,6 +6,7 @@ import { Link } from 'react-router-dom'
 import ToTopButton from "../Components/ToTopButton";
 import CartAlert from "../Components/CartAlert";
 import FavoriteAlert from "../Components/FavoriteAlert";
+import { useFavorites } from '../Pages/FavoritesContext';
 
 
 const ProductDetails = () => {
@@ -15,6 +16,7 @@ const ProductDetails = () => {
   const [quantity] = useState(1)
   const [buttonText, setButtonText] = useState("Add To Favorites");
   const changeText = (text) => setButtonText(text);
+  const { addToFavorites } = useFavorites();
   const [buttonCart, setButtonCart] = useState("Add To Cart");
   const changeCart = (text) => setButtonCart(text);
   const [cart, setCart] = useState([])
@@ -51,16 +53,17 @@ const ProductDetails = () => {
       setShowAlert1(false);
     }, 4000);
   };
-  const clickFavorite = () => {
-    // products.filter((singleProduct) => {
-    //   return (singleProduct.inFavorites === true)
-    // })
-    setShowAlert2(true);
-    setTimeout(() => {
-      setShowAlert2(false);
-    }, 4000);
-  };
 
+  const handleAddToFavorites = () => {
+    if (singleProduct) {
+      addToFavorites(singleProduct);
+      changeText("Saved !");
+      setShowAlert2(true);
+      setTimeout(() => {
+        setShowAlert2(false);
+      }, 4000);
+    }
+  };
   if (singleProduct != null)
     return (
       <>
@@ -118,7 +121,7 @@ const ProductDetails = () => {
                   <div className="inline-block">
                     <div className="mt-5 md:ml-8 flex justify-center gap-x-3">
                       <button
-                        onClick={() => { changeText("Saved !"); clickFavorite(); }}
+                        onClick={() => { changeText("Saved !"); handleAddToFavorites(); }}
                         className="flex py-1 px-4 ml-4 bg-amber-400 text-white font-semibold border border-transparent rounded hover:bg-white hover:text-amber-400 hover:border-amber-400 transition ease-in duration-200 hover:-translate-y-1 active:translate-y-0"
                         type='button'>{buttonText}
                       </button>
