@@ -147,7 +147,7 @@ const Header = () => {
                   {isLogin ? (
                     <div className="flex items-center">
                       <span className="mr-4 text-sm font-medium text-gray-300 hover:text-amber-300">
-                        Hi {username}</span>
+                        Welcome {username}</span>
                       <button className="text-sm font-medium text-gray-300 hover:text-amber-300">
                         <SignOut />
                       </button>
