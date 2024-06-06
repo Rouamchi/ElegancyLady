@@ -7,6 +7,7 @@ import ToTopButton from "../Components/ToTopButton";
 import CartAlert from "../Components/CartAlert";
 import FavoriteAlert from "../Components/FavoriteAlert";
 import { useFavorites } from '../Pages/FavoritesContext';
+import { useCart } from '../Pages/CartContext';
 
 
 const ProductDetails = () => {
@@ -19,7 +20,7 @@ const ProductDetails = () => {
   const { addToFavorites } = useFavorites();
   const [buttonCart, setButtonCart] = useState("Add To Cart");
   const changeCart = (text) => setButtonCart(text);
-  const [cart, setCart] = useState([])
+  const { addToCart } = useCart()
   const [showAlert1, setShowAlert1] = useState(false);
   const [showAlert2, setShowAlert2] = useState(false);
 
@@ -36,22 +37,15 @@ const ProductDetails = () => {
 
   }, [])
 
-  const addToCart = () => {
-    if (!singleProduct.inCart) {
-      const updatedProduct = { ...singleProduct, inCart: true };
-      console.log("Updated product:", updatedProduct);
-      setCart([...cart, updatedProduct]);
-      console.log("Cart after adding product:", [...cart, updatedProduct]);
+  const handleAddToCart = () => {
+    if (singleProduct) {
+      addToCart(singleProduct);
       changeCart("Added To Cart");
-    } else {
-
+      setShowAlert1(true);
+      setTimeout(() => {
+        setShowAlert1(false);
+      }, 4000);
     }
-  };
-  const clickCart = () => {
-    setShowAlert1(true);
-    setTimeout(() => {
-      setShowAlert1(false);
-    }, 4000);
   };
 
   const handleAddToFavorites = () => {
@@ -165,7 +159,7 @@ const ProductDetails = () => {
                 </div>
               </div>
               {/* {`/ShoppingCart/${id}?quantity=${quantity}`} */}
-              <button onClick={() => { addToCart(); clickCart(); }}
+              <button onClick={() => { handleAddToCart(); }}
                 disabled={singleProduct.countInStock === 0}
                 className="flex justify-center mt-3 w-full rounded-md bg-amber-400 py-1.5 font-medium text-blue-50 hover:bg-black">
                 {buttonCart}

@@ -18,6 +18,7 @@ import CreateProduct from './Pages/CreateProduct'
 import AboutUs from './Pages/AboutUs'
 import { AuthContext, AuthProvider } from "./Pages/AuthContext";
 import { FavoritesProvider } from './Pages/FavoritesContext';
+import { CartProvider } from './Pages/CartContext';
 
 
 const router = createBrowserRouter([
@@ -83,10 +84,12 @@ const router = createBrowserRouter([
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <FavoritesProvider>
-    <AuthProvider>
-      <Provider store={store} >
-        <RouterProvider router={router} />
-      </Provider>
-    </AuthProvider>
+    <CartProvider>
+      <AuthProvider>
+        <Provider store={store} >
+          <RouterProvider router={router} />
+        </Provider>
+      </AuthProvider>
+    </CartProvider>
   </FavoritesProvider>
 );
