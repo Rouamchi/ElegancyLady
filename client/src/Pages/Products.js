@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react"
 import Header from "../Components/Header"
 import Footer from "../Components/Footer"
-// import Rating from "../Components/Rating"
 import { Link } from "react-router-dom"
 import SectionProducts from "../Components/SectionProducts"
 import axios from "axios"

@@ -30,8 +30,8 @@ const Footer = () => {
                 ⚜️ Elegancy Lady </Link>
                 <Link to="/AboutUs" className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">
                 ⚜️ Who We Are ? </Link>
-                <p className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">
-                ⚜️ Our Categories </p>
+                <Link to="Products" className="text-amber-400 transition-colors duration-300 dark:text-amber-400 dark:hover:text-amber-400 hover:underline hover:cursor-pointer hover:text-white">
+                ⚜️ Our Categories </Link>
               </div>
             </div>
 
@@ -110,7 +110,7 @@ const Footer = () => {
               </Link>
             </div>
           </div>
-          <p className="font-sans p-8 text-start text-white md:text-center md:text-lg md:p-4">© Elegancy Lady At <Link to='/CreateProduct'> DIA STORE. </Link> All rights reserved.</p>
+          <p className="font-sans p-8 text-start text-white md:text-center md:text-lg md:p-4">© Elegancy Lady At DIA STORE . All rights reserved.</p>
         </div>
       </footer>
 
