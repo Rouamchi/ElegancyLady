@@ -130,19 +130,19 @@ const AboutUs = () => {
             <div className="flex items-center justify-center w-full md:w-1/2">
               <img
                 src={Bags}
-                alt="car"
-                className="w-full h-96 max-w-2xl rounded"
+                alt="sac"
+                className="w-full h-52 md:h-96 max-w-2xl rounded"
               />
             </div>
           </div>
         </div>
-        <div className="container px-6 py-10 mx-auto md:py-1">
+        <div className="container px-6 py-1 mx-auto md:py-1">
           <div className="flex flex-col space-y-6 md:flex-row md:items-center md:space-x-6">
             <div className="flex items-center justify-center w-full md:w-1/2">
               <img
                 src={Accessoire}
-                alt="car"
-                className="w-full h-96 max-w-2xl rounded"
+                alt="sac"
+                className="w-full h-52 md:h-96 max-w-2xl rounded"
               />
             </div>
             <div className="w-full md:w-1/2">
