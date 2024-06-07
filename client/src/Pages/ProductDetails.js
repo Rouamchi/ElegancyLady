@@ -18,6 +18,7 @@ const ProductDetails = () => {
   const { addToCart } = useCart();
   const [showAlert1, setShowAlert1] = useState(false);
   const [showAlert2, setShowAlert2] = useState(false);
+  
 
   useEffect(() => {
     fetch('http://localhost:4000/products')
