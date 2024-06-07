@@ -19,9 +19,6 @@ const pages = [
 const Header = () => {
   const [open, setOpen] = useState(false)
   const { isLogin, username } = useContext(AuthContext);
-  // console.log('isLogin:', isLogin);
-  // console.log('username:', username);
-  // console.log('isAdmin:', isAdmin);
 
   return (
     <div className="bg-white">

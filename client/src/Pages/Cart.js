@@ -76,7 +76,7 @@ const Cart = () => {
                 <div>
                   <ul>
                     {cart.length === 0 ? (
-                      <p className="text-center text-2xl">Your cart is empty.</p>
+                      <p className="text-center text-2xl">Your Cart is Empty</p>
                     ) : (
                       cart.map((singleProduct) => (
                         <div key={singleProduct._id} className="md:h-60 bg-gray-100 pt-4 md:pt-1 w-full">
@@ -90,19 +90,16 @@ const Cart = () => {
                                 />
                                 <div className="ml-4 sm:flex sm:w-full sm:justify-between">
                                   <div className="mt-5 sm:mt-0">
-                                    <h2 className="text-lg font-bold text-gray-900 md:pl-4">
+                                    <h2 className="text-lg mt-5 font-bold text-gray-900 md:pl-4">
                                       {singleProduct.name}
                                     </h2>
-                                    <p className="text-sm leading-3 text-gray-600 dark:text-white pt-2 md:pl-4">
+                                    <p className="text-base font-medium leading-3 text-gray-600 dark:text-white pt-2 md:pl-4">
                                       {singleProduct.name}, 100% authentique
                                     </p>
-                                    <p className="text-sm leading-3 text-gray-600 dark:text-white py-4 md:pl-4">
-                                      Color: {singleProduct.color}
-                                    </p>
-                                    <p className="w-96 text-sm leading-3 text-gray-600 dark:text-white md:pl-4">
+                                    <p className="w-96 text-base font-medium mt-5 leading-3 text-gray-600 dark:text-white md:pl-4">
                                       Quantity: {singleProduct.countInStock > 0 ? (<>{singleProduct.countInStock}</>) : "0"}
                                     </p>
-                                    <p className="text-base font-medium leading-3 text-gray-700 dark:text-white py-4 md:pl-4">
+                                    <p className="text-base font-medium mt-2 leading-3 text-gray-700 dark:text-white py-3 md:pl-4">
                                       Price: {singleProduct.price} DH
                                     </p>
                                     <div className="flex items-center justify-between pt-3 pb-4 md:pt-5 md:pb-0">
@@ -151,7 +148,7 @@ const Cart = () => {
                                 <div className="mt-2 flex justify-between">
                                   <p className="text-gray-700 font-medium">Quantity :</p>
                                   {singleProduct.countInStock > 0 ? (
-                                    <select className=" bg-white text-gray-700" as="select" value={singleProduct.quantity}
+                                    <select key={singleProduct._id} className=" bg-white text-gray-700" as="select" value={singleProduct.quantity}
                                       onChange={(e) => updateQuantity(singleProduct._id, parseInt(e.target.value))}>
                                       {[...Array(singleProduct.countInStock).keys()].map((x) => (
                                         <option key={x + 1} value={x + 1}>
@@ -185,7 +182,7 @@ const Cart = () => {
               {/* Display Total for all products in the cart */}
               <div className="flex justify-center md:justify-end md:mr-20">
                 <button className="md:mt-6 mb-4 rounded-md bg-white py-2 px-24 font-medium text-gray-700 shadow-md">
-                  Global Total:   {total} DH
+                  Global Total: {total} DH
                 </button>
               </div>
             </div>
@@ -193,7 +190,7 @@ const Cart = () => {
         </main>
         <Footer />
         <ToTopButton className="fixed" />
-      </div>
+      </div >
     </>
   );
 }
@@ -214,7 +211,6 @@ export default Cart;
 //   const [buttonText, setButtonText] = useState("Add To Favorites");
 //   const [cart, setCart] = useState([]);
 //   const [total, setTotal] = useState(0);
-
 //   const [image, takeScreenshot] = useScreenshot({
 //     type: 'image/png',
 //     quality: 1.0
@@ -290,7 +286,7 @@ export default Cart;
 //                   <ul>
 //                     {cart.map((singleProduct) => (
 //                       <div key={singleProduct._id} className="md:h-60 bg-gray-100 pt-4 md:pt-1 w-full">
-//                         <div className="md:flex justify-between md:mx-20 w-auto px-6 md:flex md:space-x-32 xl:px-0">
+//                         <div className="justify-between md:mx-20 w-auto px-6 md:flex md:space-x-32 xl:px-0">
 //                           <div className="rounded-lg md:w-3/4">
 //                             <div className="justify-between mb-6 rounded-lg bg-white p-3 shadow-md sm:flex sm:justify-start">
 //                               <img
