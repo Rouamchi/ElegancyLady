@@ -88,7 +88,6 @@ const ScrollToTop = () => {
         padding: '9px',
         height: '50px',
         width: '50px',
-        // fontSize: '50px',
         backgroundColor: '#FFBF00',
         color: 'white',
         border: 'none',
