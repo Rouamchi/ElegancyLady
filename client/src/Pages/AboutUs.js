@@ -231,7 +231,7 @@ const AboutUs = () => {
               </div>
             </div>
           </div>
-        </div> 
+        </div>
         <hr className="border border-amber-400 mt-5 lg:mt-10" />
         <div className=''>
           <iframe title='map' className='w-full h-96 mb-0'
