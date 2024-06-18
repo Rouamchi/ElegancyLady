@@ -12,12 +12,12 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data } = await axios.get('https://elegancyladyserver.onrender.com/products')
+      const { data } = await axios.get('http://localhost:4000/products')
       setProducts(data)
     }
     fetchProducts()
   }, [])
-
+  
 
   return (
     <>
