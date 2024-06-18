@@ -110,7 +110,7 @@ const Cart = () => {
                                           </svg>
                                         </button>
                                         <button key={singleProduct._id} onClick={() => removeFromCart(singleProduct._id)}
-                                          type="submit" className="text-sm leading-3 text-md font-bold text-red-600 hover:text-red-500 pl-5 cursor-pointer md:-mt-2">
+                                          type="submit" className="text-sm leading-3 text-md font-bold text-red-600 hover:text-red-500 pl-5 cursor-pointer -mt-2">
                                           Delete
                                         </button>
                                       </div>
