@@ -7,14 +7,12 @@ import Axios from "axios"
 
 const CreateProduct = () => {
 
-  const url = "https://elegancyladyserver.onrender.com/Products"
+  const url = "http://localhost:4000/Products"
   const [data, setData] = useState({
-    // users: "",
     name: "",
-    imageSrc: null,
+    // imageSrc: null,
+    imageSrc: "",
     description: "",
-    // brand: "",
-    // category: "",
     countInStock: "",
     inCart: false,
     inFavorites: false,
@@ -25,23 +23,23 @@ const CreateProduct = () => {
 
   function handle(e) {
     const newdata = { ...data };
-    if (e.target.id === "imageSrc") {
-      // If it's the image input, update with file object
-      newdata[e.target.id] = e.target.files[0];
-    } else {
-      // Otherwise, handle other inputs
-      newdata[e.target.id] = e.target.value;
-    }
+    // if (e.target.id === "imageSrc") {
+    //   newdata[e.target.id] = e.target.files[0];
+    // } else {
+    newdata[e.target.id] = e.target.value;
+    // }
     setData(newdata);
   }
 
   function click(e) {
     e.preventDefault();
-    const formData = new FormData();
-    for (let key in data) {
-      formData.append(key, data[key]);
-    }
-    Axios.post(url, formData, {
+    // const formData = new FormData();
+    // for (let key in data) {
+    //   formData.append(key, data[key]);
+    // }
+
+    // Axios.post(url, formData, {
+    Axios.post(url, {
       name: data.name,
       imageSrc: data.imageSrc,
       description: data.description,
@@ -79,8 +77,9 @@ const CreateProduct = () => {
               <div className="mb-2">
                 <input
                   id="imageSrc"
-                  type="file"
-                  onChange={handle}
+                  // type="file"
+                  // onChange={handle}
+                  Value={data.imageSrc} onChange={(e) => { handle(e) }} rows={1}
                   className="w-full border-2 rounded-md px-4 py-2 leading-5 transition duration-150 ease-in-out sm:text-sm sm:leading-5 resize-none focus:outline-none focus:border-amber-400"
                   placeholder="Choose Image"
                 />
