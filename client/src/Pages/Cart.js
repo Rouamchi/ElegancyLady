@@ -43,7 +43,7 @@ const Cart = () => {
 
 
   useEffect(() => {
-    fetch('http://localhost:4000/products')
+    fetch('https://elegancyladyserver.onrender.com/products')
       .then((response) => response.json())
       .catch((err) => {
         console.log(err);
