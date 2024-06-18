@@ -97,7 +97,7 @@ const Home = () => {
                     </button>
                     <div className="mt-4 justify-between">
                       <div className="ml-1 md:ml-0">
-                        <h3 className="-mt-4 text-base font-medium text-gray-700">
+                        <h3 className="-mt-4 text-base font-medium text-gray-600">
                           <span aria-hidden="true" />
                           {singleProduct.name}
                         </h3>
