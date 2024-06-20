@@ -3,17 +3,33 @@ const express = require('express');
 const router = express.Router();
 const multer = require('multer');
 const path = require('path');
+const fs = require('fs');
 const Products = require('../schemas/products.schema');
 
 // Multer setup for file uploads
+// const storage = multer.diskStorage({
+//   destination: (req, file, cb) => {
+//     cb(null, 'uploads/');
+//   },
+//   filename: (req, file, cb) => {
+//     cb(null, `${Date.now()}-${file.originalname}`);
+//   },
+// });
+
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'uploads/');
+    const uploadPath = path.join(__dirname, '..', 'uploads');
+    if (!fs.existsSync(uploadPath)) {
+      fs.mkdirSync(uploadPath);
+    }
+    cb(null, uploadPath);
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}-${file.originalname}`);
   },
 });
+
+
 const upload = multer({ storage });
 
 /* GET products listing. */
@@ -107,16 +123,16 @@ module.exports = router;
 //   const imageSrc = req.file.path;
 //   const newProduct = await Products.create({
 //     users,
-//     name, 
+//     name,
 //     imageSrc,
-//     imageAlt, 
+//     imageAlt,
 //     description,
 //     brand,
-//     category, 
+//     category,
 //     countInStock,
 //     inCart,
 //     inFavorites,
-//     price, color, 
+//     price, color,
 //     rating,
 //     createdAt: new Date(),
 //   })
@@ -127,16 +143,16 @@ module.exports = router;
 //   const { name, imageSrc, imageAlt, brand, description, inCart, inFavorites, category, countInStock, price, color, rating, _id } = req.body
 //   const newProduct = await Products.findByIdAndUpdate(_id,
 //     {
-//       name, 
+//       name,
 //       imageSrc,
-//       imageAlt, 
+//       imageAlt,
 //       brand,
 //       description,
 //       inCart,
 //       inFavorites,
-//       category, 
+//       category,
 //       countInStock,
-//       price, color, 
+//       price, color,
 //       rating,
 //     }, { new: true })
 //   res.send(newProduct);

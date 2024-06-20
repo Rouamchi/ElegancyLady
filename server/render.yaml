@@ -1,0 +1,7 @@
+services:
+  - type: web
+    name: server
+    env: node
+    buildCommand: "npm i"
+    startCommand: "npm start"
+    staticPublishPath: uploads
