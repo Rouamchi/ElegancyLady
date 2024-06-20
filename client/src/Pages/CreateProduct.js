@@ -185,14 +185,11 @@ const CreateProduct = () => {
       name: data.name,
       imageSrc: data.imageSrc,
       description: data.description,
-      // brand: data.brand,
-      // category: data.category.name,
       inCart: data.inCart,
       inFavorites: data.inFavorites,
       countInStock: data.countInStock,
       price: data.price,
       color: data.color,
-      // users: data.users.fullname,
     })
       .then(res => {
         console.log(res.data)
