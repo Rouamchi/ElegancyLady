@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data } = await axios.get('http://localhost:4000/products')
+      const { data } = await axios.get('https://elegancyladyserver.onrender.com/products')
       setProducts(data)
     }
     fetchProducts()
@@ -88,7 +88,7 @@ const Home = () => {
                     <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md md:rounded-2xl bg-gray-200 md:aspect-none h-48 md:h-80">
                       <Link to={`/ProductDetails/${singleProduct._id}`}>
                         <img 
-                        // src={`https://http://localhost:4000/uploads/image555.jpg}`}
+                        // src={`https://https://elegancyladyserver.onrender.com/uploads/image555.jpg}`}
                         src={singleProduct.imageSrc}
                         alt={singleProduct.imageAlt}
                           className="h-full w-full object-cover object-center md:h-full md:w-full" />
