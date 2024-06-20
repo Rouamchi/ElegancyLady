@@ -87,7 +87,8 @@ app.use('/', function (req, res, next) {
   next();
 });
 
-app.use('/uploads', express.static('uploads'));
+// app.use('/uploads', express.static('uploads'));
+app.use('/uploads', express.static('uploadPath'));
 
 
 app.use('/', indexRouter);
