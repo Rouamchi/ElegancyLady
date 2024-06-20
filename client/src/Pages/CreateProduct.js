@@ -7,7 +7,7 @@
 
 // const CreateProduct = () => {
 
-//   const url = "https://elegancyladyserver.onrender.com/Products"
+//   const url = "http://localhost:4000/Products"
 //   const [data, setData] = useState({
 //     name: "",
 //     imageSrc: "",
@@ -149,7 +149,7 @@ import Axios from "axios"
 
 const CreateProduct = () => {
 
-  const url = "https://elegancyladyserver.onrender.com/Products"
+  const url = "http://localhost:4000/Products"
   const [data, setData] = useState({
     // users: "",
     name: "",
