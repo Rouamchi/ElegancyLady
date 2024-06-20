@@ -15,7 +15,7 @@ const SignIn = () => {
   const [error, setError] = useState("");
   const navigate = useNavigate();
   const [showPassword, setShowPassword] = useState(false);
-  const url = "https://http://localhost:4000/users/login"; 
+  const url = "http://localhost:4000/users/login";
   const [data, setData] = useState({
     username: "",
     password: ""

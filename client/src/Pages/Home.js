@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data } = await axios.get('https://http://localhost:4000/products')
+      const { data } = await axios.get('http://localhost:4000/products')
       setProducts(data)
     }
     fetchProducts()

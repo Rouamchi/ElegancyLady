@@ -43,7 +43,7 @@ const Cart = () => {
 
 
   useEffect(() => {
-    fetch('https://http://localhost:4000/products')
+    fetch('http://localhost:4000/products')
       .then((response) => response.json())
       .catch((err) => {
         console.log(err);
