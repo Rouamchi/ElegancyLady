@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchProducts = async () => {
-      const { data } = await axios.get('https://elegancyladyserver.onrender.com/products/uploads')
+      const { data } = await axios.get('https://elegancyladyserver.onrender.com/products')
       setProducts(data)
     }
     fetchProducts()
