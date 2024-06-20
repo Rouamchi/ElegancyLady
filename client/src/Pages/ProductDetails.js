@@ -21,7 +21,7 @@ const ProductDetails = () => {
   
 
   useEffect(() => {
-    fetch('http://localhost:4000/products')
+    fetch('https://elegancyladyserver.onrender.com/products')
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
