@@ -87,7 +87,9 @@ const Home = () => {
                   <div key={singleProduct._id} singleProduct={singleProduct} className="group relative">
                     <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md md:rounded-2xl bg-gray-200 md:aspect-none h-48 md:h-80">
                       <Link to={`/ProductDetails/${singleProduct._id}`}>
-                        <img src={singleProduct.imageSrc} alt={singleProduct.imageAlt}
+                        <img alt={singleProduct.imageAlt}
+                        src="https://elegancyladyserver.onrender.com/uploads/image555.jpg"
+                        // src={singleProduct.imageSrc} 
                           className="h-full w-full object-cover object-center md:h-full md:w-full" />
                       </Link>
                     </div>
