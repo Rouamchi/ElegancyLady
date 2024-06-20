@@ -168,10 +168,8 @@ const CreateProduct = () => {
   function handle(e) {
     const newdata = { ...data };
     if (e.target.id === "imageSrc") {
-      // If it's the image input, update with file object
       newdata[e.target.id] = e.target.files[0];
     } else {
-      // Otherwise, handle other inputs
       newdata[e.target.id] = e.target.value;
     }
     setData(newdata);
