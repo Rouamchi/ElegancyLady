@@ -1,20 +1,20 @@
 
 const express = require('express');
 const router = express.Router();
-// const multer = require('multer');
+const multer = require('multer');
 const path = require('path');
 const Products = require('../schemas/products.schema');
 
 // Multer setup for file uploads
-// const storage = multer.diskStorage({
-//   destination: (req, file, cb) => {
-//     cb(null, 'uploads/');
-//   },
-//   filename: (req, file, cb) => {
-//     cb(null, `${Date.now()}-${file.originalname}`);
-//   },
-// });
-// const upload = multer({ storage });
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => {
+    cb(null, 'uploads/');
+  },
+  filename: (req, file, cb) => {
+    cb(null, `${Date.now()}-${file.originalname}`);
+  },
+});
+const upload = multer({ storage });
 
 /* GET products listing. */
 router.get('/', async function (req, res, next) {
@@ -27,11 +27,11 @@ router.get('/', async function (req, res, next) {
 });
 
 /* POST a new product. */
-// router.post('/', upload.single('imageSrc'), async function (req, res, next) {
-  router.post('/', async function (req, res, next) {
+router.post('/', upload.single('imageSrc'), async function (req, res, next) {
+  // router.post('/', async function (req, res, next) {
   try {
-    const { name, imageSrc, description, countInStock, inCart, inFavorites, price, color } = req.body;
-    // const imageSrc = `/uploads/${req.file.filename}`;
+    const { name, description, countInStock, inCart, inFavorites, price, color } = req.body;
+    const imageSrc = `/uploads/${req.file.filename}`;
     const newProduct = new Products({
       name,
       imageSrc,
