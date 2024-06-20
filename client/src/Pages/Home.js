@@ -6,7 +6,6 @@ import Footer from "../Components/Footer"
 import { Link } from "react-router-dom"
 import ToTopButton from "../Components/ToTopButton"
 import './Home.css'
-import { image } from "html2canvas/dist/types/css/types/image"
 
 const Home = () => {
   const [products, setProducts] = useState([])
@@ -18,17 +17,8 @@ const Home = () => {
     }
     fetchProducts()
   }, [])
-
-
-  const [images, setImages] = useState([])
-  useEffect(() => {
-    const fetchImages = async () => {
-      const { data } = await axios.get('https://elegancyladyserver.onrender.com/uploads')
-      setImages(data)
-    }
-    fetchImages()
-  }, [])
   
+
   return (
     <>
       <Header />
@@ -97,9 +87,7 @@ const Home = () => {
                   <div key={singleProduct._id} singleProduct={singleProduct} className="group relative">
                     <div className="aspect-h-1 aspect-w-1 w-full overflow-hidden rounded-md md:rounded-2xl bg-gray-200 md:aspect-none h-48 md:h-80">
                       <Link to={`/ProductDetails/${singleProduct._id}`}>
-                        <img alt={singleProduct.imageAlt}
-                        src={image}
-                        // src={singleProduct.imageSrc} 
+                        <img src={singleProduct.imageSrc} alt={singleProduct.imageAlt}
                           className="h-full w-full object-cover object-center md:h-full md:w-full" />
                       </Link>
                     </div>
