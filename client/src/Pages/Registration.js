@@ -10,7 +10,7 @@ import ToTopButton from "../Components/ToTopButton"
 const Registration = () => {
 
   const [showPassword, setShowPassword] = useState(false);
-  const url = "https://elegancyladyserver.onrender.com/users"
+  const url = "https://http://localhost:4000/users"
   const [data, setData] = useState({
     username: "",
     password: "",
