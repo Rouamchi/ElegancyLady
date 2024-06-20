@@ -89,7 +89,7 @@ const Home = () => {
                       <Link to={`/ProductDetails/${singleProduct._id}`}>
                         <img 
                         // src={`https://elegancyladyserver.onrender.com/uploads/image555.jpg}`}
-                        src={`${singleProduct.imageSrc}/uploads/${singleProduct.imageSrc}`}
+                        src={singleProduct.imageSrc}
                         alt={singleProduct.imageAlt}
                           className="h-full w-full object-cover object-center md:h-full md:w-full" />
                       </Link>
