@@ -66,7 +66,7 @@ const CreateProduct = () => {
               src={Logo}
               alt="Your Company"
             />
-            <form className='' enctype="multipart/form-data" action="https://elegancyladyserver.onrender.com/upload">
+            <form className='' enctype="multipart/form-data" action="/upload">
               {/* Product Photo */}
               <div className="mb-2">
                 <input
