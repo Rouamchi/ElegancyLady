@@ -150,7 +150,6 @@ import Axios from "axios"
 const CreateProduct = () => {
 
   const url = "https://elegancyladyserver.onrender.com/Products"
-  // const url = "https://elegancyladyserver.onrender.com/Products"
   const [data, setData] = useState({
     // users: "",
     name: "",
