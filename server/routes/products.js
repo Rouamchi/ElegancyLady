@@ -8,7 +8,7 @@ const Products = require('../schemas/products.schema');
 // Multer setup for file uploads
 const storage = multer.diskStorage({
   destination: (req, file, cb) => {
-    cb(null, 'https://elegancyladyserver.onrender.com/uploads/');
+    cb(null, '/server/uploads/');
   },
   filename: (req, file, cb) => {
     cb(null, `${Date.now()}-${file.originalname}`);
