@@ -87,7 +87,7 @@ app.use('/', function (req, res, next) {
   next();
 });
 
-app.use('/uploads', express.static('https://elegancyladyserver.onrender.com/uploads'));
+app.use('/uploads', express.static('uploads'));
 
 
 app.use('/', indexRouter);
