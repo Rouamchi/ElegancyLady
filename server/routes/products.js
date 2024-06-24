@@ -53,7 +53,7 @@ router.get('/', async function (req, res, next) {
 // });
 
 
-router.post('/Products', upload.single('imageSrc'), async (req, res) => {
+router.post('/', upload.single('imageSrc'), async (req, res) => {
   try {
     const { name, description, countInStock, inCart, inFavorites, price, color } = req.body;
     const imageSrc = req.file ? req.file.path : null;
