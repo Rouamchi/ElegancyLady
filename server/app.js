@@ -10,9 +10,9 @@ const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const app = express();
 // Serve React app for any unknown routes (this must come after your API routes)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+// app.get('*', (req, res) => {
+//   res.sendFile(path.join(__dirname, 'public', 'index.html'));
+// });
 ////////////////////////////////////////////
 const debug = require('debug')('server:server');
 const http = require('http');
