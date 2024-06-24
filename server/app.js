@@ -9,6 +9,10 @@ const indexRouter = require('./routes/index');
 const usersRouter = require('./routes/users');
 const productsRouter = require('./routes/products');
 const app = express();
+// Serve React app for any unknown routes (this must come after your API routes)
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'public', 'index.html'));
+});
 ////////////////////////////////////////////
 const debug = require('debug')('server:server');
 const http = require('http');
@@ -88,17 +92,9 @@ app.use('/', function (req, res, next) {
 });
 
 app.use('/uploads', express.static('uploads'));
-
-
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 app.use('/products', productsRouter);
-
-// Serve React app for any unknown routes (this must come after your API routes)
-app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
-
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
