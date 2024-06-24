@@ -29,35 +29,10 @@ router.get('/', async function (req, res, next) {
 
 /* POST a new product. */
 // router.post('/', async function (req, res, next) {
-
-// router.post('/', upload.single('imageSrc'), async function (req, res, next) {
-//   try {
-//     const { name, description, countInStock, inCart, inFavorites, price, color } = req.body;
-//     const imageSrc = `https://elegancyladyserver.onrender.com/uploads/${req.file.filename}`;
-//     const newProduct = new Products({
-//       name,
-//       imageSrc,
-//       description,
-//       countInStock,
-//       inCart,
-//       inFavorites,
-//       price,
-//       color,
-//       createdAt: new Date(),
-//     });
-//     await newProduct.save();
-//     res.status(201).send(newProduct);
-//   } catch (error) {
-//     res.status(400).send(error);
-//   }
-// });
-
-
-router.post('/', upload.single('imageSrc'), async (req, res) => {
+router.post('/', upload.single('imageSrc'), async function (req, res, next) {
   try {
     const { name, description, countInStock, inCart, inFavorites, price, color } = req.body;
     const imageSrc = `https://elegancyladyserver.onrender.com/uploads/${req.file.filename}`;
-
     const newProduct = new Products({
       name,
       imageSrc,
@@ -67,14 +42,15 @@ router.post('/', upload.single('imageSrc'), async (req, res) => {
       inFavorites,
       price,
       color,
+      createdAt: new Date(),
     });
-
-    const savedProduct = await newProduct.save();
-    res.status(201).json(savedProduct);
+    await newProduct.save();
+    res.status(201).send(newProduct);
   } catch (error) {
-    res.status(500).json({ error: error.message });
+    res.status(400).send(error);
   }
 });
+
 
 /* PUT update a product. */
 router.put('/', async function (req, res, next) {

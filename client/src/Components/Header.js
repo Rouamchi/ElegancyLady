@@ -112,7 +112,7 @@ const Header = () => {
               </button>
 
               <div className=" ml-16 flex md:ml-0">
-                <Link to="#">
+                <Link to="/">
                   <span className="sr-only">Your Company</span>
                   <img className="h-12 lg:w-32"
                     src={Logo}
