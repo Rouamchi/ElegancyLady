@@ -56,7 +56,7 @@ router.get('/', async function (req, res, next) {
 router.post('/', upload.single('imageSrc'), async (req, res) => {
   try {
     const { name, description, countInStock, inCart, inFavorites, price, color } = req.body;
-    const imageSrc = req.file ? req.file.path : null;
+    const imageSrc = `https://elegancyladyserver.onrender.com/uploads/${req.file.filename}`;
 
     const newProduct = new Products({
       name,
