@@ -47,6 +47,7 @@ const Cart = () => {
       .then((response) => response.json())
       .catch((err) => {
         console.log(err);
+        window.scrollTo(0, 0);
       });
   }, []);
 
