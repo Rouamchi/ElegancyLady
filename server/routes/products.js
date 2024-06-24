@@ -28,7 +28,7 @@ router.get('/', async function (req, res, next) {
 });
 
 /* POST a new product. */
-router.post('/', upload.single('imageSrc'), async function (req, res, next) {
+router.post('/Products', upload.single('imageSrc'), async function (req, res, next) {
   // router.post('/', async function (req, res, next) {
   try {
     const { name, description, countInStock, inCart, inFavorites, price, color } = req.body;
