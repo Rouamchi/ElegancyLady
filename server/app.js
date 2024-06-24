@@ -95,7 +95,7 @@ app.use('/users', usersRouter);
 app.use('/products', productsRouter);
 
 // Serve React app for any unknown routes (this must come after your API routes)
-app.use((req, res, next) => {
+app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'public', 'index.html'));
 });
 
