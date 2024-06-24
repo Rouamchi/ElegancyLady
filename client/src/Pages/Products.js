@@ -13,7 +13,6 @@ const Products = () => {
     const fetchProducts = async () => {
       const { data } = await axios.get('https://elegancyladyserver.onrender.com/products')
       setProducts(data)
-      window.scrollTo(0, 0);
     }
     fetchProducts()
   }, [])
