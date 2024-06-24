@@ -18,13 +18,14 @@ const ProductDetails = () => {
   const { addToCart } = useCart();
   const [showAlert1, setShowAlert1] = useState(false);
   const [showAlert2, setShowAlert2] = useState(false);
-  
+
 
   useEffect(() => {
     fetch('https://elegancyladyserver.onrender.com/products')
       .then((response) => response.json())
       .then((data) => setProducts(data))
       .catch((err) => console.log(err));
+    window.scrollTo(0, 0);
   }, []);
 
   const handleAddToCart = () => {
