@@ -98,7 +98,7 @@ const Header = () => {
         </Dialog>
       </Transition.Root>
       {/* ------------------------------ For Destop ------------------------- */}
-      <header className="fixed bg-black">
+      <header className="relative bg-black">
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
           <div className="border-b border-amber-300">
             <div className="flex h-16 items-center">
