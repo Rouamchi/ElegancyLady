@@ -22,7 +22,7 @@ export default function App() {
     <>
       <div>
         <Routes>
-          <Route path='https://elegancyladydiastore.onrender.com' exact element={<Home />}/>
+          <Route path='/' exact element={<Home />}/>
           <Route path='/home' exact element={<Home />} />
           <Route path='/Products' exact element={<Products />} />
           <Route path='/CreateProduct' exact element={<CreateProduct />} />

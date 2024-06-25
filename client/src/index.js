@@ -23,7 +23,7 @@ import { CartProvider } from './Pages/CartContext';
 
 const router = createBrowserRouter([
   {
-    path: "https://elegancyladydiastore.onrender.com",
+    path: "/",
     element: <Home />,
     errorElement: <h1>Sorry, Page not found</h1>
   },
