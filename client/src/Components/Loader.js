@@ -1,8 +1,10 @@
 import React from 'react'
-
+import Header from "./Header";
+import Footer from "./Footer";
 const Loader = () => {
   return (
     <>
+    <Header/>
       <div className="card rounded-[12px] m-10 text-xl shadow-2xl p-5 animate-pulse">
         <a href="/">
           <div className="w-full h-64 bg-gray-200 rounded mb-3" />
@@ -11,6 +13,7 @@ const Loader = () => {
           <div className="h-4 bg-gray-200 rounded w-1/4" />
         </a>
       </div>
+      <Footer/>
     </>
   )
 }
