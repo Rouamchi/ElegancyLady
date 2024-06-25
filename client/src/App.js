@@ -33,7 +33,7 @@ export default function App() {
           <Route path='/ProductDetails/:id' exact element={<ProductDetails />} />
           <Route path='/Cart' exact element={<Cart />} />
           <Route path='/CheckOut' exact element={<CheckOut />} />
-          <Route path='https://elegancyladydiastore.onrender.com/Favorites/:id?' exact element={<Favorites/>} />
+          <Route path='/Favorites/:id?' exact element={<Favorites/>} />
           <Route path='/CreateProduct' exact element={<Create />} />
           <Route path='/AuthContext' exact element={<AuthContext />} />
         </Routes>

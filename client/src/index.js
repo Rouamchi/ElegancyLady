@@ -64,7 +64,7 @@ const router = createBrowserRouter([
     element: <Cart />,
   },
   {
-    path: "https://elegancyladydiastore.onrender.com/Favorites/:id?",
+    path: "/Favorites/:id?",
     element: <Favorites />,
   },
   {
