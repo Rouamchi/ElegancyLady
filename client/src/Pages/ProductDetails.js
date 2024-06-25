@@ -7,6 +7,7 @@ import CartAlert from "../Components/CartAlert";
 import FavoriteAlert from "../Components/FavoriteAlert";
 import { useFavorites } from '../Pages/FavoritesContext';
 import { useCart } from '../Pages/CartContext';
+import Loader from '../Components/Loader'
 
 const ProductDetails = () => {
   const { id } = useParams();
@@ -47,7 +48,9 @@ const ProductDetails = () => {
   };
 
   if (!singleProduct) {
-    return <div>Loading...</div>;
+    return <div>
+      <Loader />
+    </div>;
   }
 
   return (
