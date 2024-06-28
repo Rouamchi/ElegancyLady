@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.729c0df7.css",
+    "main.js": "/static/js/main.acde9443.js",
+    "static/media/hero2.png": "/static/media/hero2.9a9199ba3a5e60cd2115.png",
+    "static/media/hero4.png": "/static/media/hero4.f95955790f834a56c2e8.png",
+    "static/media/hero3.png": "/static/media/hero3.d73e3b3c31a242e168af.png",
+    "static/media/hero.png": "/static/media/hero.1fea89943c84de74ff12.png",
+    "static/media/hero3Mobile.png": "/static/media/hero3Mobile.e2664aedd3d20a8e4930.png",
+    "static/media/hero1.png": "/static/media/hero1.151536bee258dbae98a8.png",
+    "static/media/heroMobile.png": "/static/media/heroMobile.c997e1843fb5270f3974.png",
+    "static/media/hero2Mobile.png": "/static/media/hero2Mobile.fda64a425b5fd2e790f2.png",
+    "static/media/accessoires.png": "/static/media/accessoires.798f97bba563bfc70f3b.png",
+    "static/media/hero4Mobile.png": "/static/media/hero4Mobile.cbdfae20fd3593a4d238.png",
+    "static/media/hero1Mobile.png": "/static/media/hero1Mobile.23c0f41b84a31e8556f4.png",
+    "static/media/Morocco.png": "/static/media/Morocco.e60414e5a9091e9256b7.png",
+    "static/media/bags.jpg": "/static/media/bags.6fa9b7cdc2efe7b73b68.jpg",
+    "static/media/Logo.png": "/static/media/Logo.af487b6fa84fcb7eb137.png",
+    "index.html": "/index.html",
+    "main.729c0df7.css.map": "/static/css/main.729c0df7.css.map",
+    "main.acde9443.js.map": "/static/js/main.acde9443.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.729c0df7.css",
+    "static/js/main.acde9443.js"
+  ]
+}
