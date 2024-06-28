@@ -97,7 +97,6 @@ app.get('*', (req, res) => {
 });
 
 
-
 app.use('/uploads', express.static('uploads'));
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
