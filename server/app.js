@@ -88,14 +88,11 @@ app.use('/', function (req, res, next) {
 });
 
 // Serve static files from the React app
-app.use(express.static(path.join(__dirname, 'client/public')));
-// Your API routes
-app.get('/https://elegancyladyserver.onrender.com/products', (req, res) => {
-  // handle the API request
-});
+app.use(express.static(path.join(__dirname, 'client/build')));
+
 // Serve React app for any unknown routes (this must come after your API routes)
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/public', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
 app.use('/uploads', express.static('uploads'));
