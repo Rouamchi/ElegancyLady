@@ -28,7 +28,7 @@ const router = createBrowserRouter([
     errorElement: <h1>Sorry, Page not found</h1>
   },
   {
-    path: "/https://elegancyladydiastore.onrender.com",
+    path: "/home",
     element: <Home />,
   },
   {
