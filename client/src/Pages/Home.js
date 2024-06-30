@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react"
 import axios from "axios"
-// import Rating from "../Components/Rating"
+import Loader from '../Components/Loader'
 import Header from "../Components/Header"
 import Footer from "../Components/Footer"
 import { Link } from "react-router-dom"
@@ -19,6 +19,11 @@ const Home = () => {
     fetchProducts()
   }, [])
   
+  if (!products) {
+    return <div>
+      <Loader />
+    </div>;
+  }
 
   return (
     <>

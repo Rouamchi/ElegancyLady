@@ -5,6 +5,7 @@ import { Link } from "react-router-dom"
 import SectionProducts from "../Components/SectionProducts"
 import axios from "axios"
 import ToTopButton from "../Components/ToTopButton"
+import Loader from '../Components/Loader'
 
 
 const Products = () => {
@@ -17,6 +18,12 @@ const Products = () => {
     }
     fetchProducts()
   }, [])
+
+  if (!products) {
+    return <div>
+      <Loader />
+    </div>;
+  }
 
   return (
     <>
