@@ -17,13 +17,13 @@ const Home = () => {
       window.scrollTo(0, 0);
     }
     fetchProducts()
+    if (!products) {
+      return <div>
+        <Loader />
+      </div>;
+    }
   }, [])
   
-  if (!products) {
-    return <div>
-      <Loader />
-    </div>;
-  }
 
   return (
     <>
