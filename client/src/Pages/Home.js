@@ -89,7 +89,7 @@ const Home = () => {
               <h3 className="text-gray-600 text-2xl font-medium">Discover Our Latest Arrivals</h3>
               <div className="overflow-hidden grid gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-10 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-6">
                 {loading ? (
-                  <div className="col-span-full">
+                  <div className="col-span-full overflow-hidden grid gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-10 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-6">
                     <Loader />
                   </div>
                 ) : (
