@@ -29,6 +29,9 @@ const Home = () => {
   return (
     <>
       <Header />
+      <div className="col-span-full overflow-hidden grid gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-10 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-6">
+      <Loader />
+      </div>
       <section className="">
         <div className="relative overflow-hidden bg-cover bg-no-repeat">
           <div className="bgImage hide-when-mobile"></div>
