@@ -87,9 +87,9 @@ const Home = () => {
           <div className="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-24 md:max-w-7xl md:px-8">
             <div className="-mt-12 md:-mt-16">
               <h3 className="text-gray-600 text-2xl font-medium">Discover Our Latest Arrivals</h3>
-              <div className="">
+              <div className="overflow-hidden grid gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-10 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-6">
                 {loading ? (
-                  <div className="">
+                  <div className="col-span-full overflow-hidden grid gap-x-4 gap-y-8 md:gap-x-6 md:gap-y-10 grid-cols-2 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 mt-6">
                     <Loader />
                   </div>
                 ) : (
