@@ -2,9 +2,9 @@ import React from 'react'
 const Loader = () => {
   return (
     <>
-      <div className="rounded-[12px] text-xl ml-3 md:ml-6 mb-0 md:mb-2 shadow-xl p-2 md:p-3 animate-pulse">
+      <div className="rounded-[12px] text-xl mb-0 md:mb-2 p-0 animate-pulse">
         <a href="/">
-          <div className="w-full h-32 md:h-64 bg-gray-200 rounded mb-3">
+          <div className="w-full h-48 md:h-80 bg-gray-200 rounded md:rounded-2xl mb-3">
             <div className="flex items-center justify-center w-full h-full">
               <div className="flex justify-center items-center space-x-1 text-sm text-gray-700">
                 <svg
@@ -23,14 +23,14 @@ const Loader = () => {
               </div>
             </div>
           </div>
-          <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
-          <div className="h-1 bg-gray-200 rounded w-full mb-2" />
-          <div className="h-4 bg-gray-200 rounded w-1/4" />
+          <div className="h-4 bg-gray-200 rounded w-2/4 mb-2 ml-1" />
+          <div className="h-1 bg-gray-200 rounded w-2/4 mb-2 ml-1" />
+          <div className="h-8 bg-gray-200 rounded w-4/4 ml-1 mr-1" />
         </a>
       </div>
-      <div className="rounded-[12px] text-xl ml-0 md:ml-4 mr-3 md:mr-2 shadow-xl mb-0 md:mb-2 p-2 md:p-3 animate-pulse">
+      <div className="rounded-[12px] text-xl mb-0 md:mb-2 p-0 animate-pulse">
         <a href="/">
-          <div className="w-full h-32 md:h-64 bg-gray-200 rounded mb-3">
+          <div className="w-full h-48 md:h-80 bg-gray-200 rounded md:rounded-2xl mb-3">
           <div className="flex items-center justify-center w-full h-full">
               <div className="flex justify-center items-center space-x-1 text-sm text-gray-700">
                 <svg
@@ -49,14 +49,14 @@ const Loader = () => {
               </div>
             </div>
           </div>
-          <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
-          <div className="h-1 bg-gray-200 rounded w-full mb-2" />
-          <div className="h-4 bg-gray-200 rounded w-1/4" />
+          <div className="h-4 bg-gray-200 rounded w-2/4 mb-2 ml-1" />
+          <div className="h-1 bg-gray-200 rounded w-2/4 mb-2 ml-1" />
+          <div className="h-8 bg-gray-200 rounded w-4/4 ml-1 mr-1" />
         </a>
       </div>
-      <div className="rounded-[12px] text-xl ml-3 md:ml-2 mr-0 md:mr-4 shadow-xl mb-2 p-2 md:p-3 animate-pulse">
+      <div className="rounded-[12px] text-xl mb-2 p-0 animate-pulse">
         <a href="/">
-          <div className="w-full h-32 md:h-64 bg-gray-200 rounded mb-3">
+          <div className="w-full h-48 md:h-80 bg-gray-200 rounded md:rounded-2xl mb-3">
           <div className="flex items-center justify-center w-full h-full">
               <div className="flex justify-center items-center space-x-1 text-sm text-gray-700">
                 <svg
@@ -75,14 +75,14 @@ const Loader = () => {
               </div>
             </div>
           </div>
-          <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
-          <div className="h-1 bg-gray-200 rounded w-full mb-2" />
-          <div className="h-4 bg-gray-200 rounded w-1/4" />
+          <div className="h-4 bg-gray-200 rounded w-2/4 mb-2 ml-1" />
+          <div className="h-1 bg-gray-200 rounded w-2/4 mb-2 ml-1" />
+          <div className="h-8 bg-gray-200 rounded w-4/4 ml-1 mr-1" />
         </a>
       </div>
-      <div className="rounded-[12px] text-xl mr-3 md:mr-6 shadow-xl mb-2 p-2 md:p-3 animate-pulse">
+      <div className="rounded-[12px] text-xl mb-2 p-0 animate-pulse">
         <a href="/">
-          <div className="w-full h-32 md:h-64 bg-gray-200 rounded mb-3">
+          <div className="w-full h-48 md:h-80 bg-gray-200 rounded md:rounded-2xl mb-3">
           <div className="flex items-center justify-center w-full h-full">
               <div className="flex justify-center items-center space-x-1 text-sm text-gray-700">
                 <svg
@@ -101,9 +101,9 @@ const Loader = () => {
               </div>
             </div>
           </div>
-          <div className="h-4 bg-gray-200 rounded w-3/4 mb-2" />
-          <div className="h-1 bg-gray-200 rounded w-full mb-2" />
-          <div className="h-4 bg-gray-200 rounded w-1/4" />
+          <div className="h-4 bg-gray-200 rounded w-2/4 mb-2 ml-1" />
+          <div className="h-1 bg-gray-200 rounded w-2/4 mb-2 ml-1" />
+          <div className="h-8 bg-gray-200 rounded w-4/4 ml-1 mr-1" />
         </a>
       </div>
     </>
