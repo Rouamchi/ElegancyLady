@@ -32,7 +32,6 @@ export default function App() {
           <Route path='/Registration' exact element={<Registration />} />
           <Route path='/ProductDetails/:id' exact element={<ProductDetails />} />
           <Route path='/Cart' exact element={<Cart />} />
-          <Route path='https://elegancyladydiastore.onrender.com/Cart' exact element={<Cart />} />
           <Route path='/CheckOut' exact element={<CheckOut />} />
           <Route path='/Favorites/:id?' exact element={<Favorites/>} />
           <Route path='/CreateProduct' exact element={<Create />} />

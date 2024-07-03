@@ -17,10 +17,10 @@
         "tabs",
         "activeTab",
         "storage",
-        "https://elegancyladydiastore.onrender.com/*"  
+        "https://elegancyladyserver.onrender.com/*"  
       ],
       "externally_connectable": {
-        "matches": ["https://elegancyladydiastore.onrender.com/*"]  
+        "matches": ["https://elegancyladyserver.onrender.com/*"]  
       },
       "background": {
         "scripts": ["background.js"],
@@ -28,7 +28,7 @@
       },
       "content_scripts": [
         {
-          "matches": ["https://elegancyladydiastore.onrender.com/*"], 
+          "matches": ["https://elegancyladyserver.onrender.com/*"], 
           "js": ["content.js"]
         }
       ]
