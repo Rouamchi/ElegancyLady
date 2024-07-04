@@ -25,6 +25,66 @@ const Header = () => {
       {/* Mobile menu */}
       <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 md:hidden" onClose={setOpen}>
+          <div className="fixed inset-0 bg-black bg-opacity-25" />
+          <div className="fixed inset-0 z-40 flex">
+            <Dialog.Panel className="relative flex w-1/2 max-w-xs flex-col overflow-y-auto bg-gray-900 pb-12 shadow-xl">
+              <div className="flex px-4 pb-2 pt-5">
+                <button type="button" className="relative -m-3 mb-0 inline-flex items-center justify-center rounded-md p-2 text-amber-400" onClick={() => setOpen(false)}>
+                  <span className="absolute -inset-0.5" />
+                  <span className="sr-only">Close menu</span>
+                  <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                  <p className='ml-4 text-lg'>Hide</p>
+                </button>
+              </div>
+              <div className="space-y-6 border-t border-amber-400 px-4 py-6">
+                {pages.map((page) => (
+                  <div key={page.name} className="flow-root">
+                    <Link to={page.to} className="-m-2 block p-2 font-medium text-amber-400">
+                      {page.name}
+                    </Link>
+                  </div>
+                ))}
+                {isLogin ? (
+                  <Link to="/CreateProduct" className="text-md font-medium text-amber-400 hover:text-amber-300">
+                    CREATE
+                  </Link>
+                ) : (
+                  <Link></Link>
+                )}
+              </div>
+              <div className="space-y-6 border-t border-amber-400 px-4 py-6">
+                {isLogin ? (
+                  <div className=" items-center">
+                    <span className="mr-4 font-medium text-amber-400 hover:text-amber-300">
+                      {username} ⚜️</span> <br /><br />
+                    <button className=" font-medium text-amber-400 hover:text-amber-300">
+                      <SignOut />
+                    </button>
+                  </div>
+                ) : (
+                  <Link to="/SignIn" className="font-medium text-amber-400 hover:text-amber-300">
+                    Sign In</Link>
+                )}
+                <div className="flow-root">
+                  <Link to="/Registration" className="-m-2 block p-2 font-medium text-amber-400">
+                    Create Account
+                  </Link>
+                </div>
+              </div>
+              <div className="border-t border-amber-400 px-4 py-6">
+                <Link to="#" className="-m-2 -mt-6 flex items-center p-2">
+                  <img src={Morocco} alt="" className="block h-auto w-5 flex-shrink-0" />
+                  <span className="ml-3 block text-base font-medium text-amber-400">MAD</span>
+                </Link>
+              </div>
+              <img className="w-auto mt-6" src={Logo} alt="" />
+            </Dialog.Panel>
+          </div>
+        </Dialog>
+      </Transition.Root>
+
+      {/* <Transition.Root show={open} as={Fragment}>
+        <Dialog as="div" className="relative z-40 md:hidden" onClose={setOpen}>
           <Transition.Child as={Fragment} enter="transition-opacity ease-linear duration-300" enterFrom="opacity-0" enterTo="opacity-100" leave="transition-opacity ease-linear duration-300" leaveFrom="opacity-100" leaveTo="opacity-0">
             <div className="fixed inset-0 bg-black bg-opacity-25" />
           </Transition.Child>
@@ -42,7 +102,7 @@ const Header = () => {
                   </button>
                 </div>
 
-                {/* Links was here */}
+  
 
                 <div className="space-y-6 border-t border-amber-400 px-4 py-6">
                   {pages.map((page) => (
@@ -96,7 +156,7 @@ const Header = () => {
             </Transition.Child>
           </div>
         </Dialog>
-      </Transition.Root>
+      </Transition.Root> */}
       {/* ------------------------------ For Destop ------------------------- */}
       <header className="relative bg-black">
         <nav aria-label="Top" className="mx-auto max-w-7xl px-4 sm:px-6 md:px-8">
