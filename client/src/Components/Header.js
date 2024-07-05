@@ -24,7 +24,7 @@ const Header = () => {
     <div className="bg-white">
       {/* Mobile menu */}
       
-      {/* <Transition.Root show={open} as={Fragment}>
+      <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 md:hidden" onClose={setOpen}>
           <div className="fixed inset-0 bg-black bg-opacity-25" />
           <div className="fixed inset-0 z-40 flex">
@@ -82,9 +82,9 @@ const Header = () => {
             </Dialog.Panel>
           </div>
         </Dialog>
-      </Transition.Root> */}
+      </Transition.Root>
 
-    <Transition.Root show={open} as={Fragment}>
+    {/* <Transition.Root show={open} as={Fragment}>
       <Dialog as="div" className="relative z-40 md:hidden" onClose={setOpen}>
         <Transition.Child
           as={Fragment}
@@ -174,7 +174,7 @@ const Header = () => {
           </Transition.Child>
         </div>
       </Dialog>
-    </Transition.Root>
+    </Transition.Root> */}
 
       {/* <Transition.Root show={open} as={Fragment}>
         <Dialog as="div" className="relative z-40 md:hidden" onClose={setOpen}>
