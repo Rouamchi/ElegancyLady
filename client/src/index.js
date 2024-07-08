@@ -19,6 +19,7 @@ import AboutUs from './Pages/AboutUs'
 import { AuthContext, AuthProvider } from "./Pages/AuthContext";
 import { FavoritesProvider } from './Pages/FavoritesContext';
 import { CartProvider } from './Pages/CartContext';
+import * as serviceWorkerRegistration from './serviceWorkerRegistration';
 
 
 const router = createBrowserRouter([
@@ -93,3 +94,4 @@ root.render(
     </CartProvider>
   </FavoritesProvider>
 );
+serviceWorkerRegistration.register();
