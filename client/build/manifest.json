@@ -7,36 +7,11 @@
       "sizes": "256x135 64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
-    
-
-
-
-
     {
-      "permissions": [
-        "tabs",
-        "activeTab",
-        "storage",
-        "https://elegancyladyserver.onrender.com/*"  
-      ],
-      "externally_connectable": {
-        "matches": ["https://elegancyladyserver.onrender.com/*"]  
-      },
-      "background": {
-        "scripts": ["background.js"],
-        "persistent": false
-      },
-      "content_scripts": [
-        {
-          "matches": ["https://elegancyladyserver.onrender.com/*"], 
-          "js": ["content.js"]
-        }
-      ]
+      "src": "logo.png",
+      "type": "image/png",
+      "sizes": "1280x676"
     }
-
-
-
-
 
 
   ],
